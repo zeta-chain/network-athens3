@@ -26,7 +26,15 @@ $ echo $SEED
 16Uiu2HAkzocxERFCih7PZWCzyoncZ9MEbH8M4Bi3dPjrzBb8tSEY
 ```
 
-First, replace with your own operator key
+If your node has a public IP and private IP (such as AWS EC2 instance), then you need to
+set the following environment variable MYIP to your public IP otherwise the p2p connection
+will not work. 
+
+```
+$ export MYIP=3.141.21.139
+```
+
+Replace with your own operator key
 
 ```bash
 $ rm ~/.tss/address_book.seed
