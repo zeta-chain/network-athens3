@@ -28,7 +28,7 @@ $ echo $SEED
 
 If your node has a public IP and private IP (such as AWS EC2 instance), then you need to
 set the following environment variable MYIP to your public IP otherwise the p2p connection
-will not work. 
+will not work. You can query your public IP by `curl ifconfig.me`. 
 
 ```
 $ export MYIP=3.141.21.139
