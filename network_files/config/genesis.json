@@ -54,16 +54,6 @@
         {
           "@type": "/ethermint.types.v1.EthAccount",
           "base_account": {
-            "address": "zeta1uskq3zlwfktltadpztay33kvg62z7fa7ch30pt",
-            "pub_key": null,
-            "account_number": "0",
-            "sequence": "0"
-          },
-          "code_hash": "0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470"
-        },
-        {
-          "@type": "/ethermint.types.v1.EthAccount",
-          "base_account": {
             "address": "zeta15l0xn4aw9elmny8l4pt0577ukrf8qv698huk8y",
             "pub_key": null,
             "account_number": "0",
@@ -155,78 +145,6 @@
     },
     "authz": {
       "authorization": [
-        {
-          "granter": "zeta1uskq3zlwfktltadpztay33kvg62z7fa7ch30pt",
-          "grantee": "zeta15l0xn4aw9elmny8l4pt0577ukrf8qv698huk8y",
-          "authorization": {
-            "@type": "/cosmos.authz.v1beta1.GenericAuthorization",
-            "msg": "/zetachain.zetacore.crosschain.MsgNonceVoter"
-          },
-          "expiration": null
-        },
-        {
-          "granter": "zeta1uskq3zlwfktltadpztay33kvg62z7fa7ch30pt",
-          "grantee": "zeta15l0xn4aw9elmny8l4pt0577ukrf8qv698huk8y",
-          "authorization": {
-            "@type": "/cosmos.authz.v1beta1.GenericAuthorization",
-            "msg": "/zetachain.zetacore.crosschain.MsgGasPriceVoter"
-          },
-          "expiration": null
-        },
-        {
-          "granter": "zeta1uskq3zlwfktltadpztay33kvg62z7fa7ch30pt",
-          "grantee": "zeta15l0xn4aw9elmny8l4pt0577ukrf8qv698huk8y",
-          "authorization": {
-            "@type": "/cosmos.authz.v1beta1.GenericAuthorization",
-            "msg": "/zetachain.zetacore.crosschain.MsgVoteOnObservedInboundTx"
-          },
-          "expiration": null
-        },
-        {
-          "granter": "zeta1uskq3zlwfktltadpztay33kvg62z7fa7ch30pt",
-          "grantee": "zeta15l0xn4aw9elmny8l4pt0577ukrf8qv698huk8y",
-          "authorization": {
-            "@type": "/cosmos.authz.v1beta1.GenericAuthorization",
-            "msg": "/zetachain.zetacore.crosschain.MsgVoteOnObservedOutboundTx"
-          },
-          "expiration": null
-        },
-        {
-          "granter": "zeta1uskq3zlwfktltadpztay33kvg62z7fa7ch30pt",
-          "grantee": "zeta15l0xn4aw9elmny8l4pt0577ukrf8qv698huk8y",
-          "authorization": {
-            "@type": "/cosmos.authz.v1beta1.GenericAuthorization",
-            "msg": "/zetachain.zetacore.crosschain.MsgSetNodeKeys"
-          },
-          "expiration": null
-        },
-        {
-          "granter": "zeta1uskq3zlwfktltadpztay33kvg62z7fa7ch30pt",
-          "grantee": "zeta15l0xn4aw9elmny8l4pt0577ukrf8qv698huk8y",
-          "authorization": {
-            "@type": "/cosmos.authz.v1beta1.GenericAuthorization",
-            "msg": "/zetachain.zetacore.crosschain.MsgCreateTSSVoter"
-          },
-          "expiration": null
-        },
-        {
-          "granter": "zeta1uskq3zlwfktltadpztay33kvg62z7fa7ch30pt",
-          "grantee": "zeta15l0xn4aw9elmny8l4pt0577ukrf8qv698huk8y",
-          "authorization": {
-            "@type": "/cosmos.authz.v1beta1.GenericAuthorization",
-            "msg": "/zetachain.zetacore.crosschain.MsgAddToOutTxTracker"
-          },
-          "expiration": null
-        },
-        {
-          "granter": "zeta1uskq3zlwfktltadpztay33kvg62z7fa7ch30pt",
-          "grantee": "zeta15l0xn4aw9elmny8l4pt0577ukrf8qv698huk8y",
-          "authorization": {
-            "@type": "/cosmos.authz.v1beta1.GenericAuthorization",
-            "msg": "/zetachain.zetacore.crosschain.MsgSetNodeKeys"
-          },
-          "expiration": null
-        },
         {
           "granter": "zeta1c5tl72xrdtm5x6gk0tpkth760wwsklzxc3hpa6",
           "grantee": "zeta16u99fdknt93umuhjsx6dcv9jeegvnl8cg6vkxz",
