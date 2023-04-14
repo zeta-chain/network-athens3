@@ -28,3 +28,4 @@ echo "hotkey_address: $hotkey_address"
 pubkey=hotkey_address
 mkdir ~/.zetacored/os_info
 jq -n --arg operator_address "$operator_address" --arg hotkey_address "$hotkey_address" --arg pubkey "$pubkey" '{"ObserverAddress":$operator_address,"ZetaClientGranteeAddress":$hotkey_address,"ZetaClientGranteePubKey":$pubkey}' > ~/.zetacored/os_info/os.json
+cp ~/.zetacored/os_info/os.json ./os_info/os_$HOSTNAME.json
