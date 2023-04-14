@@ -523,6 +523,15 @@
           ]
         },
         {
+          "address": "zeta1uskq3zlwfktltadpztay33kvg62z7fa7ch30pt",
+          "coins": [
+            {
+              "denom": "azeta",
+              "amount": "1000000000000000000000"
+            }
+          ]
+        },
+        {
           "address": "zeta1awl9vl2l7ff5vvfuw45lcgcgqq3uywfqxylu00",
           "coins": [
             {
