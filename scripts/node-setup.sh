@@ -1,7 +1,8 @@
 #!/bin/bash
 
-/usr/sbin/sshd
 
+
+rm -rf ~/.zetacored
 # create keys
 CHAINID="athens_7001-1"
 KEYRING="test"
@@ -14,7 +15,7 @@ zetacored init Zetanode_HOSTNAME --chain-id=$CHAINID
 rm -rf ~/.zetacored/config/config.toml
 rm -rf ~/.zetacored/config/app.toml
 rm -rf ~/.zetacored/config/client.toml
-cp -r ~/network_files/config/* ~/.zetacored/config/
+cp -r /network_files/config/* ~/.zetacored/config/
 
 zetacored keys add operator --algo=secp256k1 --keyring-backend=$KEYRING
 zetacored keys add hotkey --algo=secp256k1 --keyring-backend=$KEYRING
