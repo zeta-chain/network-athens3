@@ -11,5 +11,5 @@ rm ~/.tss/*
 export TSSPATH=~/.tss
 zetaclientd init --enable-chains "goerli_localnet" \
   --pre-params ~/preParams.json \
-  --chain-id athens_101-1 --dev --operator "$operatorAddress" --log-level 0 --hotkey=hotkey --keygen-block 30
-zetaclientd start
+  --chain-id $CHAINID --dev --operator "$operatorAddress" --log-level 0 --hotkey=hotkey --keygen-block 100
+zetaclientd start ~/.zetacored/zetaclient.log 2>&1  &
