@@ -1,7 +1,8 @@
 #!/bin/bash
 
-/usr/sbin/sshd
 
+
+rm -rf ~/.zetacored
 # create keys
 CHAINID="athens_7001-1"
 KEYRING="test"
