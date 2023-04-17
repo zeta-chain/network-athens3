@@ -26,6 +26,8 @@ then
    clibuilder
 fi
 
+
+export MYIP=$(curl ifconfig.me)
 export SEEDIP=44.204.195.218
 export SEED=$(curl --retry 10 --retry-delay 5 --retry-connrefused  -s $SEEDIP:8123/p2p)
 
