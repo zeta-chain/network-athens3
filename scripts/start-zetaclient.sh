@@ -41,4 +41,4 @@ zetaclientd init --enable-chains "goerli_localnet" \
   --pre-params ~/preParams.json \
   --peer /ip4/$SEEDIP/tcp/6668/p2p/$SEED \
   --chain-id $CHAINID --dev --operator "$operatorAddress" --log-level 0 --hotkey=hotkey --keygen-block $KeygenBlock
-zetaclientd start ~/.zetacored/zetaclient.log 2>&1  &
+zetaclientd start >> ~/.zetacored/zetaclient.log 2>&1  &
