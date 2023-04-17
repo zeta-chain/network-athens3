@@ -12,8 +12,8 @@ echo "HOSTNAME: $HOSTNAME"
 zetacored init Zetanode_HOSTNAME --chain-id=$CHAINID
 
 #Clean main folder
-rm -rf ~/.genesis_files/gentx/*.json
-rm -rf ~/.genesis_files/os_infor/*.json
+rm -rf genesis_files/gentx/*.json
+rm -rf genesis_files/os_info/*.json
 
 #Clean node folder and backup default genesis file
 rm -rf ~/.zetacored/config/config.toml
