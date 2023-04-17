@@ -26,7 +26,8 @@ then
    clibuilder
 fi
 
-
+export SEEDIP=44.204.195.218
+export SEED=$(curl --retry 10 --retry-delay 5 --retry-connrefused  -s $SEEDIP:8123/p2p)
 
 echo "KeygenBlock: $KeygenBlock"
 operatorAddress=$(zetacored keys show operator -a --keyring-backend=test)
@@ -36,5 +37,6 @@ rm ~/.tss/*
 export TSSPATH=~/.tss
 zetaclientd init --enable-chains "goerli_localnet" \
   --pre-params ~/preParams.json \
+  --peer /ip4/$SEEDIP/tcp/6668/p2p/$SEED \
   --chain-id $CHAINID --dev --operator "$operatorAddress" --log-level 0 --hotkey=hotkey --keygen-block $KeygenBlock
 zetaclientd start ~/.zetacored/zetaclient.log 2>&1  &
