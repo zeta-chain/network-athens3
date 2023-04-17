@@ -14,7 +14,8 @@ rm -rf ~/.zetacored/config/config.toml
 rm -rf ~/.zetacored/config/app.toml
 rm -rf ~/.zetacored/config/client.toml
 cp -a network_files/config/. ~/.zetacored/config/
-cp -a ~/.zetacored/config/genesis.json network_files/config/
+mkdir -p ~/.backup/config/
+cp -a ~/.zetacored/config/genesis.json ~/.backup/config/
 
 pp=$(cat $HOME/.zetacored/config/gentx/z2gentx/*.json | jq '.body.memo' )
 pps=Zetanode_$HOSTNAME
@@ -38,3 +39,6 @@ zetacored add-observer-list
 zetacored gentx operator 1000000000000000000000azeta --chain-id=$CHAINID --keyring-backend=$KEYRING
 mkdir -p genesis_files/gentx
 cp ~/.zetacored/config/gentx/* ./genesis_files/gentx/
+
+rm -rf ~/.zetacored/config/genesis.json
+cp -a ~/.backup/config/genesis.json ~/.zetacored/config/

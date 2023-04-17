@@ -4,11 +4,11 @@ KEYRING="test"
 
 rm -rf ~/.zetacored/os_info/*
 rm -rf ~/.zetacored/config/gentx/*
-rm -rf ~/.zetacored/config/genesis.json
+
 
 cp -a genesis_files/os_info/. ~/.zetacored/os_info/
 cp -a genesis_files/gentx/. ~/.zetacored/config/gentx/
-cp -a network_files/config/genesis.json ~/.zetacored/config/
+
 
 cat $HOME/.zetacored/config/genesis.json | jq '.app_state["staking"]["params"]["bond_denom"]="azeta"' > $HOME/.zetacored/config/tmp_genesis.json && mv $HOME/.zetacored/config/tmp_genesis.json $HOME/.zetacored/config/genesis.json
 cat $HOME/.zetacored/config/genesis.json | jq '.app_state["crisis"]["constant_fee"]["denom"]="azeta"' > $HOME/.zetacored/config/tmp_genesis.json && mv $HOME/.zetacored/config/tmp_genesis.json $HOME/.zetacored/config/genesis.json
