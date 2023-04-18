@@ -1,5 +1,8 @@
 #!/bin/bash
 
+now=zetacored-$(date +"%T")
+mkdir -p ~/.zetacored-old/$now
+cp -a ~/.zetacored/* ~/.zetacored-old/$now/
 rm -rf ~/.zetacored
 # create keys
 CHAINID="athens_7001-1"

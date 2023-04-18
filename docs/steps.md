@@ -27,6 +27,8 @@ chmod +x ./scripts/*.sh
   - Use `Branch-Name-<YourName>` as the branch name for the new branch.
   - The pr should contain only `os_info.json` and `gentx-XX.json`. Use `git status` to check
   - If there is a file `network_files/config/genesis.json` do not commit it.This file can be deleted ,it is not required.The genesis being used will be provided by the coordinator.
+
+- NOTE : A backup us created for the existing zetacored folder under `~/.zetacored_old/zetacored-<timestamp>`.You can copy back keys etc if needed .
     
 
   
