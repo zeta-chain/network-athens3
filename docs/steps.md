@@ -47,9 +47,9 @@ NOTE : A backup us created for the existing zetacored folder under `~/.zetacored
   
 
 ### Start Node Step
-<div style="border: 1px solid black; padding: 10px;">
-Wait for final genesis to be provided by the Coordinator of the ceremony
-</div>
+
+**Wait for final genesis to be provided by the Coordinator of the ceremony before starting the following process**
+
 
 Edit config file (~/.zetacored/config/config.toml) to
   - Add persistant peers
