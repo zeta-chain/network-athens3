@@ -81,10 +81,8 @@ You can find your genesis transaction JSON file in the following directory. Subm
 Once the final ZetaChain genesis file is ready, there will be an announcement that it can be downloaded from our URL:
 
 ```jsx
-https://zetachain-external-files.s3.amazonaws.com/genesis/<blockchain_name>/genesis.json
+https://zetachain-external-files.s3.amazonaws.com/genesis/athens3/genesis.json
 ```
-
-- `blockchain_name` is the name of the blockchain you are joining (ex. athens3)
 
 ### Complete Node Deployment
 
