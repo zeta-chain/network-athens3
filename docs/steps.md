@@ -30,7 +30,7 @@ chmod +x ./scripts/*.sh
 ```
 
 After the `node-setup.sh` script generates the keys and necessary
-files, create a branch , Commit , and Raise a PR to submit the files
+files, create a branch, commit, and raise a PR to submit the files
 to zetachain coordinator:
 
   - Use `Branch-Name-<YourName>` as the branch name for the new branch.
