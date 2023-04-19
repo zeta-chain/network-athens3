@@ -1,6 +1,5 @@
 ## Keygen Ceremony
 
-
 During the genesis process of the Athens3 testnet, 
 the TSS Signers (validators who are in the set of TSSSigner)
 need to coordinate the generation of a TSS public key and key fragments
