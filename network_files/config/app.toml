@@ -109,7 +109,7 @@ global-labels = [
 [api]
 
 # Enable defines if the API server should be enabled.
-enable = true
+enable = false
 
 # Swagger defines if swagger documentation should automatically be registered.
 swagger = false
@@ -130,7 +130,7 @@ rpc-write-timeout = 0
 rpc-max-body-bytes = 1000000
 
 # EnableUnsafeCORS defines if CORS should be enabled (unsafe - use it at your own risk).
-enabled-unsafe-cors = true
+enabled-unsafe-cors = false
 
 ###############################################################################
 ###                           Rosetta Configuration                         ###
@@ -166,7 +166,7 @@ offline = false
 enable = true
 
 # Address defines the gRPC server address to bind to.
-address = "0.0.0.0:9090"
+address = "127.0.0.1:9090"
 
 ###############################################################################
 ###                        gRPC Web Configuration                           ###
@@ -176,10 +176,10 @@ address = "0.0.0.0:9090"
 
 # GRPCWebEnable defines if the gRPC-web should be enabled.
 # NOTE: gRPC must also be enabled, otherwise, this configuration is a no-op.
-enable = true
+enable = false
 
 # Address defines the gRPC-web server address to bind to.
-address = "0.0.0.0:9091"
+address = "127.0.0.1:9091"
 
 # EnableUnsafeCORS defines if CORS should be enabled (unsafe - use it at your own risk).
 enable-unsafe-cors = false
@@ -220,13 +220,13 @@ max-tx-gas-wanted = 0
 [json-rpc]
 
 # Enable defines if the gRPC server should be enabled.
-enable = true
+enable = false
 
 # Address defines the EVM RPC HTTP server address to bind to.
-address = "0.0.0.0:8545"
+address = "127.0.0.1:8545"
 
 # Address defines the EVM WebSocket server address to bind to.
-ws-address = "0.0.0.0:8546"
+ws-address = "127.0.0.1:8546"
 
 # API defines a list of JSON-RPC namespaces that should be enabled
 # Example: "eth,txpool,personal,net,debug,web3"
