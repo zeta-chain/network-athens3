@@ -2,7 +2,7 @@
 Here we assume a typical Ubuntu 22.04 LTS x86_64 setup. If you are using a different OS you may need to make some adjustments.
 For more information about the compute node requirement see [here](hosting.md)
 
-Make sure `jq`, `git`, `curl`, and `make` are installed. 
+#### Make sure `jq`, `git`, `curl`, and `make` are installed. 
 
 ```bash
 sudo apt update
@@ -10,12 +10,7 @@ sudo apt install -y jq curl git
 jq --version
 ```
 
-Now clone the network github repository
-```bash
-git clone https://github.com/zeta-chain/network-athens3.git && cd network-athens3
-```
-
-Download two executable binaries (`zetacored` and `zetaclientd`)
+#### Download and install `zetacored` and `zetaclientd` binaries
 ```
 wget https://zetachain-external-files.s3.amazonaws.com/binaries/athens3/latest/zetacored-ubuntu
 wget https://zetachain-external-files.s3.amazonaws.com/binaries/athens3/latest/zetaclientd-ubuntu
@@ -24,17 +19,22 @@ mv zetaclientd-ubuntu /usr/bin/zetaclientd && chmod +x zetaclientd
 # You may need to set additional permissions depending on your node configuration
 ```
 
+#### Clone the network github repository
+```bash
+git clone https://github.com/zeta-chain/network-athens3.git && cd network-athens3
+```
+
 Check out a specific branch. Branch name will be provided by the coordinator
 ```bash
 git checkout <Branch-Name>
 ```
 
+#### Run The Node Setup Script
+
 Give execute permissions to the scripts and run the node setup script
-```bash
-chmod +x ./scripts/*.sh
-```
 
 ```bash
+chmod +x ./scripts/*.sh
 ./scripts/node-setup.sh
 ```
 
@@ -49,22 +49,21 @@ to zetachain coordinator:
 NOTE : A backup us created for the existing zetacored folder under `~/.zetacored_old/zetacored-<timestamp>`.You can copy back keys etc if needed .
   
 
-### Start Node Step
+#### Start The Node 
 
-**Wait for final genesis to be provided by the Coordinator of the ceremony before starting the following process**
-
+**Wait for final genesis to be provided by the ZetaChain Coordinator before starting the following process**
+Additional parameters will be provided by the ZetaChain Coordinator. 
 
 Edit config file (~/.zetacored/config/config.toml) to
-  - Add persistant peers
-  - Edit config to check for SEED (make it empty if it has a value)
-  - Start Node
+  - Add persistent peers
+  - Edit config.toml to check for SEED (make it empty if it has a value)
 
 ```bash
 ./scripts/start-zetacore.sh
 ```
 
 Start Zetaclient
-  - `KeygenBlock` and `SEEDIP` are distributed by the the coordinator.
+  - `KeygenBlock` and `SEEDIP` are provided by the the coordinator.
 
 ```bash
 ./scripts/start-zetaclient.sh -k <KeygenBlock> -s <SEEDIP>
@@ -80,25 +79,11 @@ pkill zetacored
 
 
 ## Setup Process Management for `zetacored` and `zetaclientd`
-This instructions are for the initial setup and genesis of the network. Running a validator 24/7 requires a more robust setup that will change depending on the environment you are running the validator in.
+These instructions are for the initial setup and genesis of the network. 
+Running a validator 24/7 requires a more robust setup that will change depending on the environment you are running the validator in.
 At a minimum we reccomend you: 
 - [ ] Run each process as a systemd service
 - [ ] Do NOT run these services as root. Create a new restricted ZetaChain user
 - [ ] Create Sentry nodes to protect your validator 
 - [ ] Make sure you setup resource monitoring (CPU, RAM, etc), uptime monitoring, log ingestion, etc to minimize the risk of downtime or slashing 
 - [ ] Install adequate security measures such as, Endpoint protection, Anti-Virus, system level logging, WAF, etc  
-
-## Orchestrator / Coordinator
-
-**These should only be run by the ZetaChain coordinator, and only after all PRs containing the gentx and other information from operators have been submitted **
-
-### Collector
-- Merge all PRS
-- `git pull` the merged branch so that you have all the files in the gentx folder
-
-```bash
-./scripts/genesis_collector.sh
-```
-
-- This would put a genesis.json into the `genesis_files/config/` folder
-    - Commit and push the file to the Repo
