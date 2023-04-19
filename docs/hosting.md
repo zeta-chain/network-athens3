@@ -6,15 +6,12 @@
 
 These are some recommended specs to run the different type of ZetaChain nodes.
 
-| Validator | 4 CPUs | 32 GB Memory | 50 GB Root disk
-300 GB Data disk |
-| --- | --- | --- | --- |
-| API Node | 4 CPUs | 32 GB Memory | 50 GB Root disk
-300 GB Data disk |
-| Full Node / Statesync Node | 4 CPUs | 32 GB Memory | 50 GB Root disk
-300 GB Data disk |
-| Archive Node | 4 CPUs | 32 GB Memory | 50 GB Root disk
-500 GB Data disk* |
+| Node Type | CPU | Memory | Root Disk | Data Disk |
+| :--- | :--- | :--- | :--- | :--- |
+| Validator | 4 CPUs | 32 GB Memory | 50 GB Root disk |300 GB Data disk |
+| API Node | 4 CPUs | 32 GB Memory | 50 GB Root disk | 300 GB Data disk |
+| Full Node / Statesync Node | 4 CPUs | 32 GB Memory | 50 GB Root disk | 300 GB Data disk |
+| Archive Node | 4 CPUs | 32 GB Memory | 50 GB Root disk | 500 GB Data disk* |
 
 *Archive nodes store the entire blockchain. As the blockchain grows, more disk space is needed.
 
