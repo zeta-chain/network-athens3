@@ -15,8 +15,9 @@ Now clone the network github repository
 git clone https://github.com/zeta-chain/network-athens3.git && cd network-athens3
 ```
 
-Get two binaries (`zetacored` and `zetaclientd`)
+Get two executable binaries (`zetacored` and `zetaclientd`)
 - [ ] Add instructions here
+- [ ] Copy the binaries to `/usr/bin/` folder
 
 Check out a specific branch. Branch name will be provided by the coordinator
 ```bash
