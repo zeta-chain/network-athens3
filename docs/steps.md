@@ -42,7 +42,6 @@ to zetachain coordinator:
   - If there is a file `network_files/config/genesis.json` do not commit it.This file can be deleted ,it is not required.The genesis being used will be provided by the coordinator.
 
 NOTE : A backup us created for the existing zetacored folder under `~/.zetacored_old/zetacored-<timestamp>`.You can copy back keys etc if needed .
-    
 
   
 
@@ -67,15 +66,27 @@ Start Zetaclient
 ./scripts/start-zetaclient.sh -k <KeygenBlock> -s <SEEDIP>
 ```
 
+**Wait until zetachain coordinator confirms that genesis and TSS keygen is completed**. 
+Then terminate the processes `zetacored` and `zetaclientd`.
+
+```bash
+pkill zetaclientd
+pkill zetacored
+```
+
 
 ## Setup Process Management for `zetacored` and `zetaclientd`
 
 **TODO: Add instructions for process management with `systemd`**
 
+- [ ] Systemd files
+- [ ] Starting/Stopping/Restarting services
+- [ ] Logs
+
 ## Orchestrator / Coordinator
-<div style="border: 1px solid black; padding: 10px;">
-These should only be run by the coordinator, once all PRs from the node setup steps are raised
-</div>
+
+**These should only be run by the coordinator, once all PRs from the node setup steps are raised**
+
 
 ### Collector
 - Merge all PRS
