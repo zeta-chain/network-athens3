@@ -67,6 +67,11 @@ Start Zetaclient
 ./scripts/start-zetaclient.sh -k <KeygenBlock> -s <SEEDIP>
 ```
 
+
+## Setup Process Management for `zetacored` and `zetaclientd`
+
+**TODO: Add instructions for process management with `systemd`**
+
 ## Orchestrator / Coordinator
 <div style="border: 1px solid black; padding: 10px;">
 These should only be run by the coordinator, once all PRs from the node setup steps are raised
