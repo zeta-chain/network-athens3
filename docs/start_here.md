@@ -1,6 +1,6 @@
 # Athens 3 Validator Setup guide
  
-The Genesisp process is broken up into three phases
+The ZetaChan Genesis process for Athens3 is broken up into three phases:
 
 Phase 1: Local Setup
   - Setup your node - Generate keys - Submit keys to the coordinator via GitHub
