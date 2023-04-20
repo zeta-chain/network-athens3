@@ -1,3 +1,7 @@
-ZetaChain athens3 testnet genesis file, scripts, and documentations for validators and the public
+# ZetaChain Athens3 testnet Genesis Repo
+
+This repo contains file, scripts, and documentation for validators to join the ZetaChain Athens3 testnet.
+
+Documentation For Genesis Validatores starts [here](docs/start_here.md) 
 
 
