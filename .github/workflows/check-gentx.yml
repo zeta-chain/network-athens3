@@ -13,8 +13,8 @@ on:
 env:
   # ZETACORED_BINARY: "https://zetachain-external-files.s3.amazonaws.com/binaries/athens3/latest/zetacored-ubuntu"
   # ZETACLIENT_BINARY: "https://zetachain-external-files.s3.amazonaws.com/binaries/athens3/latest/zetaclientd-ubuntu"
-  ZETACORED_BINARY: "https://zetachain-external-files.s3.amazonaws.com/binaries/athens3-prerelease/0.0.0/zetacored-ubuntu"
-  ZETACLIENT_BINARY: "https://zetachain-external-files.s3.amazonaws.com/binaries/thens3-prerelease/0.0.0/zetaclientd-ubuntu"
+  ZETACORED_BINARY: "https://zetachain-external-files.s3.amazonaws.com/binaries/athens3-prerelease/0.0.1/zetacored-ubuntu"
+  ZETACLIENT_BINARY: "https://zetachain-external-files.s3.amazonaws.com/binaries/thens3-prerelease/0.0.1/zetaclientd-ubuntu"
   CHAINID: "athens_7001-1"
   KEYRING: "test"
   HOSTNAME: checker
@@ -59,11 +59,11 @@ jobs:
           --json-rpc.api eth,txpool,personal,net,debug,web3,miner \
           --api.enable >> ~/.zetacored/zetacored.log 2>&1  &
 
-          sleep 6
+          sleep 10
           latest_block_height=$(curl --request GET -sL --url 'localhost:26657/status' --header 'Content-Type: application/json' | jq '.result.sync_info.latest_block_height|tonumber')
 
           echo "latest_block_height: $latest_block_height"
-          if [ "$latest_block_height" -ge 0 ]; then
+          if [ "$latest_block_height" -ge 3 ]; then
               echo "SUCCESS"
               echo "gentx and OS_INFO files are valid"
               exit 0
