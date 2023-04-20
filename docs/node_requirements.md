@@ -1,6 +1,4 @@
-# Hosting a Node
-
-## Technical Requirements
+## Node Technical Requirements
 
 ### Node Specifications
 

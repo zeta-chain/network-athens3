@@ -1,6 +1,25 @@
+# Athens 3 Validator Setup guide
+ 
+The Genesisp process is broken up into three phases
+
+Phase 1: Local Setup
+  - Setup your node
+  - Generate keys
+  - Submit keys to the coordinator via GitHub PR
+Phase 2: Core Genesis
+  - Wait for updated genesis file to be provided by the coordinator
+  - Start your node
+  - Wait for the coordinator to confirm genesis is complete 
+Phase 3: TSS Keygen
+  - Wait for the coordinator to provide the TSS keygen block and SEED IP
+  - Start your node
+  - Wait for the coordinator to confirm TSS keygen is complete
+
+
+## Phase 1: Local Setup 
 ### Node Setup
 Here we assume a typical Ubuntu 22.04 LTS x86_64 setup. If you are using a different OS you may need to make some adjustments.
-For more information about the compute node requirement see [here](hosting.md)
+For more information about the compute node requirement see [here](node_requirements.md)
 
 #### Make sure `jq`, `git`, `curl`, and `make` are installed. 
 
@@ -15,7 +34,7 @@ jq --version
 wget https://zetachain-external-files.s3.amazonaws.com/binaries/athens3/latest/zetacored-ubuntu
 wget https://zetachain-external-files.s3.amazonaws.com/binaries/athens3/latest/zetaclientd-ubuntu
 mv zetaclientd-ubuntu /usr/bin/zetacored && chmod +x /usr/bin/zetacored
-mv zetaclientd-ubuntu /usr/bin/zetaclientd && chmod +x zetaclientd
+mv zetaclientd-ubuntu /usr/bin/zetaclientd && chmod +x /usr/bin/zetaclientd
 # You may need to set additional permissions depending on your node configuration
 ```
 
@@ -48,6 +67,7 @@ to zetachain coordinator:
 
 NOTE : A backup us created for the existing zetacored folder under `~/.zetacored_old/zetacored-<timestamp>`.You can copy back keys etc if needed .
   
+## Phase 2: Core Genesis
 
 #### Start The Node 
 
@@ -61,6 +81,8 @@ Edit config file (~/.zetacored/config/config.toml) to
 ```bash
 ./scripts/start-zetacore.sh
 ```
+
+## Phase 3: TSS Keygen (zetaclientd)
 
 Start Zetaclient
   - `KeygenBlock` and `SEEDIP` are provided by the the coordinator.
@@ -77,8 +99,7 @@ pkill zetaclientd
 pkill zetacored
 ```
 
-
-## Setup Process Management for `zetacored` and `zetaclientd`
+## Long Term Process Management for `zetacored` and `zetaclientd`
 These instructions are for the initial setup and genesis of the network. 
 Running a validator 24/7 requires a more robust setup that will change depending on the environment you are running the validator in.
 At a minimum we reccomend you: 

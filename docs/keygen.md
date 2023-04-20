@@ -1,6 +1,10 @@
 ## Keygen Ceremony
 
-During the genesis process of the Athens3 testnet, 
+** These steps have been automated for the Athens3 testnet via the `node-setup.sh` and
+`start-zetaclient.sh` scripts.
+Operators should ignore this document unless you they to perform their key generation manually**
+
+During the genesis process of the Athens3 testnet,
 the TSS Signers (validators who are in the set of TSSSigner)
 need to coordinate the generation of a TSS public key and key fragments
 (the `keygen` ceremony).
@@ -8,7 +12,7 @@ need to coordinate the generation of a TSS public key and key fragments
 For the `keygen` ceremony all TSS signers need to be online
 at the same time, and all TSS signers need to specify the same
 `--keygen-block <block num>`. The keygen ceremony will begin
-at block `<block num>`. 
+at block `<block num>`.
 
 First, query the seed node to join the zetaclient p2p network:
 
@@ -27,7 +31,7 @@ $ echo $SEED
 
 If your node has a public IP and private IP (such as AWS EC2 instance), then you need to
 set the following environment variable MYIP to your public IP otherwise the p2p connection
-will not work. You can query your public IP by `curl ifconfig.me`. 
+will not work. You can query your public IP by `curl ifconfig.me`.
 
 ```
 $ export MYIP=3.141.21.139
