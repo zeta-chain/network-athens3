@@ -27,4 +27,15 @@ zetacored validate-genesis
 zetacored start --trace \
 --minimum-gas-prices=0.0001azeta \
 --json-rpc.api eth,txpool,personal,net,debug,web3,miner \
---api.enable
+--api.enable >> ~/.zetacored/zetacored.log 2>&1  &
+
+sleep 6
+latest_block_height=$(curl --request GET -sL --url 'localhost:26657/status' --header 'Content-Type: application/json' | jq '.result.sync_info.latest_block_height|tonumber')
+
+echo "latest_block_height: $latest_block_height"
+if [ "$latest_block_height" -ge 0 ]; then
+    echo "gentx and OS_INFO files are valid"
+else
+    echo "gentx or OS_INFO files are inValid"
+    exit 1
+fi
