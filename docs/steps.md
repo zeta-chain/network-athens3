@@ -14,7 +14,7 @@ jq --version
 ```
 wget https://zetachain-external-files.s3.amazonaws.com/binaries/athens3/latest/zetacored-ubuntu
 wget https://zetachain-external-files.s3.amazonaws.com/binaries/athens3/latest/zetaclientd-ubuntu
-mv zetaclientd-ubuntu /usr/bin/zetacored && chmod +x zetacored
+mv zetaclientd-ubuntu /usr/bin/zetacored && chmod +x /usr/bin/zetacored
 mv zetaclientd-ubuntu /usr/bin/zetaclientd && chmod +x zetaclientd
 # You may need to set additional permissions depending on your node configuration
 ```
