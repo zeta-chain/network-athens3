@@ -40,11 +40,6 @@ mv zetaclientd-ubuntu /usr/bin/zetaclientd && chmod +x /usr/bin/zetaclientd
 git clone https://github.com/zeta-chain/network-athens3.git && cd network-athens3
 ```
 
-Check out a specific branch. Branch name will be provided by the coordinator
-```bash
-git checkout <Branch-Name>
-```
-
 #### Run The Node Setup Script
 
 Give execute permissions to the scripts and run the node setup script
