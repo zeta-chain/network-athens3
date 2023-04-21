@@ -100,7 +100,23 @@ This phase applies to **Observer/Signer Validators only**. Most operators are `c
 validators` and can skip this step. If you aren't sure what you are, you are
 most likely a core validator.
 
-Start Zetaclient
+#### Configure RPC Connectivity
+
+Observer Signers need an RPC endpoint for each chain. You can follow the
+standard instructions to configure a node for most chains but the BTC requires
+special instructions. The links below will take you to a node setup guide for
+each chain.
+
+- [Ethereum RPC Node Setup](https://ethereum.org/en/developers/docs/nodes-and-clients/run-a-node/)
+- [BSC RPC Node Setup](https://docs.bnbchain.org/docs/validator/fullnode/)
+- [Polygon RPC Node Setup](https://wiki.polygon.technology/docs/category/run-a-full-node)
+- [BTC RPC Node Setup](btc-rpc.md)
+
+Edit the `zeta-client.toml` file located in the `.zetacored/config` directory
+and add the RPC endpoints to the `Endpoint = ` section of each chain. 
+
+
+#### Start Zetaclient
   - `KeygenBlock` and `SEEDIP` are provided by the the coordinator.
 
 ```bash
