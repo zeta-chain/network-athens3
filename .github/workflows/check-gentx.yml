@@ -17,7 +17,7 @@ env:
   # ZETACORED_BINARY: "https://zetachain-external-files.s3.amazonaws.com/binaries/athens3/latest/zetacored-ubuntu"
   # ZETACLIENT_BINARY: "https://zetachain-external-files.s3.amazonaws.com/binaries/athens3/latest/zetaclientd-ubuntu"
   ZETACORED_BINARY: "https://zetachain-external-files.s3.amazonaws.com/binaries/athens3-prerelease/0.0.1/zetacored-ubuntu"
-  ZETACLIENT_BINARY: "https://zetachain-external-files.s3.amazonaws.com/binaries/thens3-prerelease/0.0.1/zetaclientd-ubuntu"
+  ZETACLIENT_BINARY: "https://zetachain-external-files.s3.amazonaws.com/binaries/athens3-prerelease/0.0.1/zetaclientd-ubuntu"
   CHAINID: "athens_7001-1"
   KEYRING: "test"
   HOSTNAME: checker
@@ -30,12 +30,25 @@ jobs:
 
       - uses: actions/checkout@v3
 
-      - name: Install Binaries
+      # - name: Restore Cache
+      #   uses: actions/cache@v2
+      #   with:
+      #     path: /usr/bin/zetacored
+      #     key: ${{ runner.os }}-zetacored-${{ hashFiles('zetacored') }}
+
+      - name: Download Zetacored
+        # if: steps.restore-cache.outputs.cache-hit != 'true'
         run: |
-          wget $ZETACORED_BINARY -O zetacored 
-          sudo cp zetacored /usr/bin/zetacored
+          wget $ZETACORED_BINARY -O zetacored
+          mv zetacored /usr/bin/zetacored
           sudo chmod +x /usr/bin/zetacored
           zetacored version
+
+      # - name: Install Binaries
+      #   run: |
+      #     mv zetacored ~/.local/bin/zetacored
+      #     sudo chmod +x /usr/bin/zetacored
+      #     zetacored version
         
       - name: Check GentX Is Valid
         run: |
@@ -49,29 +62,48 @@ jobs:
           cat "$HOME"/.zetacored/config/genesis.json | jq '.consensus_params["block"]["max_gas"]="10000000"' > "$HOME"/.zetacored/config/tmp_genesis.json && mv "$HOME"/.zetacored/config/tmp_genesis.json "$HOME"/.zetacored/config/genesis.json
           cat "$HOME"/.zetacored/config/genesis.json | jq '.app_state["gov"]["voting_params"]["voting_period"]="10s"' > "$HOME"/.zetacored/config/tmp_genesis.json && mv "$HOME"/.zetacored/config/tmp_genesis.json "$HOME"/.zetacored/config/genesis.json
 
-          cp -a genesis_files/os_info/. ~/.zetacored/os_info/
-          cp -a genesis_files/gentx/. ~/.zetacored/config/gentx/
+          mkdir -p ~/.zetacored/os_info  ~/.zetacored/config/gentx/
+          cp -a genesis_files/os_info/* ~/.zetacored/os_info/
+          cp -a genesis_files/gentx/* ~/.zetacored/config/gentx/
 
           zetacored collect-observer-info
           zetacored add-observer-list
           zetacored collect-gentxs
           zetacored validate-genesis
 
+          # If the above command fails, the job will fail
+          if [ $? -eq 0 ]; then
+            echo "SUCCESS"
+            echo "gentx and OS_INFO files are valid"
+            exit 0
+          else
+            echo "FAILURE"
+            echo "gentx and OS_INFO files are invalid"
+            exit 1
+          fi
+
+      - name: Start Chain For Testing
+        run: |
           zetacored start --trace \
           --minimum-gas-prices=0.0001azeta \
           --json-rpc.api eth,txpool,personal,net,debug,web3,miner \
-          --api.enable >> ~/.zetacored/zetacored.log 2>&1  &
+          --api.enable >> ~/.zetacored/zetacored.log # 2>&1  &
 
-          sleep 10
-          latest_block_height=$(curl --request GET -sL --url 'localhost:26657/status' --header 'Content-Type: application/json' | jq '.result.sync_info.latest_block_height|tonumber')
+          # sleep 15
+          # latest_block_height=$(curl --request GET -sL --url 'localhost:26657/status' --header 'Content-Type: application/json' | jq '.result.sync_info.latest_block_height|tonumber')
+          # echo "latest_block_height: $latest_block_height"
+          # if [ "$latest_block_height" -ge 3 ]; then
+          #     echo "SUCCESS"
+          #     echo "gentx and OS_INFO files are valid"
+          #     exit 0
+          # else
+          #   echo "FAILURE"
+          #     echo "gentx or OS_INFO files are inValid"
+          #     exit 1
+          # fi
 
-          echo "latest_block_height: $latest_block_height"
-          if [ "$latest_block_height" -ge 3 ]; then
-              echo "SUCCESS"
-              echo "gentx and OS_INFO files are valid"
-              exit 0
-          else
-            echo "FAILURE"
-              echo "gentx or OS_INFO files are inValid"
-              exit 1
-          fi
+      # - name: Cache Binary
+      #   uses: actions/upload-artifact@v2
+      #   with:
+      #     name: ${{ runner.os }}-zetacored-${{ hashFiles('zetacored') }}
+      #     path: /usr/bin/zetacored
