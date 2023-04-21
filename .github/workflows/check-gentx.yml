@@ -5,10 +5,13 @@ on:
     branches:
       - genesis/athens3-reduced-steps
       - cicd/genesis/athens3-reduced-steps
+      - main
   pull_request:
     branches:
       - main
       - genesis/athens3-reduced-steps
+    paths:
+      - 'genesis_files/**'
 
 env:
   # ZETACORED_BINARY: "https://zetachain-external-files.s3.amazonaws.com/binaries/athens3/latest/zetacored-ubuntu"
