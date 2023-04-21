@@ -102,9 +102,9 @@ most likely a core validator.
 
 #### Configure RPC Connectivity
 
-Observer Signers need an RPC endpoint for each chain. You can follow the
+Observer Signers need an RPC endpoint for each connected chain. You can follow the
 standard instructions to configure a node for most chains but the BTC requires
-special instructions. The links below will take you to a node setup guide for
+special instructions just for ZetaChain. The links below will take you to a node setup guide for
 each chain.
 
 - [Ethereum RPC Node Setup](https://ethereum.org/en/developers/docs/nodes-and-clients/run-a-node/)
