@@ -6,7 +6,7 @@
 
 AuthzGranter = ""
 AuthzHotkey = ""
-ChainID = "athens-1"
+ChainID = "athens_7001-1"
 KeygenBlock = 0
 LogConsole = false
 LogLevel = 1
@@ -20,7 +20,7 @@ ZetaCoreURL = "127.0.0.1"
   RPCEndpoint = "bitcoin:18443"
   RPCParams = "regtest"
   RPCPassword = "123"
-  RPCUsername = "smoketest"
+  RPCUsername = "username"
   WatchGasPricePeriod = 5
   WatchInTxPeriod = 5
   WatchUTXOSPeriod = 5
