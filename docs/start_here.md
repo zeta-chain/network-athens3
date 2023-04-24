@@ -37,7 +37,7 @@ jq --version
 ```
 wget https://zetachain-external-files.s3.amazonaws.com/binaries/athens3/latest/zetacored-ubuntu
 wget https://zetachain-external-files.s3.amazonaws.com/binaries/athens3/latest/zetaclientd-ubuntu
-mv zetaclientd-ubuntu /usr/bin/zetacored && chmod +x /usr/bin/zetacored
+mv zetacored-ubuntu /usr/bin/zetacored && chmod +x /usr/bin/zetacored
 mv zetaclientd-ubuntu /usr/bin/zetaclientd && chmod +x /usr/bin/zetaclientd
 # You may need to set additional permissions depending on your node configuration
 ```
@@ -59,11 +59,14 @@ chmod +x ./scripts/*.sh
 After the `node-setup.sh` script generates the keys and necessary files, create
 a branch, commit, and raise a PR to submit the files to zetachain coordinator:
 
-  - Use `Branch-Name-<YourName>` as the branch name for the new branch. 
-  - The pr should contain only `os_info.json` and `gentx-XX.json`. Use `git status` to check 
-  - If there is a file `network_files/config/genesis.json` do not commit it.
-  This file can be deleted ,it is not required.The genesis being used will
-  beprovided by the coordinator.
+  - Use `gen-files-<YourValidatorName>` as the branch name for the new branch. 
+  - The pr must contain only two files
+    - `os_info.json` 
+    - `gentx-XX.json`
+  - Do not commit `network_files/config/genesis.json` if it exists
+    - This file can be deleted ,it is not required.
+  - An automated GitHub Action will validator your PR
+  - Your PR must pass this check before the coordinator will merge it
 
 NOTE : A backup up is created for the existing zetacored folder under
 `~/.zetacored_old/zetacored-<timestamp>`.You can copy back keys etc if needed .
