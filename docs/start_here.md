@@ -1,39 +1,43 @@
 # Athens 3 Validator Setup guide
- 
+
 The ZetaChan Genesis process for Athens3 is broken up into three phases:
 
 Phase 1: Local Setup
-  - Setup your validator node 
-  - Generate keys 
-  - Submit keys to the coordinator via GitHub PR
+
+- Setup your validator node
+- Generate keys
+- Submit keys to the coordinator via GitHub PR
 
 Phase 2: Core Genesis
-  - Wait for updated genesis file to be provided by the coordinator 
-  - Start zetacored
-  - Wait for the coordinator to confirm network genesis is complete 
+
+- Wait for updated genesis file to be provided by the coordinator
+- Start zetacored
+- Wait for the coordinator to confirm network genesis is complete
 
 Phase 3: TSS Keygen (Observer/Signer Validators Only)
-  - Wait for the coordinator to provide the TSS keygen block and SEED IP 
-  - Start zetaclientd
-  - Wait for the coordinator to confirm TSS keygen is complete
 
-## Phase 1: Local Setup 
+- Wait for the coordinator to provide the TSS keygen block and SEED IP
+- Start zetaclientd
+- Wait for the coordinator to confirm TSS keygen is complete
 
-### Node Setup 
+## Phase 1: Local Setup
+
+### Node Setup
 
 Here we assume a typical Ubuntu 22.04 LTS x86_64 setup. If you are using a
 different OS you may need to make some adjustments. For more information about
 the compute node requirement see [here](node_requirements.md)
 
-#### Make sure `jq`, `git`, `curl`, and `make` are installed. 
+#### Make sure `jq`, `git`, `curl`, and `make` are installed.
 
 ```bash
 sudo apt update
-sudo apt install -y jq curl git 
+sudo apt install -y jq curl git
 jq --version
 ```
 
 #### Download and install `zetacored` and `zetaclientd` binaries
+
 ```
 wget https://zetachain-external-files.s3.amazonaws.com/binaries/athens3/latest/zetacored-ubuntu
 wget https://zetachain-external-files.s3.amazonaws.com/binaries/athens3/latest/zetaclientd-ubuntu
@@ -43,6 +47,7 @@ mv zetaclientd-ubuntu /usr/bin/zetaclientd && chmod +x /usr/bin/zetaclientd
 ```
 
 #### Clone the network github repository
+
 ```bash
 git clone https://github.com/zeta-chain/network-athens3.git && cd network-athens3
 ```
@@ -61,36 +66,47 @@ chmod +x ./scripts/*.sh
 After the `node-setup.sh` script generates the keys and necessary files, create
 a branch, commit, and raise a PR to submit the files to zetachain coordinator:
 
-  - Use `gen-files-<YourValidatorName>` as the branch name for the new branch. 
-  - The pr must contain only two files
-    - `os_info.json` 
-    - `gentx-XX.json`
-  - Do not commit `network_files/config/genesis.json` if it exists
-    - This file can be deleted, it is not required.
-  - An automated GitHub Action will validator your PR
-  - Your PR must pass this check before the coordinator will merge it
+- Use `gen-files-<YourValidatorName>` as the branch name for the new branch.
+- The pr must contain only two files
+  - `os_info.json`
+  - `gentx-XX.json`
+- Do not commit `network_files/config/genesis.json` if it exists
+  - This file can be deleted, it is not required.
+- An automated GitHub Action will validator your PR
+- Your PR must pass this check before the coordinator will merge it
 
 NOTE : A backup up is created for the existing zetacored folder under
 `~/.zetacored_old/zetacored-<timestamp>`.You can copy back keys etc if needed .
-  
+
 ## Phase 2: Core Genesis
 
-#### Start The Node 
+### Get Updated Genesis File
 
-**Wait for final genesis to be provided by the ZetaChain Coordinator before
-starting the following process** Additional parameters will be provided by the
-ZetaChain Coordinator. 
+After the ZetaChain Coordinator has merged the PRs and updated the genesis
+file: 
 
-Edit config file (~/.zetacored/config/config.toml) to
-  - Add persistent peers - Edit config.toml to check for SEED (make it empty if
-  it has a value)
+- Switch back to the `main` branch 
+- Pull the latest changes to get the updated genesis.json file
+
+```bash
+git switch main
+git pull
+```
+
+#### Start The Node
 
 ```bash
 ./scripts/start-zetacore.sh
 ```
 
+**Optional** The start-zetacore.sh script will automatically update the config file
+(~/.zetacored/config/config.toml) with a persistent peer. If you did not use
+the start-zetacored.sh script you need to update the config file manually with
+the peer information.
 
-**Wait until ZetaChain coordinator confirms that genesis is completed**. 
+#### Wait for Genesis to Complete
+
+**Wait until ZetaChain coordinator confirms that genesis is completed.** Then
 You can terminate the `zetacored` process that was manually started in the
 previous step. You'll want to resume zetacored using a more robust process
 management system. See the final section below for more information.
@@ -99,7 +115,7 @@ management system. See the final section below for more information.
 pkill zetacored
 ```
 
-## Phase 3: TSS Keygen (zetaclientd) 
+## Phase 3: TSS Keygen (zetaclientd)
 
 This phase applies to **Observer/Signer Validators only**. Most operators are `core
 validators` and can skip this step. If you aren't sure what you are, you are
@@ -118,17 +134,17 @@ each chain.
 - [BTC RPC Node Setup](btc-rpc.md)
 
 Edit the `zeta-client.toml` file located in the `.zetacored/config` directory
-and add the RPC endpoints to the `Endpoint = ` section of each chain. 
-
+and add the RPC endpoints to the `Endpoint = ` section of each chain.
 
 #### Start Zetaclient
-  - `KeygenBlock` and `SEEDIP` are provided by the the coordinator.
+
+- `KeygenBlock` and `SEEDIP` are provided by the the coordinator.
 
 ```bash
 ./scripts/start-zetaclient.sh -k <KeygenBlock> -s <SEEDIP>
 ```
 
-**Wait until zetachain coordinator confirms that TSS keygen is completed**. 
+**Wait until zetachain coordinator confirms that TSS keygen is completed**.
 Then terminate the processes `zetacored` and `zetaclientd`.
 
 ```bash
@@ -140,12 +156,12 @@ pkill zetacored
 
 These instructions are for the initial setup and genesis of the network. Running
 a validator 24/7 requires a more robust setup that will change depending on the
-environment you are running the validator in. At a minimum we reccomend you: 
+environment you are running the validator in. At a minimum we reccomend you:
+
 - [ ] Run each process as a systemd service or containerized service
 - [ ] Do NOT run these services as root. Create a new restricted ZetaChain user
-- [ ] Create Sentry nodes to protect your validator 
+- [ ] Create Sentry nodes to protect your validator
 - [ ] Make sure you setup resource monitoring (CPU, RAM, etc), uptime
-monitoring, log ingestion, etc to minimize the risk of downtime or slashing 
+      monitoring, log ingestion, etc to minimize the risk of downtime or slashing
 - [ ] Install adequate security measures such as, Endpoint protection, Anti-Virus,
-system level logging, WAF, etc  
-
+      system level logging, WAF, etc
