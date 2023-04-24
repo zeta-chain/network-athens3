@@ -1,0 +1,1268 @@
+{
+  "genesis_time": "2023-04-24T18:15:28.863376866Z",
+  "chain_id": "athens_7001-1",
+  "initial_height": "1",
+  "consensus_params": {
+    "block": {
+      "max_bytes": "22020096",
+      "max_gas": "10000000",
+      "time_iota_ms": "1000"
+    },
+    "evidence": {
+      "max_age_num_blocks": "100000",
+      "max_age_duration": "172800000000000",
+      "max_bytes": "1048576"
+    },
+    "validator": {
+      "pub_key_types": [
+        "ed25519"
+      ]
+    },
+    "version": {}
+  },
+  "app_hash": "",
+  "app_state": {
+    "auth": {
+      "params": {
+        "max_memo_characters": "256",
+        "tx_sig_limit": "7",
+        "tx_size_cost_per_byte": "10",
+        "sig_verify_cost_ed25519": "590",
+        "sig_verify_cost_secp256k1": "1000"
+      },
+      "accounts": [
+        {
+          "@type": "/ethermint.types.v1.EthAccount",
+          "base_account": {
+            "address": "zeta1r28vgnya7rplkwd6p3kgv4etwfptmgep7zqql3",
+            "pub_key": null,
+            "account_number": "0",
+            "sequence": "0"
+          },
+          "code_hash": "0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470"
+        },
+        {
+          "@type": "/ethermint.types.v1.EthAccount",
+          "base_account": {
+            "address": "zeta1u7mg4gu2yta3mfah0nr5duvexc9j7wwzrxp43k",
+            "pub_key": null,
+            "account_number": "0",
+            "sequence": "0"
+          },
+          "code_hash": "0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470"
+        },
+        {
+          "@type": "/ethermint.types.v1.EthAccount",
+          "base_account": {
+            "address": "zeta1h20tefzkvd7acsm3a3wekz768hw87pc9axuuxp",
+            "pub_key": null,
+            "account_number": "0",
+            "sequence": "0"
+          },
+          "code_hash": "0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470"
+        },
+        {
+          "@type": "/ethermint.types.v1.EthAccount",
+          "base_account": {
+            "address": "zeta16yx7vt8jkw3rh5eln5q6qatddlfwucamj765tc",
+            "pub_key": null,
+            "account_number": "0",
+            "sequence": "0"
+          },
+          "code_hash": "0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470"
+        },
+        {
+          "@type": "/ethermint.types.v1.EthAccount",
+          "base_account": {
+            "address": "zeta1e8uv2cn4ytjz8msdj2vj49ke6hrvj6lnt9rfez",
+            "pub_key": null,
+            "account_number": "0",
+            "sequence": "0"
+          },
+          "code_hash": "0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470"
+        },
+        {
+          "@type": "/ethermint.types.v1.EthAccount",
+          "base_account": {
+            "address": "zeta1cg3pphvfhzr0p742xsqy8qrkgpft2fad4p0gqv",
+            "pub_key": null,
+            "account_number": "0",
+            "sequence": "0"
+          },
+          "code_hash": "0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470"
+        },
+        {
+          "@type": "/ethermint.types.v1.EthAccount",
+          "base_account": {
+            "address": "zeta18p8mm05076yf6vdek8mfhkvmxauu6jvpwvyr0k",
+            "pub_key": null,
+            "account_number": "0",
+            "sequence": "0"
+          },
+          "code_hash": "0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470"
+        },
+        {
+          "@type": "/ethermint.types.v1.EthAccount",
+          "base_account": {
+            "address": "zeta16zn700qtn2luydgldtp05wg3899w82xjnghkjd",
+            "pub_key": null,
+            "account_number": "0",
+            "sequence": "0"
+          },
+          "code_hash": "0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470"
+        },
+        {
+          "@type": "/ethermint.types.v1.EthAccount",
+          "base_account": {
+            "address": "zeta1r295v3yqs9ra60hpy30lnvknvv8l07xa4g732a",
+            "pub_key": null,
+            "account_number": "0",
+            "sequence": "0"
+          },
+          "code_hash": "0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470"
+        },
+        {
+          "@type": "/ethermint.types.v1.EthAccount",
+          "base_account": {
+            "address": "zeta1denzz8nc0h7a48zzgpjp378gfs9p9twxwfrpx6",
+            "pub_key": null,
+            "account_number": "0",
+            "sequence": "0"
+          },
+          "code_hash": "0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470"
+        }
+      ]
+    },
+    "authz": {
+      "authorization": [
+        {
+          "granter": "zeta1r28vgnya7rplkwd6p3kgv4etwfptmgep7zqql3",
+          "grantee": "zeta1u7mg4gu2yta3mfah0nr5duvexc9j7wwzrxp43k",
+          "authorization": {
+            "@type": "/cosmos.authz.v1beta1.GenericAuthorization",
+            "msg": "/zetachain.zetacore.crosschain.MsgNonceVoter"
+          },
+          "expiration": null
+        },
+        {
+          "granter": "zeta1r28vgnya7rplkwd6p3kgv4etwfptmgep7zqql3",
+          "grantee": "zeta1u7mg4gu2yta3mfah0nr5duvexc9j7wwzrxp43k",
+          "authorization": {
+            "@type": "/cosmos.authz.v1beta1.GenericAuthorization",
+            "msg": "/zetachain.zetacore.crosschain.MsgGasPriceVoter"
+          },
+          "expiration": null
+        },
+        {
+          "granter": "zeta1r28vgnya7rplkwd6p3kgv4etwfptmgep7zqql3",
+          "grantee": "zeta1u7mg4gu2yta3mfah0nr5duvexc9j7wwzrxp43k",
+          "authorization": {
+            "@type": "/cosmos.authz.v1beta1.GenericAuthorization",
+            "msg": "/zetachain.zetacore.crosschain.MsgVoteOnObservedInboundTx"
+          },
+          "expiration": null
+        },
+        {
+          "granter": "zeta1r28vgnya7rplkwd6p3kgv4etwfptmgep7zqql3",
+          "grantee": "zeta1u7mg4gu2yta3mfah0nr5duvexc9j7wwzrxp43k",
+          "authorization": {
+            "@type": "/cosmos.authz.v1beta1.GenericAuthorization",
+            "msg": "/zetachain.zetacore.crosschain.MsgVoteOnObservedOutboundTx"
+          },
+          "expiration": null
+        },
+        {
+          "granter": "zeta1r28vgnya7rplkwd6p3kgv4etwfptmgep7zqql3",
+          "grantee": "zeta1u7mg4gu2yta3mfah0nr5duvexc9j7wwzrxp43k",
+          "authorization": {
+            "@type": "/cosmos.authz.v1beta1.GenericAuthorization",
+            "msg": "/zetachain.zetacore.crosschain.MsgSetNodeKeys"
+          },
+          "expiration": null
+        },
+        {
+          "granter": "zeta1r28vgnya7rplkwd6p3kgv4etwfptmgep7zqql3",
+          "grantee": "zeta1u7mg4gu2yta3mfah0nr5duvexc9j7wwzrxp43k",
+          "authorization": {
+            "@type": "/cosmos.authz.v1beta1.GenericAuthorization",
+            "msg": "/zetachain.zetacore.crosschain.MsgCreateTSSVoter"
+          },
+          "expiration": null
+        },
+        {
+          "granter": "zeta1r28vgnya7rplkwd6p3kgv4etwfptmgep7zqql3",
+          "grantee": "zeta1u7mg4gu2yta3mfah0nr5duvexc9j7wwzrxp43k",
+          "authorization": {
+            "@type": "/cosmos.authz.v1beta1.GenericAuthorization",
+            "msg": "/zetachain.zetacore.crosschain.MsgAddToOutTxTracker"
+          },
+          "expiration": null
+        },
+        {
+          "granter": "zeta1r28vgnya7rplkwd6p3kgv4etwfptmgep7zqql3",
+          "grantee": "zeta1u7mg4gu2yta3mfah0nr5duvexc9j7wwzrxp43k",
+          "authorization": {
+            "@type": "/cosmos.authz.v1beta1.GenericAuthorization",
+            "msg": "/zetachain.zetacore.crosschain.MsgSetNodeKeys"
+          },
+          "expiration": null
+        },
+        {
+          "granter": "zeta1h20tefzkvd7acsm3a3wekz768hw87pc9axuuxp",
+          "grantee": "zeta16yx7vt8jkw3rh5eln5q6qatddlfwucamj765tc",
+          "authorization": {
+            "@type": "/cosmos.authz.v1beta1.GenericAuthorization",
+            "msg": "/zetachain.zetacore.crosschain.MsgNonceVoter"
+          },
+          "expiration": null
+        },
+        {
+          "granter": "zeta1h20tefzkvd7acsm3a3wekz768hw87pc9axuuxp",
+          "grantee": "zeta16yx7vt8jkw3rh5eln5q6qatddlfwucamj765tc",
+          "authorization": {
+            "@type": "/cosmos.authz.v1beta1.GenericAuthorization",
+            "msg": "/zetachain.zetacore.crosschain.MsgGasPriceVoter"
+          },
+          "expiration": null
+        },
+        {
+          "granter": "zeta1h20tefzkvd7acsm3a3wekz768hw87pc9axuuxp",
+          "grantee": "zeta16yx7vt8jkw3rh5eln5q6qatddlfwucamj765tc",
+          "authorization": {
+            "@type": "/cosmos.authz.v1beta1.GenericAuthorization",
+            "msg": "/zetachain.zetacore.crosschain.MsgVoteOnObservedInboundTx"
+          },
+          "expiration": null
+        },
+        {
+          "granter": "zeta1h20tefzkvd7acsm3a3wekz768hw87pc9axuuxp",
+          "grantee": "zeta16yx7vt8jkw3rh5eln5q6qatddlfwucamj765tc",
+          "authorization": {
+            "@type": "/cosmos.authz.v1beta1.GenericAuthorization",
+            "msg": "/zetachain.zetacore.crosschain.MsgVoteOnObservedOutboundTx"
+          },
+          "expiration": null
+        },
+        {
+          "granter": "zeta1h20tefzkvd7acsm3a3wekz768hw87pc9axuuxp",
+          "grantee": "zeta16yx7vt8jkw3rh5eln5q6qatddlfwucamj765tc",
+          "authorization": {
+            "@type": "/cosmos.authz.v1beta1.GenericAuthorization",
+            "msg": "/zetachain.zetacore.crosschain.MsgSetNodeKeys"
+          },
+          "expiration": null
+        },
+        {
+          "granter": "zeta1h20tefzkvd7acsm3a3wekz768hw87pc9axuuxp",
+          "grantee": "zeta16yx7vt8jkw3rh5eln5q6qatddlfwucamj765tc",
+          "authorization": {
+            "@type": "/cosmos.authz.v1beta1.GenericAuthorization",
+            "msg": "/zetachain.zetacore.crosschain.MsgCreateTSSVoter"
+          },
+          "expiration": null
+        },
+        {
+          "granter": "zeta1h20tefzkvd7acsm3a3wekz768hw87pc9axuuxp",
+          "grantee": "zeta16yx7vt8jkw3rh5eln5q6qatddlfwucamj765tc",
+          "authorization": {
+            "@type": "/cosmos.authz.v1beta1.GenericAuthorization",
+            "msg": "/zetachain.zetacore.crosschain.MsgAddToOutTxTracker"
+          },
+          "expiration": null
+        },
+        {
+          "granter": "zeta1h20tefzkvd7acsm3a3wekz768hw87pc9axuuxp",
+          "grantee": "zeta16yx7vt8jkw3rh5eln5q6qatddlfwucamj765tc",
+          "authorization": {
+            "@type": "/cosmos.authz.v1beta1.GenericAuthorization",
+            "msg": "/zetachain.zetacore.crosschain.MsgSetNodeKeys"
+          },
+          "expiration": null
+        },
+        {
+          "granter": "zeta1e8uv2cn4ytjz8msdj2vj49ke6hrvj6lnt9rfez",
+          "grantee": "zeta1cg3pphvfhzr0p742xsqy8qrkgpft2fad4p0gqv",
+          "authorization": {
+            "@type": "/cosmos.authz.v1beta1.GenericAuthorization",
+            "msg": "/zetachain.zetacore.crosschain.MsgNonceVoter"
+          },
+          "expiration": null
+        },
+        {
+          "granter": "zeta1e8uv2cn4ytjz8msdj2vj49ke6hrvj6lnt9rfez",
+          "grantee": "zeta1cg3pphvfhzr0p742xsqy8qrkgpft2fad4p0gqv",
+          "authorization": {
+            "@type": "/cosmos.authz.v1beta1.GenericAuthorization",
+            "msg": "/zetachain.zetacore.crosschain.MsgGasPriceVoter"
+          },
+          "expiration": null
+        },
+        {
+          "granter": "zeta1e8uv2cn4ytjz8msdj2vj49ke6hrvj6lnt9rfez",
+          "grantee": "zeta1cg3pphvfhzr0p742xsqy8qrkgpft2fad4p0gqv",
+          "authorization": {
+            "@type": "/cosmos.authz.v1beta1.GenericAuthorization",
+            "msg": "/zetachain.zetacore.crosschain.MsgVoteOnObservedInboundTx"
+          },
+          "expiration": null
+        },
+        {
+          "granter": "zeta1e8uv2cn4ytjz8msdj2vj49ke6hrvj6lnt9rfez",
+          "grantee": "zeta1cg3pphvfhzr0p742xsqy8qrkgpft2fad4p0gqv",
+          "authorization": {
+            "@type": "/cosmos.authz.v1beta1.GenericAuthorization",
+            "msg": "/zetachain.zetacore.crosschain.MsgVoteOnObservedOutboundTx"
+          },
+          "expiration": null
+        },
+        {
+          "granter": "zeta1e8uv2cn4ytjz8msdj2vj49ke6hrvj6lnt9rfez",
+          "grantee": "zeta1cg3pphvfhzr0p742xsqy8qrkgpft2fad4p0gqv",
+          "authorization": {
+            "@type": "/cosmos.authz.v1beta1.GenericAuthorization",
+            "msg": "/zetachain.zetacore.crosschain.MsgSetNodeKeys"
+          },
+          "expiration": null
+        },
+        {
+          "granter": "zeta1e8uv2cn4ytjz8msdj2vj49ke6hrvj6lnt9rfez",
+          "grantee": "zeta1cg3pphvfhzr0p742xsqy8qrkgpft2fad4p0gqv",
+          "authorization": {
+            "@type": "/cosmos.authz.v1beta1.GenericAuthorization",
+            "msg": "/zetachain.zetacore.crosschain.MsgCreateTSSVoter"
+          },
+          "expiration": null
+        },
+        {
+          "granter": "zeta1e8uv2cn4ytjz8msdj2vj49ke6hrvj6lnt9rfez",
+          "grantee": "zeta1cg3pphvfhzr0p742xsqy8qrkgpft2fad4p0gqv",
+          "authorization": {
+            "@type": "/cosmos.authz.v1beta1.GenericAuthorization",
+            "msg": "/zetachain.zetacore.crosschain.MsgAddToOutTxTracker"
+          },
+          "expiration": null
+        },
+        {
+          "granter": "zeta1e8uv2cn4ytjz8msdj2vj49ke6hrvj6lnt9rfez",
+          "grantee": "zeta1cg3pphvfhzr0p742xsqy8qrkgpft2fad4p0gqv",
+          "authorization": {
+            "@type": "/cosmos.authz.v1beta1.GenericAuthorization",
+            "msg": "/zetachain.zetacore.crosschain.MsgSetNodeKeys"
+          },
+          "expiration": null
+        },
+        {
+          "granter": "zeta18p8mm05076yf6vdek8mfhkvmxauu6jvpwvyr0k",
+          "grantee": "zeta16zn700qtn2luydgldtp05wg3899w82xjnghkjd",
+          "authorization": {
+            "@type": "/cosmos.authz.v1beta1.GenericAuthorization",
+            "msg": "/zetachain.zetacore.crosschain.MsgNonceVoter"
+          },
+          "expiration": null
+        },
+        {
+          "granter": "zeta18p8mm05076yf6vdek8mfhkvmxauu6jvpwvyr0k",
+          "grantee": "zeta16zn700qtn2luydgldtp05wg3899w82xjnghkjd",
+          "authorization": {
+            "@type": "/cosmos.authz.v1beta1.GenericAuthorization",
+            "msg": "/zetachain.zetacore.crosschain.MsgGasPriceVoter"
+          },
+          "expiration": null
+        },
+        {
+          "granter": "zeta18p8mm05076yf6vdek8mfhkvmxauu6jvpwvyr0k",
+          "grantee": "zeta16zn700qtn2luydgldtp05wg3899w82xjnghkjd",
+          "authorization": {
+            "@type": "/cosmos.authz.v1beta1.GenericAuthorization",
+            "msg": "/zetachain.zetacore.crosschain.MsgVoteOnObservedInboundTx"
+          },
+          "expiration": null
+        },
+        {
+          "granter": "zeta18p8mm05076yf6vdek8mfhkvmxauu6jvpwvyr0k",
+          "grantee": "zeta16zn700qtn2luydgldtp05wg3899w82xjnghkjd",
+          "authorization": {
+            "@type": "/cosmos.authz.v1beta1.GenericAuthorization",
+            "msg": "/zetachain.zetacore.crosschain.MsgVoteOnObservedOutboundTx"
+          },
+          "expiration": null
+        },
+        {
+          "granter": "zeta18p8mm05076yf6vdek8mfhkvmxauu6jvpwvyr0k",
+          "grantee": "zeta16zn700qtn2luydgldtp05wg3899w82xjnghkjd",
+          "authorization": {
+            "@type": "/cosmos.authz.v1beta1.GenericAuthorization",
+            "msg": "/zetachain.zetacore.crosschain.MsgSetNodeKeys"
+          },
+          "expiration": null
+        },
+        {
+          "granter": "zeta18p8mm05076yf6vdek8mfhkvmxauu6jvpwvyr0k",
+          "grantee": "zeta16zn700qtn2luydgldtp05wg3899w82xjnghkjd",
+          "authorization": {
+            "@type": "/cosmos.authz.v1beta1.GenericAuthorization",
+            "msg": "/zetachain.zetacore.crosschain.MsgCreateTSSVoter"
+          },
+          "expiration": null
+        },
+        {
+          "granter": "zeta18p8mm05076yf6vdek8mfhkvmxauu6jvpwvyr0k",
+          "grantee": "zeta16zn700qtn2luydgldtp05wg3899w82xjnghkjd",
+          "authorization": {
+            "@type": "/cosmos.authz.v1beta1.GenericAuthorization",
+            "msg": "/zetachain.zetacore.crosschain.MsgAddToOutTxTracker"
+          },
+          "expiration": null
+        },
+        {
+          "granter": "zeta18p8mm05076yf6vdek8mfhkvmxauu6jvpwvyr0k",
+          "grantee": "zeta16zn700qtn2luydgldtp05wg3899w82xjnghkjd",
+          "authorization": {
+            "@type": "/cosmos.authz.v1beta1.GenericAuthorization",
+            "msg": "/zetachain.zetacore.crosschain.MsgSetNodeKeys"
+          },
+          "expiration": null
+        },
+        {
+          "granter": "zeta1r295v3yqs9ra60hpy30lnvknvv8l07xa4g732a",
+          "grantee": "zeta1denzz8nc0h7a48zzgpjp378gfs9p9twxwfrpx6",
+          "authorization": {
+            "@type": "/cosmos.authz.v1beta1.GenericAuthorization",
+            "msg": "/zetachain.zetacore.crosschain.MsgNonceVoter"
+          },
+          "expiration": null
+        },
+        {
+          "granter": "zeta1r295v3yqs9ra60hpy30lnvknvv8l07xa4g732a",
+          "grantee": "zeta1denzz8nc0h7a48zzgpjp378gfs9p9twxwfrpx6",
+          "authorization": {
+            "@type": "/cosmos.authz.v1beta1.GenericAuthorization",
+            "msg": "/zetachain.zetacore.crosschain.MsgGasPriceVoter"
+          },
+          "expiration": null
+        },
+        {
+          "granter": "zeta1r295v3yqs9ra60hpy30lnvknvv8l07xa4g732a",
+          "grantee": "zeta1denzz8nc0h7a48zzgpjp378gfs9p9twxwfrpx6",
+          "authorization": {
+            "@type": "/cosmos.authz.v1beta1.GenericAuthorization",
+            "msg": "/zetachain.zetacore.crosschain.MsgVoteOnObservedInboundTx"
+          },
+          "expiration": null
+        },
+        {
+          "granter": "zeta1r295v3yqs9ra60hpy30lnvknvv8l07xa4g732a",
+          "grantee": "zeta1denzz8nc0h7a48zzgpjp378gfs9p9twxwfrpx6",
+          "authorization": {
+            "@type": "/cosmos.authz.v1beta1.GenericAuthorization",
+            "msg": "/zetachain.zetacore.crosschain.MsgVoteOnObservedOutboundTx"
+          },
+          "expiration": null
+        },
+        {
+          "granter": "zeta1r295v3yqs9ra60hpy30lnvknvv8l07xa4g732a",
+          "grantee": "zeta1denzz8nc0h7a48zzgpjp378gfs9p9twxwfrpx6",
+          "authorization": {
+            "@type": "/cosmos.authz.v1beta1.GenericAuthorization",
+            "msg": "/zetachain.zetacore.crosschain.MsgSetNodeKeys"
+          },
+          "expiration": null
+        },
+        {
+          "granter": "zeta1r295v3yqs9ra60hpy30lnvknvv8l07xa4g732a",
+          "grantee": "zeta1denzz8nc0h7a48zzgpjp378gfs9p9twxwfrpx6",
+          "authorization": {
+            "@type": "/cosmos.authz.v1beta1.GenericAuthorization",
+            "msg": "/zetachain.zetacore.crosschain.MsgCreateTSSVoter"
+          },
+          "expiration": null
+        },
+        {
+          "granter": "zeta1r295v3yqs9ra60hpy30lnvknvv8l07xa4g732a",
+          "grantee": "zeta1denzz8nc0h7a48zzgpjp378gfs9p9twxwfrpx6",
+          "authorization": {
+            "@type": "/cosmos.authz.v1beta1.GenericAuthorization",
+            "msg": "/zetachain.zetacore.crosschain.MsgAddToOutTxTracker"
+          },
+          "expiration": null
+        },
+        {
+          "granter": "zeta1r295v3yqs9ra60hpy30lnvknvv8l07xa4g732a",
+          "grantee": "zeta1denzz8nc0h7a48zzgpjp378gfs9p9twxwfrpx6",
+          "authorization": {
+            "@type": "/cosmos.authz.v1beta1.GenericAuthorization",
+            "msg": "/zetachain.zetacore.crosschain.MsgSetNodeKeys"
+          },
+          "expiration": null
+        }
+      ]
+    },
+    "bank": {
+      "params": {
+        "send_enabled": [],
+        "default_send_enabled": true
+      },
+      "balances": [
+        {
+          "address": "zeta1r295v3yqs9ra60hpy30lnvknvv8l07xa4g732a",
+          "coins": [
+            {
+              "denom": "azeta",
+              "amount": "100000000000000000000000"
+            }
+          ]
+        },
+        {
+          "address": "zeta1r28vgnya7rplkwd6p3kgv4etwfptmgep7zqql3",
+          "coins": [
+            {
+              "denom": "azeta",
+              "amount": "100000000000000000000000"
+            }
+          ]
+        },
+        {
+          "address": "zeta18p8mm05076yf6vdek8mfhkvmxauu6jvpwvyr0k",
+          "coins": [
+            {
+              "denom": "azeta",
+              "amount": "100000000000000000000000"
+            }
+          ]
+        },
+        {
+          "address": "zeta1denzz8nc0h7a48zzgpjp378gfs9p9twxwfrpx6",
+          "coins": [
+            {
+              "denom": "azeta",
+              "amount": "100000000000000000000"
+            }
+          ]
+        },
+        {
+          "address": "zeta1h20tefzkvd7acsm3a3wekz768hw87pc9axuuxp",
+          "coins": [
+            {
+              "denom": "azeta",
+              "amount": "100000000000000000000000"
+            }
+          ]
+        },
+        {
+          "address": "zeta1cg3pphvfhzr0p742xsqy8qrkgpft2fad4p0gqv",
+          "coins": [
+            {
+              "denom": "azeta",
+              "amount": "100000000000000000000"
+            }
+          ]
+        },
+        {
+          "address": "zeta1e8uv2cn4ytjz8msdj2vj49ke6hrvj6lnt9rfez",
+          "coins": [
+            {
+              "denom": "azeta",
+              "amount": "100000000000000000000000"
+            }
+          ]
+        },
+        {
+          "address": "zeta16zn700qtn2luydgldtp05wg3899w82xjnghkjd",
+          "coins": [
+            {
+              "denom": "azeta",
+              "amount": "100000000000000000000"
+            }
+          ]
+        },
+        {
+          "address": "zeta16yx7vt8jkw3rh5eln5q6qatddlfwucamj765tc",
+          "coins": [
+            {
+              "denom": "azeta",
+              "amount": "100000000000000000000"
+            }
+          ]
+        },
+        {
+          "address": "zeta1u7mg4gu2yta3mfah0nr5duvexc9j7wwzrxp43k",
+          "coins": [
+            {
+              "denom": "azeta",
+              "amount": "100000000000000000000"
+            }
+          ]
+        }
+      ],
+      "supply": [
+        {
+          "denom": "azeta",
+          "amount": "500500000000000000000000"
+        }
+      ],
+      "denom_metadata": []
+    },
+    "capability": {
+      "index": "1",
+      "owners": []
+    },
+    "crisis": {
+      "constant_fee": {
+        "denom": "azeta",
+        "amount": "1000"
+      }
+    },
+    "crosschain": {
+      "params": {},
+      "outTxTrackerList": [],
+      "nodeAccountList": [
+        {
+          "creator": "zeta1r28vgnya7rplkwd6p3kgv4etwfptmgep7zqql3",
+          "tssSignerAddress": "zeta1u7mg4gu2yta3mfah0nr5duvexc9j7wwzrxp43k",
+          "pubkeySet": {
+            "secp256k1": "zetapub1addwnpepqt9x4cjewv94wspvhvx6pgle3ujytvwjc3wmdez4fa0qmle56pxqw4vy3ne"
+          },
+          "nodeStatus": 4
+        },
+        {
+          "creator": "zeta1h20tefzkvd7acsm3a3wekz768hw87pc9axuuxp",
+          "tssSignerAddress": "zeta16yx7vt8jkw3rh5eln5q6qatddlfwucamj765tc",
+          "pubkeySet": {
+            "secp256k1": "zetapub1addwnpepq08ant7p3ne3xm4uf60k45wwrsws4rxa9emcgr8wvgtn6afmwt64u0nmfwl"
+          },
+          "nodeStatus": 4
+        },
+        {
+          "creator": "zeta1e8uv2cn4ytjz8msdj2vj49ke6hrvj6lnt9rfez",
+          "tssSignerAddress": "zeta1cg3pphvfhzr0p742xsqy8qrkgpft2fad4p0gqv",
+          "pubkeySet": {
+            "secp256k1": "zetapub1addwnpepq29w6sw03jlt0hwc8yfaxxrqk0a662lwwdzsjusekp64vhu2chjyxy43wup"
+          },
+          "nodeStatus": 4
+        },
+        {
+          "creator": "zeta18p8mm05076yf6vdek8mfhkvmxauu6jvpwvyr0k",
+          "tssSignerAddress": "zeta16zn700qtn2luydgldtp05wg3899w82xjnghkjd",
+          "pubkeySet": {
+            "secp256k1": "zetapub1addwnpepqwd2tff64a3a0afwzve65nkfmlgdkgn5lgae74dtdvt2wsyu8pgwzzzwcc7"
+          },
+          "nodeStatus": 4
+        },
+        {
+          "creator": "zeta1r295v3yqs9ra60hpy30lnvknvv8l07xa4g732a",
+          "tssSignerAddress": "zeta1denzz8nc0h7a48zzgpjp378gfs9p9twxwfrpx6",
+          "pubkeySet": {
+            "secp256k1": "zetapub1addwnpepqf4destmmdjjfmrnlnpep75mrcp9cxgcqq7v8lardxsdu2sxnkf0jczpuh8"
+          },
+          "nodeStatus": 4
+        }
+      ],
+      "inTxHashToCctxList": []
+    },
+    "distribution": {
+      "params": {
+        "community_tax": "0.020000000000000000",
+        "base_proposer_reward": "0.010000000000000000",
+        "bonus_proposer_reward": "0.040000000000000000",
+        "withdraw_addr_enabled": true
+      },
+      "fee_pool": {
+        "community_pool": []
+      },
+      "delegator_withdraw_infos": [],
+      "previous_proposer": "",
+      "outstanding_rewards": [],
+      "validator_accumulated_commissions": [],
+      "validator_historical_rewards": [],
+      "validator_current_rewards": [],
+      "delegator_starting_infos": [],
+      "validator_slash_events": []
+    },
+    "emissions": {
+      "params": {
+        "max_bond_factor": "1.25",
+        "min_bond_factor": "0.75",
+        "avg_block_time": "6.00",
+        "target_bond_ratio": "00.67",
+        "validator_emission_percentage": "00.50",
+        "observer_emission_percentage": "00.25",
+        "tss_signer_emission_percentage": "00.25",
+        "duration_factor_constant": "0.001877876953694702"
+      }
+    },
+    "evidence": {
+      "evidence": []
+    },
+    "evm": {
+      "accounts": [],
+      "params": {
+        "evm_denom": "azeta",
+        "enable_create": true,
+        "enable_call": true,
+        "extra_eips": [],
+        "chain_config": {
+          "homestead_block": "0",
+          "dao_fork_block": "0",
+          "dao_fork_support": true,
+          "eip150_block": "0",
+          "eip150_hash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "eip155_block": "0",
+          "eip158_block": "0",
+          "byzantium_block": "0",
+          "constantinople_block": "0",
+          "petersburg_block": "0",
+          "istanbul_block": "0",
+          "muir_glacier_block": "0",
+          "berlin_block": "0",
+          "london_block": "0",
+          "arrow_glacier_block": "0",
+          "gray_glacier_block": "0",
+          "merge_netsplit_block": "0",
+          "shanghai_block": "0",
+          "cancun_block": "0"
+        },
+        "allow_unprotected_txs": false
+      }
+    },
+    "feemarket": {
+      "params": {
+        "no_base_fee": false,
+        "base_fee_change_denominator": 8,
+        "elasticity_multiplier": 2,
+        "enable_height": "0",
+        "base_fee": "1000000000",
+        "min_gas_price": "0.000000000000000000",
+        "min_gas_multiplier": "0.500000000000000000"
+      },
+      "block_gas": "0"
+    },
+    "fungible": {
+      "params": {},
+      "foreignCoinsList": [],
+      "systemContract": null
+    },
+    "genutil": {
+      "gen_txs": [
+        {
+          "body": {
+            "messages": [
+              {
+                "@type": "/cosmos.staking.v1beta1.MsgCreateValidator",
+                "description": {
+                  "moniker": "Zetanode_ip-172-24-1-165.ec2.internal",
+                  "identity": "",
+                  "website": "",
+                  "security_contact": "",
+                  "details": ""
+                },
+                "commission": {
+                  "rate": "0.100000000000000000",
+                  "max_rate": "0.200000000000000000",
+                  "max_change_rate": "0.010000000000000000"
+                },
+                "min_self_delegation": "1",
+                "delegator_address": "zeta1r28vgnya7rplkwd6p3kgv4etwfptmgep7zqql3",
+                "validator_address": "zetavaloper1r28vgnya7rplkwd6p3kgv4etwfptmgep6zcuj8",
+                "pubkey": {
+                  "@type": "/cosmos.crypto.ed25519.PubKey",
+                  "key": "od3/XDYhQe1P3gdQ6egiFC7fCvAcanNCTLTW2rpfMFU="
+                },
+                "value": {
+                  "denom": "azeta",
+                  "amount": "1000000000000000000000"
+                }
+              }
+            ],
+            "memo": "119ba325b6c706422aedd845b13899fe6229fa10@172.24.1.165:26656",
+            "timeout_height": "0",
+            "extension_options": [],
+            "non_critical_extension_options": []
+          },
+          "auth_info": {
+            "signer_infos": [
+              {
+                "public_key": {
+                  "@type": "/cosmos.crypto.secp256k1.PubKey",
+                  "key": "A2kMD8rnN2Px/mHPF8UNWK/JlyuLYwAVNJDIUWczD+4f"
+                },
+                "mode_info": {
+                  "single": {
+                    "mode": "SIGN_MODE_DIRECT"
+                  }
+                },
+                "sequence": "0"
+              }
+            ],
+            "fee": {
+              "amount": [],
+              "gas_limit": "200000",
+              "payer": "",
+              "granter": ""
+            },
+            "tip": null
+          },
+          "signatures": [
+            "aMCcD389g3f78IT0I1k8X9exOgHQFIbrdrISzpUPSME4okUbtNkarONraQUiEToEW1S3vXmEk70jkdyzmcnzdA=="
+          ]
+        },
+        {
+          "body": {
+            "messages": [
+              {
+                "@type": "/cosmos.staking.v1beta1.MsgCreateValidator",
+                "description": {
+                  "moniker": "test",
+                  "identity": "",
+                  "website": "",
+                  "security_contact": "",
+                  "details": ""
+                },
+                "commission": {
+                  "rate": "0.100000000000000000",
+                  "max_rate": "0.200000000000000000",
+                  "max_change_rate": "0.010000000000000000"
+                },
+                "min_self_delegation": "1",
+                "delegator_address": "zeta1e8uv2cn4ytjz8msdj2vj49ke6hrvj6lnt9rfez",
+                "validator_address": "zetavaloper1e8uv2cn4ytjz8msdj2vj49ke6hrvj6ln09m455",
+                "pubkey": {
+                  "@type": "/cosmos.crypto.ed25519.PubKey",
+                  "key": "P7UjsfEqGp1u39fjD8mTp+F5d2pdvCGedxx+kaCywdA="
+                },
+                "value": {
+                  "denom": "azeta",
+                  "amount": "1000000000000000000000"
+                }
+              }
+            ],
+            "memo": "2af8a5ff35b7bddece613f95c2af428ac0f4d062@172.28.202.58:26656",
+            "timeout_height": "0",
+            "extension_options": [],
+            "non_critical_extension_options": []
+          },
+          "auth_info": {
+            "signer_infos": [
+              {
+                "public_key": {
+                  "@type": "/cosmos.crypto.secp256k1.PubKey",
+                  "key": "AxBz+HnDfURRr9kBACBpuTzGuLQT7b/MwKySexF8SW+W"
+                },
+                "mode_info": {
+                  "single": {
+                    "mode": "SIGN_MODE_DIRECT"
+                  }
+                },
+                "sequence": "0"
+              }
+            ],
+            "fee": {
+              "amount": [],
+              "gas_limit": "200000",
+              "payer": "",
+              "granter": ""
+            },
+            "tip": null
+          },
+          "signatures": [
+            "XWsS0FdnsZ20/SLxzAOrdWCXXphAENyC+Ha9G7i+6bdvLwibgMf2H0PGfJpNGJ/ibFxNFj39To/8yF5ZdyZ/Cw=="
+          ]
+        },
+        {
+          "body": {
+            "messages": [
+              {
+                "@type": "/cosmos.staking.v1beta1.MsgCreateValidator",
+                "description": {
+                  "moniker": "Zetanode_ip-172-31-44-162",
+                  "identity": "",
+                  "website": "",
+                  "security_contact": "",
+                  "details": ""
+                },
+                "commission": {
+                  "rate": "0.100000000000000000",
+                  "max_rate": "0.200000000000000000",
+                  "max_change_rate": "0.010000000000000000"
+                },
+                "min_self_delegation": "1",
+                "delegator_address": "zeta1r295v3yqs9ra60hpy30lnvknvv8l07xa4g732a",
+                "validator_address": "zetavaloper1r295v3yqs9ra60hpy30lnvknvv8l07xa3gxd8t",
+                "pubkey": {
+                  "@type": "/cosmos.crypto.ed25519.PubKey",
+                  "key": "iaCs+YkbebmdNn69op3jqCigyM4JRR7oE91KnW26wLk="
+                },
+                "value": {
+                  "denom": "azeta",
+                  "amount": "1000000000000000000000"
+                }
+              }
+            ],
+            "memo": "78b6b862fd30fc442d76b8ed0be95883fa126683@172.31.44.162:26656",
+            "timeout_height": "0",
+            "extension_options": [],
+            "non_critical_extension_options": []
+          },
+          "auth_info": {
+            "signer_infos": [
+              {
+                "public_key": {
+                  "@type": "/cosmos.crypto.secp256k1.PubKey",
+                  "key": "AoN/09kBsPEApYUgkKRwG5Z06WjXOfVrHBAoNoAkTTSk"
+                },
+                "mode_info": {
+                  "single": {
+                    "mode": "SIGN_MODE_DIRECT"
+                  }
+                },
+                "sequence": "0"
+              }
+            ],
+            "fee": {
+              "amount": [],
+              "gas_limit": "200000",
+              "payer": "",
+              "granter": ""
+            },
+            "tip": null
+          },
+          "signatures": [
+            "1+GNC/0HAIBKdAstYRC74TxUwcznWArV0GCf6IqzHq8RuXgMvhQsGKf3WzpuaMyaNd0mH5+eQ6KJxkEC8qq4BQ=="
+          ]
+        },
+        {
+          "body": {
+            "messages": [
+              {
+                "@type": "/cosmos.staking.v1beta1.MsgCreateValidator",
+                "description": {
+                  "moniker": "test",
+                  "identity": "",
+                  "website": "",
+                  "security_contact": "",
+                  "details": ""
+                },
+                "commission": {
+                  "rate": "0.100000000000000000",
+                  "max_rate": "0.200000000000000000",
+                  "max_change_rate": "0.010000000000000000"
+                },
+                "min_self_delegation": "1",
+                "delegator_address": "zeta1h20tefzkvd7acsm3a3wekz768hw87pc9axuuxp",
+                "validator_address": "zetavaloper1h20tefzkvd7acsm3a3wekz768hw87pc9exyqth",
+                "pubkey": {
+                  "@type": "/cosmos.crypto.ed25519.PubKey",
+                  "key": "jsRQi4sfcSgUcaWBjoq8OmsAFmV+PtTMr5erR0IO/G4="
+                },
+                "value": {
+                  "denom": "azeta",
+                  "amount": "1000000000000000000000"
+                }
+              }
+            ],
+            "memo": "dc40518d8e8fa23b48e17de4e211a07f04168e5c@172.28.10.110:26656",
+            "timeout_height": "0",
+            "extension_options": [],
+            "non_critical_extension_options": []
+          },
+          "auth_info": {
+            "signer_infos": [
+              {
+                "public_key": {
+                  "@type": "/cosmos.crypto.secp256k1.PubKey",
+                  "key": "AzW2LEuiuTEanyebJUWFFc5g19fJJQMESqz8NDCntLBV"
+                },
+                "mode_info": {
+                  "single": {
+                    "mode": "SIGN_MODE_DIRECT"
+                  }
+                },
+                "sequence": "0"
+              }
+            ],
+            "fee": {
+              "amount": [],
+              "gas_limit": "200000",
+              "payer": "",
+              "granter": ""
+            },
+            "tip": null
+          },
+          "signatures": [
+            "eSPwc4DsLDoOeyF7DxAW/pcxgu6ts+KYmk3FZ8Ng3KouMtiA4bpBI/WPL84h24jXxD3aLTNKNrY2ahc2If/20w=="
+          ]
+        },
+        {
+          "body": {
+            "messages": [
+              {
+                "@type": "/cosmos.staking.v1beta1.MsgCreateValidator",
+                "description": {
+                  "moniker": "Zetanode_ip-172-31-17-94",
+                  "identity": "",
+                  "website": "",
+                  "security_contact": "",
+                  "details": ""
+                },
+                "commission": {
+                  "rate": "0.100000000000000000",
+                  "max_rate": "0.200000000000000000",
+                  "max_change_rate": "0.010000000000000000"
+                },
+                "min_self_delegation": "1",
+                "delegator_address": "zeta18p8mm05076yf6vdek8mfhkvmxauu6jvpwvyr0k",
+                "validator_address": "zetavaloper18p8mm05076yf6vdek8mfhkvmxauu6jvp2vulzq",
+                "pubkey": {
+                  "@type": "/cosmos.crypto.ed25519.PubKey",
+                  "key": "c7GnKWl+rsNAD8loP0TkUdbOFZURDR/+wBgZltbzvTE="
+                },
+                "value": {
+                  "denom": "azeta",
+                  "amount": "1000000000000000000000"
+                }
+              }
+            ],
+            "memo": "f26656ae7b46b614fb22eea735db3042fa5eb5a5@172.31.17.94:26656",
+            "timeout_height": "0",
+            "extension_options": [],
+            "non_critical_extension_options": []
+          },
+          "auth_info": {
+            "signer_infos": [
+              {
+                "public_key": {
+                  "@type": "/cosmos.crypto.secp256k1.PubKey",
+                  "key": "A1gF6rXowdest5CNi5J+iwoe8z9tULuj701fSKNUryDE"
+                },
+                "mode_info": {
+                  "single": {
+                    "mode": "SIGN_MODE_DIRECT"
+                  }
+                },
+                "sequence": "0"
+              }
+            ],
+            "fee": {
+              "amount": [],
+              "gas_limit": "200000",
+              "payer": "",
+              "granter": ""
+            },
+            "tip": null
+          },
+          "signatures": [
+            "wzTXWpCizW3AHcPeieGE/QCZ1ZazE9axddP0kuCqrhQsLuSEODA5CnSWLYZvxxx/P4hNJNein3jKYRPdOfx3XA=="
+          ]
+        }
+      ]
+    },
+    "gov": {
+      "starting_proposal_id": "1",
+      "deposits": [],
+      "votes": [],
+      "proposals": [],
+      "deposit_params": {
+        "min_deposit": [
+          {
+            "denom": "azeta",
+            "amount": "10000000"
+          }
+        ],
+        "max_deposit_period": "172800s"
+      },
+      "voting_params": {
+        "voting_period": "10s"
+      },
+      "tally_params": {
+        "quorum": "0.334000000000000000",
+        "threshold": "0.500000000000000000",
+        "veto_threshold": "0.334000000000000000"
+      }
+    },
+    "group": {
+      "group_seq": "0",
+      "groups": [],
+      "group_members": [],
+      "group_policy_seq": "0",
+      "group_policies": [],
+      "proposal_seq": "0",
+      "proposals": [],
+      "votes": []
+    },
+    "mint": {
+      "params": {
+        "mint_denom": "azeta"
+      }
+    },
+    "observer": {
+      "observers": [
+        {
+          "observer_chain": {
+            "chain_name": 11,
+            "chain_id": 7001
+          },
+          "observer_list": [
+            "zeta1r28vgnya7rplkwd6p3kgv4etwfptmgep7zqql3",
+            "zeta1h20tefzkvd7acsm3a3wekz768hw87pc9axuuxp",
+            "zeta1e8uv2cn4ytjz8msdj2vj49ke6hrvj6lnt9rfez",
+            "zeta18p8mm05076yf6vdek8mfhkvmxauu6jvpwvyr0k",
+            "zeta1r295v3yqs9ra60hpy30lnvknvv8l07xa4g732a"
+          ]
+        },
+        {
+          "observer_chain": {
+            "chain_name": 12,
+            "chain_id": 18332
+          },
+          "observer_list": [
+            "zeta1r28vgnya7rplkwd6p3kgv4etwfptmgep7zqql3",
+            "zeta1h20tefzkvd7acsm3a3wekz768hw87pc9axuuxp",
+            "zeta1e8uv2cn4ytjz8msdj2vj49ke6hrvj6lnt9rfez",
+            "zeta18p8mm05076yf6vdek8mfhkvmxauu6jvpwvyr0k",
+            "zeta1r295v3yqs9ra60hpy30lnvknvv8l07xa4g732a"
+          ]
+        },
+        {
+          "observer_chain": {
+            "chain_name": 7,
+            "chain_id": 80001
+          },
+          "observer_list": [
+            "zeta1r28vgnya7rplkwd6p3kgv4etwfptmgep7zqql3",
+            "zeta1h20tefzkvd7acsm3a3wekz768hw87pc9axuuxp",
+            "zeta1e8uv2cn4ytjz8msdj2vj49ke6hrvj6lnt9rfez",
+            "zeta18p8mm05076yf6vdek8mfhkvmxauu6jvpwvyr0k",
+            "zeta1r295v3yqs9ra60hpy30lnvknvv8l07xa4g732a"
+          ]
+        },
+        {
+          "observer_chain": {
+            "chain_name": 9,
+            "chain_id": 1001
+          },
+          "observer_list": [
+            "zeta1r28vgnya7rplkwd6p3kgv4etwfptmgep7zqql3",
+            "zeta1h20tefzkvd7acsm3a3wekz768hw87pc9axuuxp",
+            "zeta1e8uv2cn4ytjz8msdj2vj49ke6hrvj6lnt9rfez",
+            "zeta18p8mm05076yf6vdek8mfhkvmxauu6jvpwvyr0k",
+            "zeta1r295v3yqs9ra60hpy30lnvknvv8l07xa4g732a"
+          ]
+        },
+        {
+          "observer_chain": {
+            "chain_name": 10,
+            "chain_id": 97
+          },
+          "observer_list": [
+            "zeta1r28vgnya7rplkwd6p3kgv4etwfptmgep7zqql3",
+            "zeta1h20tefzkvd7acsm3a3wekz768hw87pc9axuuxp",
+            "zeta1e8uv2cn4ytjz8msdj2vj49ke6hrvj6lnt9rfez",
+            "zeta18p8mm05076yf6vdek8mfhkvmxauu6jvpwvyr0k",
+            "zeta1r295v3yqs9ra60hpy30lnvknvv8l07xa4g732a"
+          ]
+        },
+        {
+          "observer_chain": {
+            "chain_name": 6,
+            "chain_id": 5
+          },
+          "observer_list": [
+            "zeta1r28vgnya7rplkwd6p3kgv4etwfptmgep7zqql3",
+            "zeta1h20tefzkvd7acsm3a3wekz768hw87pc9axuuxp",
+            "zeta1e8uv2cn4ytjz8msdj2vj49ke6hrvj6lnt9rfez",
+            "zeta18p8mm05076yf6vdek8mfhkvmxauu6jvpwvyr0k",
+            "zeta1r295v3yqs9ra60hpy30lnvknvv8l07xa4g732a"
+          ]
+        }
+      ],
+      "params": {
+        "observer_params": [
+          {
+            "chain": {
+              "chain_name": 12,
+              "chain_id": 18332
+            },
+            "ballot_threshold": "0.660000000000000000",
+            "min_observer_delegation": "10000000000.000000000000000000",
+            "is_supported": true
+          },
+          {
+            "chain": {
+              "chain_name": 7,
+              "chain_id": 80001
+            },
+            "ballot_threshold": "0.660000000000000000",
+            "min_observer_delegation": "10000000000.000000000000000000",
+            "is_supported": true
+          },
+          {
+            "chain": {
+              "chain_name": 9,
+              "chain_id": 1001
+            },
+            "ballot_threshold": "0.660000000000000000",
+            "min_observer_delegation": "10000000000.000000000000000000",
+            "is_supported": true
+          },
+          {
+            "chain": {
+              "chain_name": 10,
+              "chain_id": 97
+            },
+            "ballot_threshold": "0.660000000000000000",
+            "min_observer_delegation": "10000000000.000000000000000000",
+            "is_supported": true
+          },
+          {
+            "chain": {
+              "chain_name": 6,
+              "chain_id": 5
+            },
+            "ballot_threshold": "0.660000000000000000",
+            "min_observer_delegation": "10000000000.000000000000000000",
+            "is_supported": true
+          },
+          {
+            "chain": {
+              "chain_name": 11,
+              "chain_id": 7001
+            },
+            "ballot_threshold": "0.660000000000000000",
+            "min_observer_delegation": "10000000000.000000000000000000",
+            "is_supported": true
+          }
+        ]
+      }
+    },
+    "params": null,
+    "slashing": {
+      "params": {
+        "signed_blocks_window": "100",
+        "min_signed_per_window": "0.500000000000000000",
+        "downtime_jail_duration": "600s",
+        "slash_fraction_double_sign": "0.050000000000000000",
+        "slash_fraction_downtime": "0.010000000000000000"
+      },
+      "signing_infos": [],
+      "missed_blocks": []
+    },
+    "staking": {
+      "params": {
+        "unbonding_time": "1814400s",
+        "max_validators": 100,
+        "max_entries": 7,
+        "historical_entries": 10000,
+        "bond_denom": "azeta",
+        "min_commission_rate": "0.000000000000000000"
+      },
+      "last_total_power": "0",
+      "last_validator_powers": [],
+      "validators": [],
+      "delegations": [],
+      "unbonding_delegations": [],
+      "redelegations": [],
+      "exported": false
+    },
+    "upgrade": {},
+    "vesting": {}
+  }
+}
