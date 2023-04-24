@@ -26,10 +26,9 @@ For example, you could extract it to `/opt/bitcoin`.
     ```
 
 4. Start the Bitcoin daemon by running the `bitcoind` command. 
-Using `-startatheight` flag can reduces sync times significantly.
 
     ```
-    ./bitcoind -startatheight 2430000
+    ./bitcoind
     ```
 
 5. By default, the Bitcoin daemon will use the mainnet network. To use a
@@ -39,7 +38,7 @@ option when starting the daemon.
     For example, to start the daemon in testnet mode:
 
     ```
-    ./bitcoind -testnet -startatheight 2430000
+    ./bitcoind -testnet
     ```
 
 6. Once the daemon is running, you can use the `bitcoin-cli` command to interact
