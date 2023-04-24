@@ -18,8 +18,12 @@ fi
 
 now=zetacored-$(date +"%T")
 mkdir -p ~/.zetacored-old/"$now"
-cp -a ~/.zetacored/* ~/.zetacored-old/"$now"/
-rm -rf ~/.zetacored
+rm -rf ~/.zetacored/config
+rm -rf ~/.zetacored/data
+rm -rf ~/.zetacored/keyring*
+rm -rf ~/.zetacored/os_info
+
+
 # create keys
 CHAINID="athens_7001-1"
 KEYRING="test"
