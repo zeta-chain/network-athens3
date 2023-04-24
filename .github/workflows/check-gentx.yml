@@ -5,11 +5,13 @@ on:
     branches:
       - genesis/athens3-reduced-steps
       - cicd/genesis/athens3-reduced-steps
+      - athens3-testnetwork/v0.3.0
       - main
   pull_request:
     branches:
       - main
       - genesis/athens3-reduced-steps
+      - athens3-testnetwork/v0.3.0
     paths:
       - "genesis_files/**"
 
