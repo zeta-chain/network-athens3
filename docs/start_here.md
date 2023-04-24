@@ -74,9 +74,9 @@ a branch, commit, and raise a PR to submit the files to zetachain coordinator:
 - The pr must contain only two files
   - `os_info.json`
   - `gentx-XX.json`
-- Do not commit `network_files/config/genesis.json` if it exists
+- Do not commit `network_files/config/genesis.json` (if it exists)
   - This file can be deleted, it is not required.
-- An automated GitHub Action will validator your PR
+- An automated GitHub Action will verify your PR is correct
 - Your PR must pass this check before the coordinator will merge it
 
 ## Phase 2: Core Genesis
