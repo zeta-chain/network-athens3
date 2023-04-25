@@ -83,9 +83,9 @@ NOTE : A backup up is created for the existing zetacored folder under
 ### Get Updated Genesis File
 
 After the ZetaChain Coordinator has merged the PRs and updated the genesis
-file: 
+file:
 
-- Switch back to the `main` branch 
+- Switch back to the `main` branch
 - Pull the latest changes to get the updated genesis.json file
 
 ```bash
@@ -115,6 +115,8 @@ management system. See the final section below for more information.
 pkill zetacored
 ```
 
+If you are an Observer Signer Validator you must leave zetacored running and move onto the next step.
+
 ## Phase 3: TSS Keygen (zetaclientd)
 
 This phase applies to **Observer/Signer Validators only**. Most operators are `core
@@ -136,12 +138,23 @@ each chain.
 Edit the `zeta-client.toml` file located in the `.zetacored/config` directory
 and add the RPC endpoints to the `Endpoint = ` section of each chain.
 
-#### Start Zetaclient
-
-- `KeygenBlock` and `SEEDIP` are provided by the the coordinator.
+#### Set Public IP
+If your node has a public IP and private IP (such as AWS EC2 instance), then you
+need to set the `MYIP` environment variable to your public IP otherwise
+the p2p connection will not work.
 
 ```bash
-./scripts/start-zetaclient.sh -k <KeygenBlock> -s <SEEDIP>
+export MYIP=3.141.21.139
+```
+
+#### Start Zetaclient
+
+- `KeygenBlock` will be provided by the ZetaChain Coordinator.
+
+```bash
+SEEDIP=3.218.170.198
+KEYGENBLOCK=<Keygen Block Provided By ZetaChain Coordinator>
+./scripts/start-zetaclient.sh -k $KEYGENBLOCK-s $SEEDIP
 ```
 
 **Wait until zetachain coordinator confirms that TSS keygen is completed**.
@@ -161,6 +174,7 @@ environment you are running the validator in. At a minimum we reccomend you:
 - [ ] Run each process as a systemd service or containerized service
 - [ ] Do NOT run these services as root. Create a new restricted ZetaChain user
 - [ ] Create Sentry nodes to protect your validator
+- [ ] Setup ngnix to forward p2p traffic from Sentry node to zetaclientd -- TODO add documentation for this
 - [ ] Make sure you setup resource monitoring (CPU, RAM, etc), uptime
       monitoring, log ingestion, etc to minimize the risk of downtime or slashing
 - [ ] Install adequate security measures such as, Endpoint protection, Anti-Virus,

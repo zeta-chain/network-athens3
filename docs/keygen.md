@@ -15,7 +15,8 @@ keygen ceremony will begin at block `<block num>`.
 First, query the seed node to join the zetaclient p2p network:
 
 ```bash
-export SEEDIP=3.141.21.139 export SEED=$(curl --retry 10 --retry-delay 5 --retry-connrefused  -s $SEEDIP:8123/p2p)
+export SEEDIP=3.141.21.139 
+export SEED=$(curl --retry 10 --retry-delay 5 --retry-connrefused  -s $SEEDIP:8123/p2p)
 ```
 
 You should not see any errors and can verify the `SEED` environment variable has
@@ -26,8 +27,8 @@ echo $SEED 16Uiu2HAkzocxERFCih7PZWCzyoncZ9MEbH8M4Bi3dPjrzBb8tSEY
 ```
 
 If your node has a public IP and private IP (such as AWS EC2 instance), then you
-need to set the following environment variable MYIP to your public IP otherwise
-the p2p connection will not work. You can query your public IP by `curl ifconfig.me`.
+need to set the `MYIP` environment variable to your public IP otherwise
+the p2p connection will not work.
 
 ```bash
 export MYIP=3.141.21.139
@@ -40,7 +41,7 @@ rm ~/.tss/address_book.seed $ export TSSPATH=~/.tss
 zetaclientd init --val val --log-console \
     --enable-chains "goerli_testnet,bsc_testnet" \
     --chain-id athens_7001-1 --dev \
-    --operator zeta1z46tdw75jvh4h39y3vu758ctv34rw5z9kmyhgz \
+    --operator <your-operator-key-here> \
     --log-level 0 \
     --peer /ip4/$SEEDIP/tcp/6668/p2p/$SEED \
     --keygen-block 15000
