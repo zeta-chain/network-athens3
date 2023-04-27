@@ -55,12 +55,8 @@ git clone https://github.com/zeta-chain/network-athens3.git && cd network-athens
 #### Run The Node Setup Script
 
 Give execute permissions to the scripts and run the node setup script.
-When prompted for confirmation, enter `y` to continue.
 
-NOTE: This script removes all data in the `~/.zetacored directory`and should
-only be used during the initial setup before any content has been added to that
-directory. As a precaution, a backup up is created for the existing zetacored
-folder under `~/.zetacored_old/zetacored-<timestamp>`. 
+When prompted for confirm, enter `y` to continue.
 
 ```bash
 chmod +x ./scripts/*.sh
@@ -74,29 +70,43 @@ a branch, commit, and raise a PR to submit the files to zetachain coordinator:
 - The pr must contain only two files
   - `os_info.json`
   - `gentx-XX.json`
-- Do not commit `network_files/config/genesis.json` (if it exists)
+- Do not commit `network_files/config/genesis.json` if it exists
   - This file can be deleted, it is not required.
-- An automated GitHub Action will verify your PR is correct
+- An automated GitHub Action will validator your PR
 - Your PR must pass this check before the coordinator will merge it
+
+NOTE : A backup up is created for the existing zetacored folder under
+`~/.zetacored_old/zetacored-<timestamp>`.You can copy back keys etc if needed .
 
 ## Phase 2: Core Genesis
 
+### Get Updated Genesis File
+
+After the ZetaChain Coordinator has merged the PRs and updated the genesis
+file:
+
+- Switch back to the `main` branch
+- Pull the latest changes to get the updated genesis.json file
+
+```bash
+git switch main
+git pull
+```
+
 #### Start The Node
-
-**Wait for final genesis to be provided by the ZetaChain Coordinator before
-starting the following process** Additional parameters will be provided by the
-ZetaChain Coordinator.
-
-Edit config file (~/.zetacored/config/config.toml) to
-
-- Add persistent peers - Edit config.toml to check for SEED (make it empty if
-  it has a value)
 
 ```bash
 ./scripts/start-zetacore.sh
 ```
 
-**Wait until ZetaChain coordinator confirms that genesis is completed**.
+**Optional** The start-zetacore.sh script will automatically update the config file
+(~/.zetacored/config/config.toml) with a persistent peer. If you did not use
+the start-zetacored.sh script you need to update the config file manually with
+the peer information.
+
+#### Wait for Genesis to Complete
+
+**Wait until ZetaChain coordinator confirms that genesis is completed.** Then
 You can terminate the `zetacored` process that was manually started in the
 previous step. You'll want to resume zetacored using a more robust process
 management system. See the final section below for more information.
@@ -104,6 +114,8 @@ management system. See the final section below for more information.
 ```bash
 pkill zetacored
 ```
+
+If you are an Observer Signer Validator you must leave zetacored running and move onto the next step.
 
 ## Phase 3: TSS Keygen (zetaclientd)
 
@@ -113,10 +125,10 @@ most likely a core validator.
 
 #### Configure RPC Connectivity
 
-Observer Signers need an RPC endpoint for each connected chain. You can follow
-the standard instructions to configure a node for most chains but the BTC
-requires special instructions to customize it for ZetaChain. The links below
-will take you to a node setup guide for each chain.
+Observer Signers need an RPC endpoint for each connected chain. You can follow the
+standard instructions to configure a node for most chains but the BTC requires
+special instructions just for ZetaChain. The links below will take you to a node setup guide for
+each chain.
 
 - [Ethereum RPC Node Setup](https://ethereum.org/en/developers/docs/nodes-and-clients/run-a-node/)
 - [BSC RPC Node Setup](https://docs.bnbchain.org/docs/validator/fullnode/)
@@ -126,15 +138,26 @@ will take you to a node setup guide for each chain.
 Edit the `zeta-client.toml` file located in the `.zetacored/config` directory
 and add the RPC endpoints to the `Endpoint = ` section of each chain.
 
-#### Start Zetaclient
-
-- `KeygenBlock` and `SEEDIP` are provided by the the coordinator.
+#### Set Public IP
+If your node has a public IP and private IP (such as AWS EC2 instance), then you
+need to set the `MYIP` environment variable to your public IP otherwise
+the p2p connection will not work.
 
 ```bash
-./scripts/start-zetaclient.sh -k <KeygenBlock> -s <SEEDIP>
+export MYIP=3.141.21.139
 ```
 
-**Wait until ZetaChain coordinator confirms that TSS keygen is completed**.
+#### Start Zetaclient
+
+- `KeygenBlock` will be provided by the ZetaChain Coordinator.
+
+```bash
+SEEDIP=3.218.170.198
+KEYGENBLOCK=<Keygen Block Provided By ZetaChain Coordinator>
+./scripts/start-zetaclient.sh -k $KEYGENBLOCK-s $SEEDIP
+```
+
+**Wait until zetachain coordinator confirms that TSS keygen is completed**.
 Then terminate the processes `zetacored` and `zetaclientd`.
 
 ```bash
@@ -151,6 +174,7 @@ environment you are running the validator in. At a minimum we reccomend you:
 - [ ] Run each process as a systemd service or containerized service
 - [ ] Do NOT run these services as root. Create a new restricted ZetaChain user
 - [ ] Create Sentry nodes to protect your validator
+- [ ] Setup ngnix to forward p2p traffic from Sentry node to zetaclientd -- TODO add documentation for this
 - [ ] Make sure you setup resource monitoring (CPU, RAM, etc), uptime
       monitoring, log ingestion, etc to minimize the risk of downtime or slashing
 - [ ] Install adequate security measures such as, Endpoint protection, Anti-Virus,

@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 # Ask for confirmation
 read -p "This script should only be used during the initial setup. 
 It will DELETE EXISTING config files and keys if used a second time. 
@@ -14,15 +15,21 @@ else
     exit 1
 fi
 
+
 now=zetacored-$(date +"%T")
 mkdir -p ~/.zetacored-old/"$now"
-cp -a ~/.zetacored/* ~/.zetacored-old/"$now"/
-rm -rf ~/.zetacored
+rm -rf ~/.zetacored/config
+rm -rf ~/.zetacored/data
+rm -rf ~/.zetacored/keyring*
+rm -rf ~/.zetacored/os_info
+
+
 # create keys
 CHAINID="athens_7001-1"
 KEYRING="test"
 HOSTNAME=$(hostname)
 echo "HOSTNAME: $HOSTNAME"
+
 
 # Init a new node to generate genesis file .
 # Copy config files from existing folders which get copied via Docker Copy when building images
@@ -41,7 +48,7 @@ mkdir -p ~/.backup/config/
 cp -a ~/.zetacored/config/genesis.json ~/.backup/config/
 
 # Add moniker to config file
-pp=$(cat "$HOME"/.zetacored/config/gentx/z2gentx/*.json | jq '.body.memo')
+pp=$(cat "$HOME"/.zetacored/config/gentx/z2gentx/*.json | jq '.body.memo' )
 pps=Zetanode_$HOSTNAME
 sed -i -e "/moniker =/s/=.*/= \"$pps\"/" "$HOME"/.zetacored/config/config.toml
 
@@ -50,12 +57,12 @@ zetacored keys add operator --algo=secp256k1 --keyring-backend=$KEYRING
 zetacored keys add hotkey --algo=secp256k1 --keyring-backend=$KEYRING
 operator_address=$(zetacored keys show operator -a --keyring-backend=$KEYRING)
 hotkey_address=$(zetacored keys show hotkey -a --keyring-backend=$KEYRING)
-pubkey=$(zetacored get-pubkey hotkey | sed -e 's/secp256k1:"\(.*\)"/\1/' | sed 's/ //g')
+pubkey=$(zetacored get-pubkey hotkey|sed -e 's/secp256k1:"\(.*\)"/\1/' | sed 's/ //g' )
 echo "operator_address: $operator_address"
 echo "hotkey_address: $hotkey_address"
 echo "pubkey: $pubkey"
 mkdir ~/.zetacored/os_info
-jq -n --arg operator_address "$operator_address" --arg hotkey_address "$hotkey_address" --arg pubkey "$pubkey" '{"ObserverAddress":$operator_address,"ZetaClientGranteeAddress":$hotkey_address,"ZetaClientGranteePubKey":$pubkey}' >~/.zetacored/os_info/os.json
+jq -n --arg operator_address "$operator_address" --arg hotkey_address "$hotkey_address" --arg pubkey "$pubkey" '{"ObserverAddress":$operator_address,"ZetaClientGranteeAddress":$hotkey_address,"ZetaClientGranteePubKey":$pubkey}' > ~/.zetacored/os_info/os.json
 mkdir -p genesis_files/os_info
 cp ~/.zetacored/os_info/os.json ./genesis_files/os_info/os_"$HOSTNAME".json
 

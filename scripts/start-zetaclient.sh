@@ -28,12 +28,15 @@ then
    clibuilder
 fi
 
+if [ -z "${MYIP}" ]; then 
+    echo "MYIP ENV Variable Not Set -- Setting it automatically using host IP"
+    export MYIP=$(curl ifconfig.me)
+fi
 
-export MYIP=$(curl ifconfig.me)
 export SEEDIP=$SEEDIP
 echo "SEEDIP: $SEEDIP"
 echo "KeygenBlock: $KeygenBlock"
-export SEED=$(curl --retry 10 --retry-delay 5 --retry-connrefused  -s $SEEDIP:8123/p2p)
+export SEED=$(curl --retry 10 --retry-delay 5 --retry-connrefused  -s "$SEEDIP":8123/p2p)
 export TSSPATH=~/.tss
 
 operatorAddress=$(zetacored keys show operator -a --keyring-backend=test)
@@ -41,7 +44,7 @@ echo "operatorAddress: $operatorAddress"
 
 rm ~/.tss/*
 zetaclientd init --enable-chains "goerli_testnet,btc_testnet" \
-  --pre-params ~/preParams.json \
-  --peer /ip4/$SEEDIP/tcp/6668/p2p/$SEED \
-  --chain-id $CHAINID --dev --operator "$operatorAddress" --log-level 0 --hotkey=hotkey --keygen-block $KeygenBlock
+  --pre-params" ~/preP"arams.json \
+  --peer /ip4/"$SEEDIP"/tcp/6668/p2p/"$SEED" \
+  --chain-id $CHAINID --dev --operator "$operatorAddress" --log-level 0 --hotkey=hotkey --keygen-block "$KeygenBlock"
 zetaclientd start >> ~/.zetacored/zetaclient.log 2>&1  &
