@@ -1,0 +1,105 @@
+name: check-gentx
+
+on:
+  push:
+    branches:
+      - genesis/athens3-reduced-steps
+      - cicd/genesis/athens3-reduced-steps
+      - athens3-testnetwork/v0.3.0
+      - main
+  pull_request:
+    branches:
+      - main
+      - genesis/athens3-reduced-steps
+      - athens3-testnetwork/v0.3.0
+    paths:
+      - "genesis_files/**"
+
+env:
+  ZETACORED_BINARY: "https://zetachain-external-files.s3.amazonaws.com/binaries/athens3/latest/zetacored-ubuntu"
+  ZETACLIENT_BINARY: "https://zetachain-external-files.s3.amazonaws.com/binaries/athens3/latest/zetaclientd-ubuntu"
+  CHAINID: "athens_7001-1"
+  KEYRING: "test"
+  HOSTNAME: checker
+
+jobs:
+  check-gentx:
+    runs-on: ["ubuntu-22.04"]
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Restore Cached Binary
+        uses: actions/cache/restore@v3
+        id: restore-cache
+        with:
+          path: /usr/bin/zetacored
+          key: ${{ runner.os }}-zetacored-${{ hashFiles('zetacored') }}
+
+      - name: Download Zetacored
+        if: steps.restore-cache.outputs.cache-hit != 'true'
+        run: |
+          echo "Downloading Latest Zetacored From $ZETACORED_BINARY"
+          wget $ZETACORED_BINARY -O zetacored
+          sudo mv zetacored /usr/bin/zetacored
+          sudo chmod +x /usr/bin/zetacored
+          zetacored version
+
+      - name: Validate GentX and OS_INFO files
+        run: |
+          rm -rf ~/.zetacored/ || true
+          zetacored init Zetanode --chain-id=$CHAINID
+          cat "$HOME"/.zetacored/config/genesis.json | jq '.app_state["staking"]["params"]["bond_denom"]="azeta"' > "$HOME"/.zetacored/config/tmp_genesis.json && mv "$HOME"/.zetacored/config/tmp_genesis.json "$HOME"/.zetacored/config/genesis.json
+          cat "$HOME"/.zetacored/config/genesis.json | jq '.app_state["crisis"]["constant_fee"]["denom"]="azeta"' > "$HOME"/.zetacored/config/tmp_genesis.json && mv "$HOME"/.zetacored/config/tmp_genesis.json "$HOME"/.zetacored/config/genesis.json
+          cat "$HOME"/.zetacored/config/genesis.json | jq '.app_state["gov"]["deposit_params"]["min_deposit"][0]["denom"]="azeta"' > "$HOME"/.zetacored/config/tmp_genesis.json && mv "$HOME"/.zetacored/config/tmp_genesis.json "$HOME"/.zetacored/config/genesis.json
+          cat "$HOME"/.zetacored/config/genesis.json | jq '.app_state["mint"]["params"]["mint_denom"]="azeta"' > "$HOME"/.zetacored/config/tmp_genesis.json && mv "$HOME"/.zetacored/config/tmp_genesis.json "$HOME"/.zetacored/config/genesis.json
+          cat "$HOME"/.zetacored/config/genesis.json | jq '.app_state["evm"]["params"]["evm_denom"]="azeta"' > "$HOME"/.zetacored/config/tmp_genesis.json && mv "$HOME"/.zetacored/config/tmp_genesis.json "$HOME"/.zetacored/config/genesis.json
+          cat "$HOME"/.zetacored/config/genesis.json | jq '.consensus_params["block"]["max_gas"]="10000000"' > "$HOME"/.zetacored/config/tmp_genesis.json && mv "$HOME"/.zetacored/config/tmp_genesis.json "$HOME"/.zetacored/config/genesis.json
+          cat "$HOME"/.zetacored/config/genesis.json | jq '.app_state["gov"]["voting_params"]["voting_period"]="10s"' > "$HOME"/.zetacored/config/tmp_genesis.json && mv "$HOME"/.zetacored/config/tmp_genesis.json "$HOME"/.zetacored/config/genesis.json
+
+          mkdir -p ~/.zetacored/os_info  ~/.zetacored/config/gentx/
+          cp -a genesis_files/os_info/* ~/.zetacored/os_info/
+          cp -a genesis_files/gentx/* ~/.zetacored/config/gentx/
+
+          zetacored collect-observer-info
+          zetacored add-observer-list
+          zetacored collect-gentxs
+          zetacored validate-genesis
+
+          # If the above command fails, the job will fail
+          if [ $? -eq 0 ]; then
+            echo "SUCCESS"
+            echo "gentx and OS_INFO files are valid"
+            exit 0
+          else
+            echo "FAILURE"
+            echo "gentx and OS_INFO files are invalid"
+            exit 1
+          fi
+
+      - name: Start Zetacored
+        run: |
+          zetacored start --trace \
+          --minimum-gas-prices=0.0001azeta \
+          --json-rpc.api eth,txpool,personal,net,debug,web3,miner \
+          --api.enable >> ~/.zetacored/zetacored.log 2>&1  &
+
+          sleep 6
+          latest_block_height=$(curl --request GET -sL --url 'localhost:26657/status' --header 'Content-Type: application/json' | jq '.result.sync_info.latest_block_height|tonumber')
+
+          if [ "$latest_block_height" -ge 0 ]; then
+              echo "SUCCESS"
+              echo "zetacored started successfully"
+              exit 0
+          else
+            echo "FAILURE"
+            echo "zetacored failed to start"
+            exit 1
+          fi
+
+      - name: Save Binary To Cache
+        uses: actions/cache/save@v3
+        if: steps.restore-cache.outputs.cache-hit != 'true'
+        with:
+          path: /usr/bin/zetacored
+          key: ${{ runner.os }}-zetacored-${{ hashFiles('zetacored') }}

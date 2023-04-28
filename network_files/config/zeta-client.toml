@@ -1,0 +1,132 @@
+## For Observer/Signer Validators Only
+## If you are a core-validator you do not need this file
+
+## This is here as an example. The file will be generated automatically 
+## when you run the `start-zetaclient.sh` script or use `zetaclientd init`
+
+AuthzGranter = ""
+AuthzHotkey = ""
+ChainID = "athens_7001-1"
+KeygenBlock = 0
+LogConsole = false
+LogLevel = 1
+Peer = ""
+PreParamsPath = ""
+SetNodeKey = false
+ValidatorName = ""
+ZetaCoreURL = "127.0.0.1"
+
+[BitcoinConfig]
+  RPCEndpoint = "bitcoin:18443"
+  RPCParams = "regtest"
+  RPCPassword = "123"
+  RPCUsername = "username"
+  WatchGasPricePeriod = 5
+  WatchInTxPeriod = 5
+  WatchUTXOSPeriod = 5
+
+[ChainConfigs]
+
+  [ChainConfigs.goerli_localnet]
+    BlockTime = 2
+    ConfCount = 0
+    ConnectorContractAddress = "0x733aB8b06DDDEf27Eaa72294B0d7c9cEF7f12db9"
+    ERC20CustodyContractAddress = "0xD28D6A0b8189305551a0A8bd247a6ECa9CE781Ca"
+    Endpoint = "http://eth:8545"
+    OutTxObservePeriod = 5
+    Topics = []
+    ZETATokenContractAddress = "0xA8D5060feb6B456e886F023709A2795373691E63"
+
+    [ChainConfigs.goerli_localnet.Chain]
+      ChainId = 1337
+      ChainName = 14
+
+    [ChainConfigs.goerli_localnet.ConnectorABI]
+
+      [ChainConfigs.goerli_localnet.ConnectorABI.Constructor]
+        Constant = false
+        ID = []
+        Name = ""
+        Payable = false
+        RawName = ""
+        Sig = ""
+        StateMutability = ""
+        Type = 0
+
+      [ChainConfigs.goerli_localnet.ConnectorABI.Errors]
+
+      [ChainConfigs.goerli_localnet.ConnectorABI.Events]
+
+      [ChainConfigs.goerli_localnet.ConnectorABI.Fallback]
+        Constant = false
+        ID = []
+        Name = ""
+        Payable = false
+        RawName = ""
+        Sig = ""
+        StateMutability = ""
+        Type = 0
+
+      [ChainConfigs.goerli_localnet.ConnectorABI.Methods]
+
+      [ChainConfigs.goerli_localnet.ConnectorABI.Receive]
+        Constant = false
+        ID = []
+        Name = ""
+        Payable = false
+        RawName = ""
+        Sig = ""
+        StateMutability = ""
+        Type = 0
+
+  [ChainConfigs.zeta_mainnet]
+    BlockTime = 6
+    ConfCount = 0
+    ConnectorContractAddress = ""
+    ERC20CustodyContractAddress = ""
+    Endpoint = ""
+    OutTxObservePeriod = 0
+    Topics = []
+    ZETATokenContractAddress = "0x2DD9830f8Ac0E421aFF9B7c8f7E9DF6F65DBF6Ea"
+
+    [ChainConfigs.zeta_mainnet.Chain]
+      ChainId = 101
+      ChainName = 2
+
+    [ChainConfigs.zeta_mainnet.ConnectorABI]
+
+      [ChainConfigs.zeta_mainnet.ConnectorABI.Constructor]
+        Constant = false
+        ID = []
+        Name = ""
+        Payable = false
+        RawName = ""
+        Sig = ""
+        StateMutability = ""
+        Type = 0
+
+      [ChainConfigs.zeta_mainnet.ConnectorABI.Errors]
+
+      [ChainConfigs.zeta_mainnet.ConnectorABI.Events]
+
+      [ChainConfigs.zeta_mainnet.ConnectorABI.Fallback]
+        Constant = false
+        ID = []
+        Name = ""
+        Payable = false
+        RawName = ""
+        Sig = ""
+        StateMutability = ""
+        Type = 0
+
+      [ChainConfigs.zeta_mainnet.ConnectorABI.Methods]
+
+      [ChainConfigs.zeta_mainnet.ConnectorABI.Receive]
+        Constant = false
+        ID = []
+        Name = ""
+        Payable = false
+        RawName = ""
+        Sig = ""
+        StateMutability = ""
+        Type = 0
