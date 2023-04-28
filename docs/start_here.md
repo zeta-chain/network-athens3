@@ -26,7 +26,7 @@ Phase 3: TSS Keygen (Observer/Signer Validators Only)
 
 Here we assume a typical Ubuntu 22.04 LTS x86_64 setup. If you are using a
 different OS you may need to make some adjustments. For more information about
-the compute node requirement see [here](node_requirements.md)
+the compute node requirement see [here](node_requirements.md).
 
 #### Make sure `jq`, `git`, `curl`, and `make` are installed.
 
@@ -76,7 +76,7 @@ a branch, commit, and raise a PR to submit the files to zetachain coordinator:
 - Your PR must pass this check before the coordinator will merge it
 
 NOTE : A backup up is created for the existing zetacored folder under
-`~/.zetacored_old/zetacored-<timestamp>`.You can copy back keys etc if needed .
+`~/.zetacored_old/zetacored-<timestamp>`.You can copy back keys etc if needed.
 
 ## Phase 2: Core Genesis
 
@@ -178,4 +178,4 @@ environment you are running the validator in. At a minimum we reccomend you:
 - [ ] Make sure you setup resource monitoring (CPU, RAM, etc), uptime
       monitoring, log ingestion, etc to minimize the risk of downtime or slashing
 - [ ] Install adequate security measures such as, Endpoint protection, Anti-Virus,
-      system level logging, WAF, etc
+      system level logging, WAF, etc.
