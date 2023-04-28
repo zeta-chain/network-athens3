@@ -2,7 +2,7 @@
 
 ** These steps have been automated for the Athens3 testnet via the
 `node-setup.sh` and `start-zetaclient.sh` scripts. Operators should ignore this
-document unless you they to perform their key generation manually**
+document unless they need to perform their key generation manually**
 
 
 The genesis file is a JSON file which defines the initial state of a blockchain.
