@@ -1,0 +1,25 @@
+{
+  "title": "Observer Param Change",
+  "description": "Update policy address",
+  "changes": [
+    {
+      "subspace": "observer",
+      "key": "AdminParams",
+      "value": [
+        {
+          "policy_type": 0,
+          "address": ""
+        },
+        {
+          "policy_type": 1,
+          "address": ""
+        },
+        {
+          "policy_type": 2,
+          "address": ""
+        }
+      ]
+    }
+  ],
+  "deposit": "1000000zeta"
+}
