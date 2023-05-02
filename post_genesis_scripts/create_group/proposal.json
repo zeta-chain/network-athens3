@@ -8,18 +8,18 @@
       "value": [
         {
           "policy_type": 0,
-          "address": ""
+          "address": "zeta1afk9zr2hn2jsac63h4hm60vl9z3e5u69gndzf7c99cqge3vzwjzsxn0x73"
         },
         {
           "policy_type": 1,
-          "address": ""
+          "address": "zeta1afk9zr2hn2jsac63h4hm60vl9z3e5u69gndzf7c99cqge3vzwjzsxn0x73"
         },
         {
           "policy_type": 2,
-          "address": ""
+          "address": "zeta1afk9zr2hn2jsac63h4hm60vl9z3e5u69gndzf7c99cqge3vzwjzsxn0x73"
         }
       ]
     }
   ],
-  "deposit": "1000000zeta"
+  "deposit": "10000000azeta"
 }

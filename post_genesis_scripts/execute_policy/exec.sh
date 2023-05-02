@@ -2,6 +2,10 @@
 CHAINID="athens_7001-1"
 KEYRING="test"
 HOSTNAME=$(hostname)
+signer="hotkey"
+
+signerAddress=$(zetacored keys show $signer -a --keyring-backend=test)
+echo "signerAddress: $signerAddress"
 
 clibuilder()
 {
@@ -25,4 +29,4 @@ then
    clibuilder
 fi
 
-zetacored tx group exec "$PID" --from zeta --fees=40azeta --chain-id=$CHAINID --keyring-backend=$KEYRING -y --broadcast-mode=block
+zetacored tx group exec "$PID" --from $signer --fees=40azeta --chain-id=$CHAINID --keyring-backend=$KEYRING -y --broadcast-mode=block

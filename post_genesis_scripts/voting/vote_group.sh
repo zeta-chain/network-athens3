@@ -2,6 +2,10 @@
 CHAINID="athens_7001-1"
 KEYRING="test"
 HOSTNAME=$(hostname)
+signer="hotkey"
+
+signerAddress=$(zetacored keys show $signer -a --keyring-backend=test)
+echo "signerAddress: $signerAddress"
 
 
 clibuilder()
@@ -26,7 +30,6 @@ then
    clibuilder
 fi
 
-hotkeyAddress=$(zetacored keys show hotkeyAddress -a --keyring-backend=test)
-echo "hotkeyAddress: $hotkeyAddress"
+
 # shellcheck disable=SC2086
-zetacored tx group vote "$PID" $hotkeyAddress VOTE_OPTION_YES metadata --from zeta --fees=40azeta --chain-id=$CHAINID --keyring-backend=$KEYRING -y --broadcast-mode=block
+zetacored tx group vote "$PID" $signerAddress VOTE_OPTION_YES metadata --from $signer --fees=40azeta --chain-id=$CHAINID --keyring-backend=$KEYRING -y --broadcast-mode=block

@@ -2,10 +2,14 @@
 CHAINID="athens_7001-1"
 KEYRING="test"
 HOSTNAME=$(hostname)
+signer="hotkey"
 
+signerAddress=$(zetacored keys show $signer -a --keyring-backend=test)
+echo "signerAddress: $signerAddress"
 
+zetacored tx  group create-group-with-policy $signerAddress group-metadata group-policy-metadata post_genesis_scripts/create_group/members.json post_genesis_scripts/create_group/policy.json --from $signer --fees=40azeta --chain-id=$CHAINID --keyring-backend=$KEYRING -y --broadcast-mode=block
+zetacored q group group-policies-by-group 1
 
-zetacored tx  group create-group-with-policy zeta1syavy2npfyt9tcncdtsdzf7kny9lh777heefxk group-metadata group-policy-metadata members.json policy.json --from hotkey --fees=40azeta --chain-id=$CHAINID --keyring-backend=$KEYRING -y --broadcast-mode=block
-zetacored tx group submit-proposal proposal_group.json --from zeta --fees=40azeta --chain-id=$CHAINID --keyring-backend=$KEYRING -y --broadcast-mode=block
+#zetacored tx group submit-proposal proposal_group.json --from zeta --fees=40azeta --chain-id=$CHAINID --keyring-backend=$KEYRING -y --broadcast-mode=block
 
 
