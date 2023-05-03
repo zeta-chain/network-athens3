@@ -4,7 +4,7 @@ clibuilder()
 {
    echo ""
    echo "Usage: $0 -o Observer Flag"
-   echo -e "\t-o Set to y to run observer-validater , set to n to run validater only"
+   echo -e "\t-o Set to y to run observer-validater , set to n to run validater only. Note this value is case sensitive"
    exit 1 # Exit script after printing help
 }
 
@@ -42,7 +42,8 @@ fi
 if [[ "$is_observer" = "y" ||"$is_observer" == "n" ]]; then
   echo "Validator only flag value : $is_observer"
 else
-  echo "Please use only Y or N for -v flag."
+  echo "Please use only y or n for -v flag.This value is casesensitive"
+  exit 1
 fi
 
 
@@ -100,7 +101,7 @@ echo "hotkey_address: $hotkey_address"
 echo "pubkey: $pubkey"
 echo "is_observer: $is_observer"
 mkdir ~/.zetacored/os_info
-jq -n --arg is_observer "$is_observer" --arg operator_address "$operator_address" --arg hotkey_address "$hotkey_address" --arg pubkey "$pubkey" '{"is_observer":$is_observer,"ObserverAddress":$operator_address,"ZetaClientGranteeAddress":$hotkey_address,"ZetaClientGranteePubKey":$pubkey}' > ~/.zetacored/os_info/os.json
+jq -n --arg is_observer "$is_observer" --arg operator_address "$operator_address" --arg hotkey_address "$hotkey_address" --arg pubkey "$pubkey" '{"IsObserver":$is_observer,"ObserverAddress":$operator_address,"ZetaClientGranteeAddress":$hotkey_address,"ZetaClientGranteePubKey":$pubkey}' > ~/.zetacored/os_info/os.json
 mkdir -p genesis_files/os_info
 cp ~/.zetacored/os_info/os.json ./genesis_files/os_info/os_"$HOSTNAME".json
 

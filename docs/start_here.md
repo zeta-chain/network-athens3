@@ -58,9 +58,15 @@ Give execute permissions to the scripts and run the node setup script.
 
 When prompted for confirm, enter `y` to continue.
 
+For observer validators
 ```bash
 chmod +x ./scripts/*.sh
-./scripts/node-setup.sh
+./scripts/node-setup.sh -o y
+```
+For non-observer validators
+```bash
+chmod +x ./scripts/*.sh
+./scripts/node-setup.sh -o n
 ```
 
 After the `node-setup.sh` script generates the keys and necessary files, create
