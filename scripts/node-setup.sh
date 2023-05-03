@@ -1,9 +1,32 @@
 #!/bin/bash
 
+clibuilder()
+{
+   echo ""
+   echo "Usage: $0 -o Observer Flag"
+   echo -e "\t-o Set to y to run observer-validater , set to n to run validater only"
+   exit 1 # Exit script after printing help
+}
+
+while getopts "o:" opt
+do
+   case "$opt" in
+      o ) is_observer="$OPTARG" ;;
+      ? ) clibuilder ;; # Print cliBuilder in case parameter is non-existent
+   esac
+done
+
+if [ -z "$is_observer" ]
+then
+   echo "Some or all of the parameters are empty";
+   clibuilder
+fi
+
+
 
 # Ask for confirmation
 read -p "This script should only be used during the initial setup. 
-It will DELETE EXISTING config files and keys if used a second time. 
+It will DELETE EXISTING config files and keys if used a second time.
 It will remove the contents of ~/.zetacored.
 Are you sure you want to continue? (y/n) " confirm
 
@@ -16,8 +39,22 @@ else
 fi
 
 
+if [[ "$is_observer" = "y" ||"$is_observer" == "n" ]]; then
+  echo "Validator only flag value : $is_observer"
+else
+  echo "Please use only Y or N for -v flag."
+fi
+
+
 now=zetacored-$(date +"%T")
 mkdir -p ~/.zetacored-old/"$now"
+
+if [ -d "$HOME/.zetacored" ]
+then
+    echo "Creating a backup of existing config files and keys in ~/.zetacored-old/$now"
+    cp -a ~/.zetacored/* ~/.zetacored-old/"$now"/
+fi
+
 rm -rf ~/.zetacored/config
 rm -rf ~/.zetacored/data
 rm -rf ~/.zetacored/keyring*
@@ -61,8 +98,9 @@ pubkey=$(zetacored get-pubkey hotkey|sed -e 's/secp256k1:"\(.*\)"/\1/' | sed 's/
 echo "operator_address: $operator_address"
 echo "hotkey_address: $hotkey_address"
 echo "pubkey: $pubkey"
+echo "is_observer: $is_observer"
 mkdir ~/.zetacored/os_info
-jq -n --arg operator_address "$operator_address" --arg hotkey_address "$hotkey_address" --arg pubkey "$pubkey" '{"ObserverAddress":$operator_address,"ZetaClientGranteeAddress":$hotkey_address,"ZetaClientGranteePubKey":$pubkey}' > ~/.zetacored/os_info/os.json
+jq -n --arg is_observer "$is_observer" --arg operator_address "$operator_address" --arg hotkey_address "$hotkey_address" --arg pubkey "$pubkey" '{"is_observer":$is_observer,"ObserverAddress":$operator_address,"ZetaClientGranteeAddress":$hotkey_address,"ZetaClientGranteePubKey":$pubkey}' > ~/.zetacored/os_info/os.json
 mkdir -p genesis_files/os_info
 cp ~/.zetacored/os_info/os.json ./genesis_files/os_info/os_"$HOSTNAME".json
 
