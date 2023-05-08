@@ -82,8 +82,7 @@ NOTE : A backup up is created for the existing zetacored folder under
 
 ### Get Updated Genesis File
 
-After the ZetaChain Coordinator has merged the PRs and updated the genesis
-file:
+After the ZetaChain Coordinator has merged the PRs and updated the genesis file:
 
 - Switch back to the `main` branch
 - Pull the latest changes to get the updated genesis.json file
@@ -99,10 +98,10 @@ git pull
 ./scripts/start-zetacore.sh
 ```
 
-**Optional** The start-zetacore.sh script will automatically update the config file
-(~/.zetacored/config/config.toml) with a persistent peer. If you did not use
-the start-zetacored.sh script you need to update the config file manually with
-the peer information.
+**Optional** The start-zetacore.sh script will automatically update the config
+file (~/.zetacored/config/config.toml) with a persistent peer. If you did not
+use the start-zetacored.sh script you need to update the config file manually
+with the peer information.
 
 #### Wait for Genesis to Complete
 
@@ -115,20 +114,21 @@ management system. See the final section below for more information.
 pkill zetacored
 ```
 
-If you are an Observer Signer Validator you must leave zetacored running and move onto the next step.
+If you are an Observer Signer Validator you must leave zetacored running and
+move onto the next step.
 
 ## Phase 3: TSS Keygen (zetaclientd)
 
-This phase applies to **Observer/Signer Validators only**. Most operators are `core
-validators` and can skip this step. If you aren't sure what you are, you are
-most likely a core validator.
+This phase applies to **Observer/Signer Validators only**. Most operators are
+`core validators` and can skip this step. If you aren't sure what you are, you
+are most likely a core validator.
 
 #### Configure RPC Connectivity
 
-Observer Signers need an RPC endpoint for each connected chain. You can follow the
-standard instructions to configure a node for most chains but the BTC requires
-special instructions just for ZetaChain. The links below will take you to a node setup guide for
-each chain.
+Observer Signers need an RPC endpoint for each connected chain. You can follow
+the standard instructions to configure a node for most chains but the BTC
+requires special instructions just for ZetaChain. The links below will take you
+to a node setup guide for each chain.
 
 - [Ethereum RPC Node Setup](https://ethereum.org/en/developers/docs/nodes-and-clients/run-a-node/)
 - [BSC RPC Node Setup](https://docs.bnbchain.org/docs/validator/fullnode/)
@@ -139,9 +139,10 @@ Edit the `zeta-client.toml` file located in the `.zetacored/config` directory
 and add the RPC endpoints to the `Endpoint = ` section of each chain.
 
 #### Set Public IP
+
 If your node has a public IP and private IP (such as AWS EC2 instance), then you
-need to set the `MYIP` environment variable to your public IP otherwise
-the p2p connection will not work.
+need to set the `MYIP` environment variable to your public IP otherwise the p2p
+connection will not work.
 
 ```bash
 export MYIP=3.141.21.139
@@ -157,8 +158,8 @@ KEYGENBLOCK=<Keygen Block Provided By ZetaChain Coordinator>
 ./scripts/start-zetaclient.sh -k $KEYGENBLOCK-s $SEEDIP
 ```
 
-**Wait until zetachain coordinator confirms that TSS keygen is completed**.
-Then terminate the processes `zetacored` and `zetaclientd`.
+**Wait until zetachain coordinator confirms that TSS keygen is completed**. Then
+terminate the processes `zetacored` and `zetaclientd`.
 
 ```bash
 pkill zetaclientd
@@ -174,8 +175,10 @@ environment you are running the validator in. At a minimum we reccomend you:
 - [ ] Run each process as a systemd service or containerized service
 - [ ] Do NOT run these services as root. Create a new restricted ZetaChain user
 - [ ] Create Sentry nodes to protect your validator
-- [ ] Setup ngnix to forward p2p traffic from Sentry node to zetaclientd -- TODO add documentation for this
+- [ ] Setup ngnix to forward p2p traffic from Sentry node to zetaclientd -- TODO
+      add documentation for this
 - [ ] Make sure you setup resource monitoring (CPU, RAM, etc), uptime
-      monitoring, log ingestion, etc to minimize the risk of downtime or slashing
-- [ ] Install adequate security measures such as, Endpoint protection, Anti-Virus,
-      system level logging, WAF, etc
+      monitoring, log ingestion, etc to minimize the risk of downtime or
+      slashing
+- [ ] Install adequate security measures such as, Endpoint protection,
+      Anti-Virus, system level logging, WAF, etc
