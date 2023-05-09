@@ -1,0 +1,12 @@
+{
+  "group_policy_address": "zeta1afk9zr2hn2jsac63h4hm60vl9z3e5u69gndzf7c99cqge3vzwjzsxn0x73",
+  "messages": [
+    {
+      "@type": "/zetachain.zetacore.crosschain.MsgUpdateKeygen",
+      "creator": "zeta1afk9zr2hn2jsac63h4hm60vl9z3e5u69gndzf7c99cqge3vzwjzsxn0x73",
+      "block": 900,
+    }
+  ],
+  "metadata": "",
+  "proposers": ["zeta1eznff5fruu64v69j5s97l98g6hkfgrnvn9tsy5"]
+}
