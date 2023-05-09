@@ -43,8 +43,8 @@ operatorAddress=$(zetacored keys show operator -a --keyring-backend=test)
 echo "operatorAddress: $operatorAddress"
 
 rm ~/.tss/*
-zetaclientd init --enable-chains "goerli_testnet,btc_testnet" \
-  --pre-params" ~/preP"arams.json \
+zetaclientd init \
+  --pre-params ~/preParams.json \
   --peer /ip4/"$SEEDIP"/tcp/6668/p2p/"$SEED" \
-  --chain-id $CHAINID --dev --operator "$operatorAddress" --log-level 0 --hotkey=hotkey --keygen-block "$KeygenBlock"
+  --chain-id $CHAINID --operator "$operatorAddress" --log-level 0 --hotkey=hotkey
 zetaclientd start >> ~/.zetacored/zetaclient.log 2>&1  &
