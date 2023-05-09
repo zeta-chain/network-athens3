@@ -27,7 +27,8 @@ echo "operator_address: $operator_address"
 echo "hotkey_address: $hotkey_address"
 echo "pubkey: $pubkey"
 mkdir ~/.zetacored/os_info
-jq -n --arg operator_address "$operator_address" --arg hotkey_address "$hotkey_address" --arg pubkey "$pubkey" '{"ObserverAddress":$operator_address,"ZetaClientGranteeAddress":$hotkey_address,"ZetaClientGranteePubKey":$pubkey}' > ~/.zetacored/os_info/os.json
+
+jq -n --arg IsObserver "y" --arg operator_address "$operator_address" --arg hotkey_address "$hotkey_address" --arg pubkey "$pubkey" '{"IsObserver":$IsObserver,"ObserverAddress":$operator_address,"ZetaClientGranteeAddress":$hotkey_address,"ZetaClientGranteePubKey":$pubkey}' > ~/.zetacored/os_info/os.json
 cp ~/.zetacored/os_info/os.json ./genesis_files/os_info/os_"$MONIKER".json
 
 # Add balances to genesis file and create GenTX
