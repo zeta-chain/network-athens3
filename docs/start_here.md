@@ -37,12 +37,18 @@ jq --version
 ```
 
 #### Download and install `zetacored` and `zetaclientd` binaries
+Binaries are built based on OS version and CPU architecture. The binaries follow this format
 
+`zetacored-ubuntu-[20,22]-[arm64,amd64]`
+
+For the rest of these instructions we'll assume you are usinng Ubuntu 22 with
+`amd64` architecture. If you are using a different OS or CPU architecture you'll
+need to adjust the commands below.
 ```
-wget https://zetachain-external-files.s3.amazonaws.com/binaries/athens3/latest/zetacored-ubuntu
-wget https://zetachain-external-files.s3.amazonaws.com/binaries/athens3/latest/zetaclientd-ubuntu
-mv zetacored-ubuntu /usr/bin/zetacored && chmod +x /usr/bin/zetacored
-mv zetaclientd-ubuntu /usr/bin/zetaclientd && chmod +x /usr/bin/zetaclientd
+wget https://zetachain-external-files.s3.amazonaws.com/binaries/athens3/latest/zetacored-ubuntu-22-amd64
+wget https://zetachain-external-files.s3.amazonaws.com/binaries/athens3/latest/zetaclientd-ubuntu-22-amd64
+mv zetacored-ubuntu-22-amd64 /usr/bin/zetacored && chmod +x /usr/bin/zetacored
+mv zetaclientd-ubuntu-22-amd64 /usr/bin/zetaclientd && chmod +x /usr/bin/zetaclientd
 # You may need to set additional permissions depending on your node configuration
 ```
 
@@ -58,9 +64,15 @@ Give execute permissions to the scripts and run the node setup script.
 
 When prompted for confirm, enter `y` to continue.
 
+For observer validators
 ```bash
 chmod +x ./scripts/*.sh
-./scripts/node-setup.sh
+./scripts/node-setup.sh -o y
+```
+For non-observer validators
+```bash
+chmod +x ./scripts/*.sh
+./scripts/node-setup.sh -o n
 ```
 
 After the `node-setup.sh` script generates the keys and necessary files, create
