@@ -20,7 +20,7 @@ cat "$HOME"/.zetacored/config/genesis.json | jq '.app_state["gov"]["voting_param
 
 
 zetacored collect-observer-info
-zetacored add-observer-list
+zetacored add-observer-list --keygen-block=100
 zetacored collect-gentxs
 zetacored validate-genesis
 rm -rf network_files/config/genesis.json
