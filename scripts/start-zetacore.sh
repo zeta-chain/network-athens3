@@ -3,7 +3,7 @@ CHAINID="athens_7001-1"
 KEYRING="test"
 HOSTNAME=$(hostname)
 
-if grep -q 'moniker = "test"' network_files/config/config.toml; then
+if grep -q 'moniker = ""' network_files/config/config.toml; then
     echo You must set a moniker for this validator
     # Get user input
     read -p "Enter the moniker for this validator: " input

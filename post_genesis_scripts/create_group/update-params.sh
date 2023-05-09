@@ -2,7 +2,7 @@
 CHAINID="athens_7001-1"
 KEYRING="test"
 HOSTNAME=$(hostname)
-signer="hotkey"
+signer="operator"
 
 signerAddress=$(zetacored keys show $signer -a --keyring-backend=test)
 echo "signerAddress: $signerAddress"
