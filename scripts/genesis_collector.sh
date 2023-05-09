@@ -2,6 +2,30 @@
 CHAINID="athens_7001-1"
 KEYRING="test"
 
+
+clibuilder()
+{
+   echo ""
+   echo "Usage: $0 -k KeygenBlock"
+   echo -e "\t-k KeygenBlock"
+   exit 1 # Exit script after printing help
+}
+
+while getopts "k:" opt
+do
+   case "$opt" in
+      k ) KeygenBlock="$OPTARG" ;;
+      ? ) clibuilder ;; # Print cliBuilder in case parameter is non-existent
+   esac
+done
+
+if [ -z "$KeygenBlock" ]
+then
+   echo "Some or all of the parameters are empty";
+   clibuilder
+fi
+
+
 rm -rf ~/.zetacored/os_info/*
 rm -rf ~/.zetacored/config/gentx/*
 
@@ -20,7 +44,7 @@ cat "$HOME"/.zetacored/config/genesis.json | jq '.app_state["gov"]["voting_param
 
 
 zetacored collect-observer-info
-zetacored add-observer-list --keygen-block=100
+zetacored add-observer-list --keygen-block="$KeygenBlock"
 zetacored collect-gentxs
 zetacored validate-genesis
 rm -rf network_files/config/genesis.json

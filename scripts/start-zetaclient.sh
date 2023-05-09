@@ -7,22 +7,20 @@ HOSTNAME=$(hostname)
 clibuilder()
 {
    echo ""
-   echo "Usage: $0 -s SEEDIP -k KeygenBlock"
+   echo "Usage: $0 -s SEEDIP"
    echo -e "\t-s SEEDIP"
-   echo -e "\t-k Keygen Block for zetaclient"
    exit 1 # Exit script after printing help
 }
 
-while getopts "k:s:" opt
+while getopts "s:" opt
 do
    case "$opt" in
-      k ) KeygenBlock="$OPTARG" ;;
       s ) SEEDIP="$OPTARG" ;;
       ? ) clibuilder ;; # Print cliBuilder in case parameter is non-existent
    esac
 done
 
-if [ -z "$KeygenBlock" ] || [ -z "$SEEDIP" ]
+if [ -z "$SEEDIP" ]
 then
    echo "Some or all of the parameters are empty";
    clibuilder
@@ -33,9 +31,7 @@ if [ -z "${MYIP}" ]; then
     export MYIP=$(curl ifconfig.me)
 fi
 
-export SEEDIP=$SEEDIP
 echo "SEEDIP: $SEEDIP"
-echo "KeygenBlock: $KeygenBlock"
 export SEED=$(curl --retry 10 --retry-delay 5 --retry-connrefused  -s "$SEEDIP":8123/p2p)
 export TSSPATH=~/.tss
 
