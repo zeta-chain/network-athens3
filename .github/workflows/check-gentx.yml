@@ -7,17 +7,19 @@ on:
       - cicd/genesis/athens3-reduced-steps
       - athens3-testnetwork/v0.3.0
       - main
+      - athens3/internal-test2
   pull_request:
     branches:
       - main
       - genesis/athens3-reduced-steps
       - athens3-testnetwork/v0.3.0
+      - athens3/internal-test2
     paths:
       - "genesis_files/**"
 
 env:
-  ZETACORED_BINARY: "https://zetachain-external-files.s3.amazonaws.com/binaries/athens3/latest/zetacored-ubuntu"
-  ZETACLIENT_BINARY: "https://zetachain-external-files.s3.amazonaws.com/binaries/athens3/latest/zetaclientd-ubuntu"
+  ZETACORED_BINARY: "https://zetachain-external-files.s3.amazonaws.com/binaries/athens3-prerelease/latest/zetacored-ubuntu-22-amd64"
+  ZETACLIENT_BINARY: "https://zetachain-external-files.s3.amazonaws.com/binaries/athens3-prerelease/latest/zetaclientd-ubuntu-22-amd64"
   CHAINID: "athens_7001-1"
   KEYRING: "test"
   HOSTNAME: checker

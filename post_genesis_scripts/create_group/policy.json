@@ -2,7 +2,7 @@
   "@type": "/cosmos.group.v1.PercentageDecisionPolicy",
   "percentage": "0.5",
   "windows": {
-    "voting_period": "20s",
+    "voting_period": "400s",
     "min_execution_period": "0s"
   }
 }
