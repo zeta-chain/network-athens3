@@ -1,6 +1,6 @@
 {
   "genesis_time": "2023-05-11T18:07:37.079761Z",
-  "chain_id": "localnet_101-1",
+  "chain_id": "athens_7001-1",
   "initial_height": "1",
   "consensus_params": {
     "block": {
