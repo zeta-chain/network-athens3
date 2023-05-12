@@ -39,6 +39,29 @@ else
 fi
 
 
+
+echo You must set a moniker for this validator
+# Get user input
+read -p "Enter the moniker for this validator: " input
+
+# Print input and confirm
+echo "You entered: $input"
+read -p "Is this correct? [Y/n] " confirm
+
+# Check confirmation
+if [[ $confirm =~ ^[Yy]$ ]]; then
+    echo "Confirmed!"
+else
+    echo "Aborted."
+    exit 1
+fi
+
+# Replace moniker
+moniker=$input
+
+
+
+
 if [[ "$is_observer" = "y" ||"$is_observer" == "n" ]]; then
   echo "Validator only flag value : $is_observer"
 else
@@ -71,7 +94,7 @@ echo "HOSTNAME: $HOSTNAME"
 
 # Init a new node to generate genesis file .
 # Copy config files from existing folders which get copied via Docker Copy when building images
-zetacored init Zetanode_HOSTNAME --chain-id=$CHAINID
+zetacored init "$moniker" --chain-id="$CHAINID"
 
 #Clean main folder
 rm -rf genesis_files/gentx/*.json
@@ -87,7 +110,7 @@ cp -a ~/.zetacored/config/genesis.json ~/.backup/config/
 
 # Add moniker to config file
 pp=$(cat "$HOME"/.zetacored/config/gentx/z2gentx/*.json | jq '.body.memo' )
-pps=Zetanode_$HOSTNAME
+pps="$moniker"
 sed -i -e "/moniker =/s/=.*/= \"$pps\"/" "$HOME"/.zetacored/config/config.toml
 
 # add keys and genenerate os_info.json
