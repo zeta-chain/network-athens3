@@ -31,7 +31,9 @@ echo "signerAddress: $signerAddress"
 
 
 zetacored tx group submit-proposal post_genesis_scripts/create_proposal/proposal_keygen.json --from $signer --fees=40azeta --chain-id=$CHAINID --keyring-backend=$KEYRING -y --broadcast-mode=block
+sleep 5
 zetacored tx gov vote "$PID" yes --from $signer --keyring-backend $KEYRING --chain-id $CHAINID --yes --fees=40azeta --broadcast-mode=block
+sleep 5
 zetacored tx group exec "$PID" --from $signer --fees=40azeta --chain-id=$CHAINID --keyring-backend=$KEYRING -y --broadcast-mode=block
 
 
