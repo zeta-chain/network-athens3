@@ -1,5 +1,5 @@
 {
-  "genesis_time": "2023-05-12T21:42:55.889569Z",
+  "genesis_time": "2023-05-14T03:38:30.541906Z",
   "chain_id": "athens_7001-1",
   "initial_height": "1",
   "consensus_params": {
@@ -1779,10 +1779,6 @@
         ],
         "admin_policy": [
           {
-            "policy_type": 4,
-            "address": "zeta1afk9zr2hn2jsac63h4hm60vl9z3e5u69gndzf7c99cqge3vzwjzsxn0x73"
-          },
-          {
             "address": "zeta1afk9zr2hn2jsac63h4hm60vl9z3e5u69gndzf7c99cqge3vzwjzsxn0x73"
           },
           {
@@ -1795,6 +1791,10 @@
           },
           {
             "policy_type": 3,
+            "address": "zeta1afk9zr2hn2jsac63h4hm60vl9z3e5u69gndzf7c99cqge3vzwjzsxn0x73"
+          },
+          {
+            "policy_type": 4,
             "address": "zeta1afk9zr2hn2jsac63h4hm60vl9z3e5u69gndzf7c99cqge3vzwjzsxn0x73"
           }
         ]
