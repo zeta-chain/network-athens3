@@ -1,28 +1,20 @@
 # Athens 3 Validator Setup guide
 
-The ZetaChan Genesis process for Athens3 is broken up into three phases:
+The ZetaChan Genesis process for Athens3 is broken up into two phases:
 
-Phase 1: Local Setup
+Phase 1: Node Setup
 
 - Setup your validator node
 - Generate keys
 - Submit keys to the coordinator via GitHub PR
 
-Phase 2: Core Genesis
+Phase 2: Genesis
 
 - Wait for updated genesis file to be provided by the coordinator
-- Start zetacored
+- Start Your Node
 - Wait for the coordinator to confirm network genesis is complete
 
-Phase 3: TSS Keygen (Observer/Signer Validators Only)
-
-- Wait for the coordinator to provide the TSS keygen block and SEED IP
-- Start zetaclientd
-- Wait for the coordinator to confirm TSS keygen is complete
-
-## Phase 1: Local Setup
-
-### Node Setup
+## Phase 1: Node Setup
 
 Here we assume a typical Ubuntu 22.04 LTS x86_64 setup. If you are using a
 different OS you may need to make some adjustments. For more information about
@@ -37,9 +29,18 @@ jq --version
 ```
 
 #### Download and install `zetacored` and `zetaclientd` binaries
-Binaries are built based on OS version and CPU architecture. The binaries follow this format
+Binaries are built based on OS version and CPU architecture. The available binaries are:
 
-`zetacored-ubuntu-[20,22]-[arm64,amd64]`
+```
+zetaclientd-alpine-amd64
+zetaclientd-ubuntu-20-amd64
+zetaclientd-ubuntu-22-amd64
+zetaclientd-ubuntu-22-arm64
+zetacored-alpine-amd64
+zetacored-ubuntu-20-amd64
+zetacored-ubuntu-22-amd64
+zetacored-ubuntu-22-arm64
+```
 
 For the rest of these instructions we'll assume you are usinng Ubuntu 22 with
 `amd64` architecture. If you are using a different OS or CPU architecture you'll
@@ -59,6 +60,11 @@ git clone https://github.com/zeta-chain/network-athens3.git && cd network-athens
 ```
 
 #### Run The Node Setup Script
+
+To streamline this process we have provided scripts that will automatically
+generate the required keys, and create your gentx and os_info files. There are
+others ways to configure your node but this is the method we can provide
+techincal support for during this testnet genesis.  
 
 Give execute permissions to the scripts and run the node setup script.
 
@@ -90,49 +96,10 @@ a branch, commit, and raise a PR to submit the files to ZetaChain coordinator:
 NOTE : A backup up is created for the existing zetacored folder under
 `~/.zetacored_old/zetacored-<timestamp>`.You can copy back keys etc if needed .
 
-## Phase 2: Core Genesis
+## Node Setup - Observer/Signer Validators Only
 
-### Get Updated Genesis File
-
-After the ZetaChain coordinator has merged the PRs and updated the genesis file:
-
-- Switch back to the `main` branch
-- Pull the latest changes to get the updated genesis.json file
-
-```bash
-git switch main
-git pull
-```
-
-#### Start The Node
-
-```bash
-./scripts/start-zetacore.sh
-```
-
-**Optional** The `start-zetacore.sh` script will automatically update the config
-file (`~/.zetacored/config/config.toml`) with a persistent peer. If you did not
-use the `start-zetacored.sh` script you need to update the config file manually
-with the peer information.
-
-#### Wait for Genesis to Complete
-
-**Wait until ZetaChain coordinator confirms that genesis is completed.** Then
-You can terminate the `zetacored` process that was manually started in the
-previous step. You'll want to resume zetacored using a more robust process
-management system. See the final section below for more information.
-
-```bash
-pkill zetacored
-```
-
-If you are an Observer Signer Validator you must leave zetacored running and
-move onto the next step.
-
-## Phase 3: TSS Keygen (`zetaclientd`)
-
-This phase applies to **Observer/Signer Validators only**. Most operators are
-"core validators" and can skip this step. If you aren't sure what you are, you
+These instructions apply to **Observer/Signer Validators only**. Most operators are
+"core validators" and can skip these steps. If you aren't sure what type of node you have, you
 are most likely a core validator.
 
 ### Configure RPC Connectivity
@@ -147,34 +114,51 @@ to a node setup guide for each chain.
 - [Polygon RPC Node Setup](https://wiki.polygon.technology/docs/category/run-a-full-node)
 - [BTC RPC Node Setup](btc-rpc.md)
 
-Edit the `zeta-client.toml` file located in the `.zetacored/config` directory
+Edit the `client_config.json` file located in the `.zetacored/config` directory
 and add the RPC endpoints to the `Endpoint = ` section of each chain.
 
-### Set Public IP
+### Set Public IP in  `client_config.json`
 
-If your node has a public IP and private IP (such as AWS EC2 instance), then you
-need to set the `MYIP` environment variable to your public IP otherwise the p2p
-connection will not work.
+Observer/Signer Validators must set their public IP in the `client_config.json` file located in the `.zetacored/config` directory. 
+
+## Phase 2: Core Genesis
+
+### Get Updated Genesis File
+
+After the ZetaChain coordinator has merged the gentx PRs and updated the genesis file:
+
+- Switch back to the `main` branch
+- Pull the latest changes to get the updated genesis.json file
 
 ```bash
-export MYIP=3.141.21.139
+git switch main
+git pull
+```
+
+### Start The Node 
+The start-zetacored.sh script automatically copies the new genesis file to `~/.zetacored/config/`.
+
+```bash
+./scripts/start-zetacore.sh
 ```
 
 ### Start `zetaclient`
 
-- `KeygenBlock` will be provided by the ZetaChain coordinator.
+This step applies to **Observer/Signer Validators only**.
 
 ```bash
 SEEDIP=3.218.170.198
-KEYGENBLOCK=<Keygen Block Provided By ZetaChain coordinator>
-./scripts/start-zetaclient.sh -k $KEYGENBLOCK-s $SEEDIP
+./scripts/start-zetaclient.sh -s $SEEDIP
 ```
 
-**Wait until ZetaChain coordinator confirms that TSS keygen is completed**. Then
-terminate the processes `zetacored` and `zetaclientd`.
+### Wait for Genesis to Complete
+
+**Wait until ZetaChain coordinator confirms that genesis is completed.** 
+You can terminate the `zetacored` process that was manually started in the
+previous step. You'll want to resume zetacored using a more robust process
+management system. See the final section below for more information.
 
 ```bash
-pkill zetaclientd
 pkill zetacored
 ```
 
