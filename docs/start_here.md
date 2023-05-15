@@ -46,8 +46,8 @@ For the rest of these instructions we'll assume you are usinng Ubuntu 22 with
 `amd64` architecture. If you are using a different OS or CPU architecture you'll
 need to adjust the commands below.
 ```
-wget https://zetachain-external-files.s3.amazonaws.com/binaries/athens3/latest/zetacored-ubuntu-22-amd64
-wget https://zetachain-external-files.s3.amazonaws.com/binaries/athens3/latest/zetaclientd-ubuntu-22-amd64
+wget https://zetachain-external-files.s3.amazonaws.com/binaries/athens3/1.0.0/zetacored-ubuntu-22-amd64
+wget https://zetachain-external-files.s3.amazonaws.com/binaries/athens3/1.0.0/zetaclientd-ubuntu-22-amd64
 mv zetacored-ubuntu-22-amd64 /usr/bin/zetacored && chmod +x /usr/bin/zetacored
 mv zetaclientd-ubuntu-22-amd64 /usr/bin/zetaclientd && chmod +x /usr/bin/zetaclientd
 # You may need to set additional permissions depending on your node configuration
