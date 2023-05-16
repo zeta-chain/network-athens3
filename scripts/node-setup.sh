@@ -109,7 +109,6 @@ mkdir -p ~/.backup/config/
 cp -a ~/.zetacored/config/genesis.json ~/.backup/config/
 
 # Add moniker to config file
-pp=$(cat "$HOME"/.zetacored/config/gentx/z2gentx/*.json | jq '.body.memo' )
 pps="$moniker"
 sed -i -e "/moniker =/s/=.*/= \"$pps\"/" "$HOME"/.zetacored/config/config.toml
 
