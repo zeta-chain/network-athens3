@@ -3,8 +3,8 @@ CHAINID="athens_7001-1"
 KEYRING="test"
 HOSTNAME=$(hostname)
 signer="operator"
-node=tcp://3.218.170.198:26657
-
+nodeip=""
+node=tcp:$nodeip//:26657
 clibuilder()
 {
    echo ""
