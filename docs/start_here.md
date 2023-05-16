@@ -86,7 +86,7 @@ a branch, commit, and raise a PR to submit the files to ZetaChain coordinator:
 
 - Use `gen-files-<YourValidatorName>` as the branch name for the new branch.
 - The pr must contain only two files
-  - `os_info.json`
+  - `os_XX.json`
   - `gentx-XX.json`
 - Do not commit `network_files/config/genesis.json` if it exists
   - This file can be deleted, it is not required.
