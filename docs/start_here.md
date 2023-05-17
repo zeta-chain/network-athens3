@@ -114,12 +114,12 @@ to a node setup guide for each chain.
 - [Polygon RPC Node Setup](https://wiki.polygon.technology/docs/category/run-a-full-node)
 - [BTC RPC Node Setup](btc-rpc.md)
 
-Edit the `client_config.json` file located in the `.zetacored/config` directory
+Edit the `zetaclient_config.json` file located in the `.zetacored/config` directory
 and add the RPC endpoints to the `Endpoint = ` section of each chain.
 
-### Set Public IP in  `client_config.json`
+### Set Public IP in  `zetaclient_config.json`
 
-Observer/Signer Validators must set their public IP in the `client_config.json` file located in the `.zetacored/config` directory. 
+Observer/Signer Validators must set their public IP in the `zetaclient_config.json` file located in the `.zetacored/config` directory. 
 
 ## Phase 2: Core Genesis
 
