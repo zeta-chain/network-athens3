@@ -3,7 +3,11 @@
     {
       "address": "zeta1a5e0ggqqg4j3ft8svvzr779gcdkz8956pzytr5",
       "weight": "1",
+<<<<<<< HEAD
       "metadata": "tanmay-operator"
+=======
+      "metadata": ""
+>>>>>>> main
     }
   ]
 }

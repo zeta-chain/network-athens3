@@ -3,7 +3,12 @@ CHAINID="athens_7001-1"
 KEYRING="test"
 HOSTNAME=$(hostname)
 signer="operator"
+<<<<<<< HEAD
 
+=======
+nodeip=""
+node=tcp:$nodeip//:26657
+>>>>>>> main
 clibuilder()
 {
    echo ""
@@ -30,10 +35,18 @@ signerAddress=$(zetacored keys show $signer -a --keyring-backend=test)
 echo "signerAddress: $signerAddress"
 
 
+<<<<<<< HEAD
 zetacored tx group submit-proposal post_genesis_scripts/create_proposal/proposal_keygen.json --from $signer --fees=40azeta --chain-id=$CHAINID --keyring-backend=$KEYRING -y --broadcast-mode=block
 sleep 5
 zetacored tx group vote "$PID" $signerAddress VOTE_OPTION_YES metadata --from $signer --fees=40azeta --chain-id=$CHAINID --keyring-backend=$KEYRING -y --broadcast-mode=block
 sleep 5
 zetacored tx group exec "$PID" --from $signer --fees=40azeta --chain-id=$CHAINID --keyring-backend=$KEYRING -y --broadcast-mode=block
+=======
+zetacored tx group submit-proposal post_genesis_scripts/create_proposal/proposal_goerili_params.json --from $signer --fees=40azeta --chain-id=$CHAINID --keyring-backend=$KEYRING -y --broadcast-mode=block --node=$node
+sleep 5
+zetacored tx group vote "$PID" $signerAddress VOTE_OPTION_YES metadata --from $signer --fees=40azeta --chain-id=$CHAINID --keyring-backend=$KEYRING -y --broadcast-mode=block --node=$node
+sleep 5
+zetacored tx group exec "$PID" --from $signer --fees=40azeta --chain-id=$CHAINID --keyring-backend=$KEYRING -y --broadcast-mode=block --node=$node
+>>>>>>> main
 
 

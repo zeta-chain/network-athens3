@@ -1,4 +1,4 @@
-# BTC Node For Observer Signers
+# BTC RPC Node For Observer Signers
 
 This applies to **Observer/Signer Validators only**. Most operators are `core
 validators` and can skip this step. If you aren't sure what type of validator
@@ -6,9 +6,13 @@ you are running then you are most likely a core validator.
 
 ## Requirements
 
-You must use `Bitcoin Core 0.22`. Newer versions will not work
+You must use `Bitcoin Core 0.22`. Newer versions will not work..
+
 
 ## Step 1 Install Bitcoin Core 0.22 
+
+Here we assume a typical Ubuntu 22.04 LTS x86_64 setup. If you are using a
+different OS you may need to make some adjustments.
 
 1. Download Bitcoin Core 0.22 software from the official Bitcoin Core website (`https://bitcoincore.org/en/download/`).
 
@@ -19,30 +23,29 @@ For example, you could extract it to `/opt/bitcoin`.
     tar -xzf bitcoin-0.22.1-x86_64-linux-gnu.tar.gz -C /opt/
     ```
 
-3. Change to the extracted directory.
+1. Change to the extracted directory.
 
     ```
     cd /opt/bitcoin-0.22.1/bin/
     ```
 
-4. Start the Bitcoin daemon by running the `bitcoind` command. 
-Using `-startatheight` flag can reduces sync times significantly.
+2. Start the Bitcoin daemon by running the `bitcoind` command. 
 
     ```
-    ./bitcoind -startatheight 2430000
+    ./bitcoind
     ```
 
-5. By default, the Bitcoin daemon will use the mainnet network. To use a
+3. By default, the Bitcoin daemon will use the mainnet network. To use a
 different network, such as testnet or regtest, you can specify the network
 option when starting the daemon.
 
     For example, to start the daemon in testnet mode:
 
     ```
-    ./bitcoind -testnet -startatheight 2430000
+    ./bitcoind -testnet
     ```
 
-6. Once the daemon is running, you can use the `bitcoin-cli` command to interact
+1. Once the daemon is running, you can use the `bitcoin-cli` command to interact
 with it. For example, you can use the `getinfo` command to get information about
 the current state of the Bitcoin network.
 
