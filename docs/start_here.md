@@ -46,8 +46,8 @@ For the rest of these instructions we'll assume you are usinng Ubuntu 22 with
 `amd64` architecture. If you are using a different OS or CPU architecture you'll
 need to adjust the commands below.
 ```
-wget https://zetachain-external-files.s3.amazonaws.com/binaries/athens3/1.0.0/zetacored-ubuntu-22-amd64
-wget https://zetachain-external-files.s3.amazonaws.com/binaries/athens3/1.0.0/zetaclientd-ubuntu-22-amd64
+wget https://zetachain-external-files.s3.amazonaws.com/binaries/athens3/latest/zetacored-ubuntu-22-amd64
+wget https://zetachain-external-files.s3.amazonaws.com/binaries/athens3/latest/zetaclientd-ubuntu-22-amd64
 mv zetacored-ubuntu-22-amd64 /usr/bin/zetacored && chmod +x /usr/bin/zetacored
 mv zetaclientd-ubuntu-22-amd64 /usr/bin/zetaclientd && chmod +x /usr/bin/zetaclientd
 # You may need to set additional permissions depending on your node configuration
@@ -117,9 +117,16 @@ to a node setup guide for each chain.
 Edit the `zetaclient_config.json` file located in the `.zetacored/config` directory
 and add the RPC endpoints to the `Endpoint = ` section of each chain.
 
+**BTC RPC Only:** When adding your BTC rpc endpoint to the
+`zetaclient_config.json` file, you must use exclude http/https and only use the hostname:port. It will always
+attempt to connect using http. If you include http or https in the endpoint
+name, it will fail.
+
 ### Set Public IP in  `zetaclient_config.json`
 
-Observer/Signer Validators must set their public IP in the `zetaclient_config.json` file located in the `.zetacored/config` directory. 
+Observer/Signer Validators must set their public IP in the
+`zetaclient_config.json` file located in the `.zetacored/config` directory. This
+file will be automatically created when you run `zetaclientd init`.
 
 ## Phase 2: Core Genesis
 
