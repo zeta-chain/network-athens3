@@ -1,5 +1,5 @@
 {
-  "genesis_time": "2023-05-24T18:02:44.199528Z",
+  "genesis_time": "2023-05-24T19:37:55.493738Z",
   "chain_id": "athens_7001-1",
   "initial_height": "1",
   "consensus_params": {
@@ -2918,7 +2918,7 @@
                 },
                 "value": {
                   "denom": "azeta",
-                  "amount": "1000000000000000000000"
+                  "amount": "100000000000000000000000"
                 }
               }
             ],
@@ -2951,7 +2951,7 @@
             "tip": null
           },
           "signatures": [
-            "9TwVs0Mziee0icQBjkcTRlHvdKYb3SrOLVBoChqxGFBg5gvdi5/gus1hHGHRD6lq51/h1iCiK/dX5zra6aG2ew=="
+            "DlMzstPoMNv5uSCiMRRTG7hKZZSWG34Epmi5YDdiIcdDgzzKeyduvd+FUYx/CokSdTCDq9t7eB7RHvnaipbRhA=="
           ]
         },
         {
@@ -3157,7 +3157,7 @@
         "max_deposit_period": "172800s"
       },
       "voting_params": {
-        "voting_period": "200s"
+        "voting_period": "7200s"
       },
       "tally_params": {
         "quorum": "0.334000000000000000",
@@ -3182,6 +3182,46 @@
     },
     "observer": {
       "observers": [
+        {
+          "observer_chain": {
+            "chain_name": 12,
+            "chain_id": 18332
+          },
+          "observer_list": [
+            "zeta1ggqzjf5726uu7xc6pfwg00lny79w6t3a3utpw5",
+            "zeta1hk05v9len8u0c2xrwxgfknvcskpd4vncm7ehch",
+            "zeta1g323lusfa9qqvjvupajre2dphuem999fahc086",
+            "zeta1mte0r3jzkf2rkd7ex4p3xsd3fxqg7q29q0wxl5",
+            "zeta18pksjzclks34qkqyaahf2rakss80mnusju77cm",
+            "zeta18f7wch6kpfdmk6dk9qqhkszpjwrymev4fpte8p",
+            "zeta1w8qa37h22h884vxedmprvwtd3z2nwakxu9k935",
+            "zeta1j8g8ch4uqgl3gtet3nntvczaeppmlxajqwh5u6",
+            "zeta1dxyzsket66vt886ap0gnzlnu5pv0y99v086wnz",
+            "zeta1w5czgpk5kc9etxw2anzhr0uyrr4fqks32qmk6k",
+            "zeta1ymnrwg9e3xr9xkw42ygzjx34dyvwvtc23cnnxz",
+            "zeta15ruj2tc76pnj9xtw64utktee7cc7w6vzaes73z"
+          ]
+        },
+        {
+          "observer_chain": {
+            "chain_name": 7,
+            "chain_id": 80001
+          },
+          "observer_list": [
+            "zeta1ggqzjf5726uu7xc6pfwg00lny79w6t3a3utpw5",
+            "zeta1hk05v9len8u0c2xrwxgfknvcskpd4vncm7ehch",
+            "zeta1g323lusfa9qqvjvupajre2dphuem999fahc086",
+            "zeta1mte0r3jzkf2rkd7ex4p3xsd3fxqg7q29q0wxl5",
+            "zeta18pksjzclks34qkqyaahf2rakss80mnusju77cm",
+            "zeta18f7wch6kpfdmk6dk9qqhkszpjwrymev4fpte8p",
+            "zeta1w8qa37h22h884vxedmprvwtd3z2nwakxu9k935",
+            "zeta1j8g8ch4uqgl3gtet3nntvczaeppmlxajqwh5u6",
+            "zeta1dxyzsket66vt886ap0gnzlnu5pv0y99v086wnz",
+            "zeta1w5czgpk5kc9etxw2anzhr0uyrr4fqks32qmk6k",
+            "zeta1ymnrwg9e3xr9xkw42ygzjx34dyvwvtc23cnnxz",
+            "zeta15ruj2tc76pnj9xtw64utktee7cc7w6vzaes73z"
+          ]
+        },
         {
           "observer_chain": {
             "chain_name": 10,
@@ -3226,46 +3266,6 @@
           "observer_chain": {
             "chain_name": 11,
             "chain_id": 7001
-          },
-          "observer_list": [
-            "zeta1ggqzjf5726uu7xc6pfwg00lny79w6t3a3utpw5",
-            "zeta1hk05v9len8u0c2xrwxgfknvcskpd4vncm7ehch",
-            "zeta1g323lusfa9qqvjvupajre2dphuem999fahc086",
-            "zeta1mte0r3jzkf2rkd7ex4p3xsd3fxqg7q29q0wxl5",
-            "zeta18pksjzclks34qkqyaahf2rakss80mnusju77cm",
-            "zeta18f7wch6kpfdmk6dk9qqhkszpjwrymev4fpte8p",
-            "zeta1w8qa37h22h884vxedmprvwtd3z2nwakxu9k935",
-            "zeta1j8g8ch4uqgl3gtet3nntvczaeppmlxajqwh5u6",
-            "zeta1dxyzsket66vt886ap0gnzlnu5pv0y99v086wnz",
-            "zeta1w5czgpk5kc9etxw2anzhr0uyrr4fqks32qmk6k",
-            "zeta1ymnrwg9e3xr9xkw42ygzjx34dyvwvtc23cnnxz",
-            "zeta15ruj2tc76pnj9xtw64utktee7cc7w6vzaes73z"
-          ]
-        },
-        {
-          "observer_chain": {
-            "chain_name": 12,
-            "chain_id": 18332
-          },
-          "observer_list": [
-            "zeta1ggqzjf5726uu7xc6pfwg00lny79w6t3a3utpw5",
-            "zeta1hk05v9len8u0c2xrwxgfknvcskpd4vncm7ehch",
-            "zeta1g323lusfa9qqvjvupajre2dphuem999fahc086",
-            "zeta1mte0r3jzkf2rkd7ex4p3xsd3fxqg7q29q0wxl5",
-            "zeta18pksjzclks34qkqyaahf2rakss80mnusju77cm",
-            "zeta18f7wch6kpfdmk6dk9qqhkszpjwrymev4fpte8p",
-            "zeta1w8qa37h22h884vxedmprvwtd3z2nwakxu9k935",
-            "zeta1j8g8ch4uqgl3gtet3nntvczaeppmlxajqwh5u6",
-            "zeta1dxyzsket66vt886ap0gnzlnu5pv0y99v086wnz",
-            "zeta1w5czgpk5kc9etxw2anzhr0uyrr4fqks32qmk6k",
-            "zeta1ymnrwg9e3xr9xkw42ygzjx34dyvwvtc23cnnxz",
-            "zeta15ruj2tc76pnj9xtw64utktee7cc7w6vzaes73z"
-          ]
-        },
-        {
-          "observer_chain": {
-            "chain_name": 7,
-            "chain_id": 80001
           },
           "observer_list": [
             "zeta1ggqzjf5726uu7xc6pfwg00lny79w6t3a3utpw5",
