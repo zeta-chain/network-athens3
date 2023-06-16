@@ -1,0 +1,24 @@
+{
+  "group_policy_address": "zeta1afk9zr2hn2jsac63h4hm60vl9z3e5u69gndzf7c99cqge3vzwjzsxn0x73",
+  "messages": [
+    {
+      "@type": "/zetachain.zetacore.observer.MsgUpdateCoreParams",
+      "creator": "zeta1afk9zr2hn2jsac63h4hm60vl9z3e5u69gndzf7c99cqge3vzwjzsxn0x73",
+      "coreParams": {
+        "confirmation_count": "6",
+        "gas_price_ticker": "30",
+        "in_tx_ticker": "5",
+        "out_tx_ticker": "8",
+        "watch_utxo_ticker": "0",
+        "zeta_token_contract_address": "0x0000c9ec4042283e8139c74f4c64bcd1e0b9b54f",
+        "connector_contract_address": "0x0000ecb8cdd25a18f12daa23f6422e07fbf8b9e1",
+        "erc20_custody_contract_address": "0x0000a7db254145767262c6a81a7ee1650684258e",
+        "chain_id": "97",
+        "outbound_tx_schedule_interval": "30",
+        "outbound_tx_schedule_lookahead": "60"
+      }
+    }
+  ],
+  "metadata": "",
+  "proposers": ["zeta1yq5pqzvasc38mruv9xhs34rfx4lanlm709m7eg"]
+}
