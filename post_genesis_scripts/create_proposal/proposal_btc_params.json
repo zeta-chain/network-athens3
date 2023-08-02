@@ -5,17 +5,17 @@
       "@type": "/zetachain.zetacore.observer.MsgUpdateCoreParams",
       "creator": "zeta1afk9zr2hn2jsac63h4hm60vl9z3e5u69gndzf7c99cqge3vzwjzsxn0x73",
       "coreParams": {
-        "confirmation_count": "6",
+        "confirmation_count": "2",
         "gas_price_ticker": "30",
-        "in_tx_ticker": "8",
-        "out_tx_ticker": "8",
-        "watch_utxo_ticker": "0",
-        "zeta_token_contract_address": "0x0000c304d2934c00db1d51995b9f6996affd17c0",
-        "connector_contract_address": "0x00005e3125aba53c5652f9f0ce1a4cf91d8b15ea",
-        "erc20_custody_contract_address": "0x000047f11c6e42293f433c82473532e869ce4ec5",
-        "chain_id": "5",
+        "in_tx_ticker": "20",
+        "out_tx_ticker": "60",
+        "watch_utxo_ticker": "30",
+        "zeta_token_contract_address": "",
+        "connector_contract_address": "",
+        "erc20_custody_contract_address": "",
+        "chain_id": "18332",
         "outbound_tx_schedule_interval": "30",
-        "outbound_tx_schedule_lookahead": "30"
+        "outbound_tx_schedule_lookahead": "60"
       }
     }
   ],

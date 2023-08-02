@@ -1,0 +1,17 @@
+{
+  "title": "Slashin Param Change",
+  "description": "Update slashing params",
+  "changes": [
+    {
+      "subspace": "slashing",
+      "key": "SignedBlocksWindow",
+      "value": "50000"
+    },
+    {
+      "subspace": "slashing",
+      "key": "DowntimeJailDuration",
+      "value": "50000"
+    }
+  ],
+  "deposit": "10000000azeta"
+}

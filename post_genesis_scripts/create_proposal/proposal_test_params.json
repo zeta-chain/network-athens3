@@ -1,0 +1,12 @@
+{
+  "title": "Test Proposal Do Not Vote",
+  "description": "This proposal is for internal testing only do not vote on it",
+  "changes": [
+    {
+      "subspace": "staking",
+      "key": "UnbondingTime",
+      "value": "432000"
+    }
+  ],
+  "deposit": "10000000azeta"
+}

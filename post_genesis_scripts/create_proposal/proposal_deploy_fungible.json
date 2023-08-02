@@ -1,0 +1,18 @@
+{
+  "group_policy_address": "zeta1afk9zr2hn2jsac63h4hm60vl9z3e5u69gndzf7c99cqge3vzwjzsxn0x73",
+  "messages": [
+    {
+      "@type": "/zetachain.zetacore.fungible.MsgDeployFungibleCoinZRC20",
+      "creator": "zeta1afk9zr2hn2jsac63h4hm60vl9z3e5u69gndzf7c99cqge3vzwjzsxn0x73",
+      "ERC20": "",
+      "foreignChain": "btc_testnet",
+      "decimals": 8,
+      "name": "BTC-btc_testnet",
+      "symbol": "tBTC",
+      "coinType": 1,
+      "gasLimit": 1000
+    }
+  ],
+  "metadata": "",
+  "proposers": ["zeta1yq5pqzvasc38mruv9xhs34rfx4lanlm709m7eg"]
+}

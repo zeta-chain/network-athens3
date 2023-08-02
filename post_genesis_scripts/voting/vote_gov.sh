@@ -2,7 +2,9 @@
 CHAINID="athens_7001-1"
 KEYRING="test"
 HOSTNAME=$(hostname)
-signer="operator"
+signer="val0_op_usw1"
+nodeip="3.218.170.198"
+node=tcp://$nodeip:26657
 
 signerAddress=$(zetacored keys show $signer -a --keyring-backend=test)
 echo "signerAddress: $signerAddress"
@@ -30,4 +32,4 @@ then
    clibuilder
 fi
 
-zetacored tx gov vote "$PID" yes --from $signer --keyring-backend $KEYRING --chain-id $CHAINID --yes --fees=40azeta --broadcast-mode=block
+zetacored tx gov vote "$PID" no --from $signer --keyring-backend $KEYRING --chain-id $CHAINID --yes --gas=auto --gas-adjustment=1.5 --gas-prices=0.01azeta --broadcast-mode=block --node=$node

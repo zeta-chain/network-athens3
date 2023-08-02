@@ -1,0 +1,12 @@
+{
+  "title": "Staking Param Change",
+  "description": "Update staking params",
+  "changes": [
+    {
+      "subspace": "staking",
+      "key": "UnbondingTime",
+      "value": "432000"
+    }
+  ],
+  "deposit": "10000000azeta"
+}
