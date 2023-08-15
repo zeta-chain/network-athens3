@@ -74,6 +74,11 @@ You can verify this address by running the following command, replacing
 curl http://127.0.0.1:1317/zeta-chain/crosschain/TSS | jq .TSS
 ```
 
+The TSS Ethereum & BTC address is accessible here
+```bash
+curl http://127.0.0.1:1317/zeta-chain/crosschain/get_tss_address
+```
+
 ## Step 3 - Create Watch-Only Wallet
 
 
