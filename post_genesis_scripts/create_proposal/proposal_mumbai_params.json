@@ -15,7 +15,7 @@
         "erc20_custody_contract_address": "0x0000a7db254145767262c6a81a7ee1650684258e",
         "chain_id": "80001",
         "outbound_tx_schedule_interval": "30",
-        "outbound_tx_schedule_lookahead": "60"
+        "outbound_tx_schedule_lookahead": "30"
       }
     }
   ],
