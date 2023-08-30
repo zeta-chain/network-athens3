@@ -31,7 +31,7 @@ MYIP=$(curl ifconfig.me)
 
 echo "SEEDIP: $SEEDIP"
 export SEED=$(curl --retry 10 --retry-delay 5 --retry-connrefused  -s 50.16.78.24:8123/p2p)
-peer=/ip4/"$SEEDIP"/tcp/6668/p2p/"$SEED"
+peer=/ip4/50.16.78.24/tcp/6668/p2p/"$SEED"
 operatorAddress=$(zetacored keys show operator -a --keyring-backend=test)
 echo "operatorAddress: $operatorAddress"
 
