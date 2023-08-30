@@ -2,11 +2,9 @@
   "group_policy_address": "zeta1afk9zr2hn2jsac63h4hm60vl9z3e5u69gndzf7c99cqge3vzwjzsxn0x73",
   "messages": [
     {
-      "@type": "/zetachain.zetacore.observer.MsgAddObserver",
+      "@type": "/zetachain.zetacore.crosschain.MsgUpdateTssAddress",
       "creator": "zeta1afk9zr2hn2jsac63h4hm60vl9z3e5u69gndzf7c99cqge3vzwjzsxn0x73",
-      "observer_address": "zeta1wm7439y2y09tm33ctv4guzhhg7y2efq9u9ypq2",
-      "zetaclient_grantee_pubkey": "zetapub1addwnpepqtehjvayfumtmylkukp4tju680c95tdw6zyp7sgtfsfwgtqx0prjqpxtjrm",
-      "add_node_account_only": true
+      "tss_pubkey": "zetapub1addwnpepqf2gqt8zzrdlmxveuyatevv4dvh9w9ldqjq8jke6r0ttqmg7sejt5js0h68"
     }
   ],
   "metadata": "",
