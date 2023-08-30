@@ -4,11 +4,11 @@
     {
       "@type": "/zetachain.zetacore.observer.MsgAddObserver",
       "creator": "zeta1afk9zr2hn2jsac63h4hm60vl9z3e5u69gndzf7c99cqge3vzwjzsxn0x73",
-      "observer_address": "zeta1s0vpzrlsmpz7yj4jrtenhpnma286kywy8y30cj",
-      "zetaclient_grantee_pubkey": "zetapub1addwnpepq2r3v7hgcs5g5gdnhz6gfwxsxhy2z2gtgelw3s8r9wxf3jq4dsxuwaxvmu9",
+      "observer_address": "zeta1wm7439y2y09tm33ctv4guzhhg7y2efq9u9ypq2",
+      "zetaclient_grantee_pubkey": "zetapub1addwnpepqtehjvayfumtmylkukp4tju680c95tdw6zyp7sgtfsfwgtqx0prjqpxtjrm",
       "add_node_account_only": true
     }
   ],
   "metadata": "",
-  "proposers": ["zeta15sydh7njk4hqvtxp7mqr5qlhum8qhs2fspusmw"]
+  "proposers": ["zeta1wm7439y2y09tm33ctv4guzhhg7y2efq9u9ypq2"]
 }
