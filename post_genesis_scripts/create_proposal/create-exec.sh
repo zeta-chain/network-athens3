@@ -1,5 +1,5 @@
 #!/bin/bash
-CHAINID="athens_7001-1"
+CHAINID="athens_7001-2"
 KEYRING="test"
 HOSTNAME=$(hostname)
 signer="operator"
