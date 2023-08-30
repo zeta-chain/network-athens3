@@ -4,7 +4,8 @@ KEYRING="test"
 HOSTNAME=$(hostname)
 
 rm -rf ~/.zetacored/data/*
-cp -a network_files/data/*.json ~/.zetacored/data/
+mkdir -p ~/.zetacored/data
+cp -a network_files/data/priv_validator_state.json ~/.zetacored/data/
 
 rm -rf ~/.zetacored/config/addrbook.json
 
