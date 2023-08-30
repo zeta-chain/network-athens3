@@ -1,39 +1,9 @@
 {
   "members": [
     {
-      "address": "zeta1futgfg5wx06zeh6s4wtw9xnsnctjf8nrcvu9sr",
+      "address": "zeta15sydh7njk4hqvtxp7mqr5qlhum8qhs2fspusmw",
       "weight": "1",
-      "metadata": "Charlie"
-    },
-    {
-      "address": "zeta1l40mm7meacx03r4lp87s9gkxfan32xnznp42u6",
-      "weight": "1",
-      "metadata": "Charlie-HW"
-    },
-    {
-      "address": "zeta12xy7l4q86kt225x2jjmags3ges5hhvd709dccs",
-      "weight": "1",
-      "metadata": "brewmaster012"
-    },
-    {
-      "address": "zeta1sypj87y8pjnpgjw5t3xw7ayz6acm0w7ur9qud8",
-      "weight": "1",
-      "metadata": "tru"
-    },
-    {
-      "address": "zeta1ew3ajtxap6ls8t2eyk3sehhuxvr6u26jvx04ar",
-      "weight": "1",
-      "metadata": "Grant"
-    },
-    {
-      "address": "zeta174p709mgccy9dks2d7fwhd7jzpg4ffj2srkf3d",
-      "weight": "1",
-      "metadata": "af"
-    },
-    {
-      "address": "zeta1yq5pqzvasc38mruv9xhs34rfx4lanlm709m7eg",
-      "weight": "1",
-      "metadata": "tanmay"
+      "metadata": "operator"
     }
   ]
 }
