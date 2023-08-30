@@ -13,7 +13,7 @@
           },
           "ballot_threshold": "0.660000000000000000",
           "min_observer_delegation": "10000000000.000000000000000000",
-          "is_supported": "true",
+          "is_supported": "true"
         },
         {
           "chain": {
@@ -22,7 +22,7 @@
           },
           "ballot_threshold": "0.660000000000000000",
           "min_observer_delegation": "10000000000.000000000000000000",
-          "is_supported": "true",
+          "is_supported": "true"
         },
         {
           "chain": {
@@ -31,7 +31,7 @@
           },
           "ballot_threshold": "0.660000000000000000",
           "min_observer_delegation": "10000000000.000000000000000000",
-          "is_supported": "true",
+          "is_supported": "true"
         },
         {
           "chain": {
@@ -40,7 +40,7 @@
           },
           "ballot_threshold": "0.660000000000000000",
           "min_observer_delegation": "10000000000.000000000000000000",
-          "is_supported": "true",
+          "is_supported": "true"
         },
         {
           "chain": {
@@ -49,7 +49,7 @@
           },
           "ballot_threshold": "0.660000000000000000",
           "min_observer_delegation": "10000000000.000000000000000000",
-          "is_supported": "true",
+          "is_supported": "true"
         }
       ],
       "deposit": "10000000azeta"
