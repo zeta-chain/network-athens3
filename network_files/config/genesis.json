@@ -1,6 +1,6 @@
 {
   "genesis_time": "2023-08-29T23:54:24.927696Z",
-  "chain_id": "athens_7001-1",
+  "chain_id": "athens_7001-2",
   "initial_height": "1",
   "consensus_params": {
     "block": {

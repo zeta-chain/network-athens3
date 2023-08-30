@@ -86,7 +86,7 @@ rm -rf ~/.zetacored/os_info
 
 
 # create keys
-CHAINID="athens_7001-1"
+CHAINID="athens_7001-2"
 KEYRING="test"
 HOSTNAME=$(hostname)
 echo "HOSTNAME: $HOSTNAME"
