@@ -1,12 +1,11 @@
-#!/bin/bash
-CHAINID="athens_7001-2"
-KEYRING="test"
-HOSTNAME=$(hostname)
-signer="operator"
-nodeip="3.218.170.198"
-node=tcp://$nodeip:26657
-echo "node: $node"
+#!/usr/bin/env bash
+source ../../config/config.shlib
+echo "$(config_get nodeip)"; # will be found in user-cfg
 
+chainID="$(config_get CHAINID)"; # how to just read a value without echoing
+echo "$(config_get othervar)"; # will fall back to defaults
+
+exit
 
 signerAddress=$(zetacored keys show $signer -a --keyring-backend=test)
 echo "signerAddress: $signerAddress"

@@ -1,0 +1,8 @@
+CHAINID="athens_7001-2"
+KEYRING="test"
+HOSTNAME=$(hostname)
+signer="operator"
+nodeip="3.218.170.198"
+node=tcp://$nodeip:26657
+echo "node: $node"
+othervar="test"
