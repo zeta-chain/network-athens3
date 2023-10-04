@@ -1,0 +1,36 @@
+{
+  "group_policy_address": "zeta1afk9zr2hn2jsac63h4hm60vl9z3e5u69gndzf7c99cqge3vzwjzsxn0x73",
+  "messages": [
+    {
+      "@type": "/zetachain.zetacore.crosschain.MsgWhitelistERC20",
+      "creator": "zeta1afk9zr2hn2jsac63h4hm60vl9z3e5u69gndzf7c99cqge3vzwjzsxn0x73",
+      "erc20_address": "0x07865c6e87b9f70255377e024ace6630c1eaa37f",
+      "chainId": 5,
+      "name": "USDC-goerli_testnet",
+      "symbol": "USDC",
+      "decimals": 6,
+      "gas_limit": 100000
+    },
+    {
+      "@type": "/zetachain.zetacore.crosschain.MsgWhitelistERC20",
+      "creator": "zeta1afk9zr2hn2jsac63h4hm60vl9z3e5u69gndzf7c99cqge3vzwjzsxn0x73",
+      "erc20_address": "0x64544969ed7EBf5f083679233325356EbE738930",
+      "chainId": 97,
+      "name": "USDC-bsc_testnet",
+      "symbol": "USDC",
+      "decimals": 6,
+      "gas_limit": 100000
+    },    {
+      "@type": "/zetachain.zetacore.crosschain.MsgWhitelistERC20",
+      "creator": "zeta1afk9zr2hn2jsac63h4hm60vl9z3e5u69gndzf7c99cqge3vzwjzsxn0x73",
+      "erc20_address": "0x9999f7fea5938fd3b1e26a12c3f2fb024e194f97",
+      "chainId": 80001,
+      "name": "USDC-mumbai_testnet",
+      "symbol": "USDC",
+      "decimals": 6,
+      "gas_limit": 100000
+    }
+  ],
+  "metadata": "",
+  "proposers": ["zeta1yq5pqzvasc38mruv9xhs34rfx4lanlm709m7eg"]
+}

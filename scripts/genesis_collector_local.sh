@@ -1,5 +1,5 @@
 #!/bin/bash
-CHAINID="athens_7001-2"
+CHAINID="athens_7000-1"
 KEYRING="test"
 
 
@@ -43,7 +43,7 @@ cat "$HOME"/.zetacored/config/genesis.json | jq '.app_state["gov"]["deposit_para
 cat "$HOME"/.zetacored/config/genesis.json | jq '.app_state["mint"]["params"]["mint_denom"]="azeta"' > "$HOME"/.zetacored/config/tmp_genesis.json && mv "$HOME"/.zetacored/config/tmp_genesis.json "$HOME"/.zetacored/config/genesis.json
 cat "$HOME"/.zetacored/config/genesis.json | jq '.app_state["evm"]["params"]["evm_denom"]="azeta"' > "$HOME"/.zetacored/config/tmp_genesis.json && mv "$HOME"/.zetacored/config/tmp_genesis.json "$HOME"/.zetacored/config/genesis.json
 cat "$HOME"/.zetacored/config/genesis.json | jq '.consensus_params["block"]["max_gas"]="500000000"' > "$HOME"/.zetacored/config/tmp_genesis.json && mv "$HOME"/.zetacored/config/tmp_genesis.json "$HOME"/.zetacored/config/genesis.json
-cat "$HOME"/.zetacored/config/genesis.json | jq '.app_state["gov"]["voting_params"]["voting_period"]="300s"' > "$HOME"/.zetacored/config/tmp_genesis.json && mv "$HOME"/.zetacored/config/tmp_genesis.json "$HOME"/.zetacored/config/genesis.json
+cat "$HOME"/.zetacored/config/genesis.json | jq '.app_state["gov"]["voting_params"]["voting_period"]="900s"' > "$HOME"/.zetacored/config/tmp_genesis.json && mv "$HOME"/.zetacored/config/tmp_genesis.json "$HOME"/.zetacored/config/genesis.json
 
 
 zetacored collect-observer-info

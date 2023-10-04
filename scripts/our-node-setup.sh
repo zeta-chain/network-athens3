@@ -1,4 +1,4 @@
-#!/bin/bash
+!/bin/bash
 
 # create keys
 CHAINID="athens_7001-1"

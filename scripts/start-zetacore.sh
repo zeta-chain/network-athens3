@@ -1,5 +1,5 @@
 #!/bin/bash
-CHAINID="athens_7001-1"
+CHAINID="athens_7000-1"
 KEYRING="test"
 HOSTNAME=$(hostname)
 

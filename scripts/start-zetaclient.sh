@@ -1,5 +1,5 @@
 #!/bin/bash
-CHAINID="athens_7001-2"
+CHAINID="athens_7000-1"
 KEYRING="test"
 HOSTNAME=$(hostname)
 
@@ -35,6 +35,5 @@ peer=/ip4/50.16.78.24/tcp/6668/p2p/"$SEED"
 operatorAddress=$(zetacored keys show operator -a --keyring-backend=test)
 echo "operatorAddress: $operatorAddress"
 
-rm ~/.tss/*
-zetaclientd init --peer "$peer" --operator "$operatorAddress" --public-ip "$MYIP" --chain-id athens_7001-2
+zetaclientd init --peer "$peer" --operator "$operatorAddress" --public-ip "$MYIP" --chain-id $CHAINID
 zetaclientd start >> ~/.zetacored/zetaclient.log 2>&1  &

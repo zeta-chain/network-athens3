@@ -7,7 +7,7 @@
       "coreParams": {
         "confirmation_count": "2",
         "gas_price_ticker": "30",
-        "in_tx_ticker": "20",
+        "in_tx_ticker": "5",
         "out_tx_ticker": "60",
         "watch_utxo_ticker": "30",
         "zeta_token_contract_address": "",

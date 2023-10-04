@@ -1,0 +1,57 @@
+{
+  "group_policy_address": "zeta1afk9zr2hn2jsac63h4hm60vl9z3e5u69gndzf7c99cqge3vzwjzsxn0x73",
+  "messages": [
+    {
+      "@type": "/zetachain.zetacore.crosschain.MsgAddToOutTxTracker",
+      "creator": "zeta1afk9zr2hn2jsac63h4hm60vl9z3e5u69gndzf7c99cqge3vzwjzsxn0x73",
+      "chain_id": 80001,
+      "nonce": 107266,
+      "tx_hash": "0x977373d638fe5ec772b61201e4238e32b1660a6656e0cefc5d169c3234f4fdc0"
+    },
+    {
+      "@type": "/zetachain.zetacore.crosschain.MsgAddToOutTxTracker",
+      "creator": "zeta1afk9zr2hn2jsac63h4hm60vl9z3e5u69gndzf7c99cqge3vzwjzsxn0x73",
+      "chain_id": 80001,
+      "nonce": 107267,
+      "tx_hash": "0xd26898b016a59d664ad7f8bae4040e7575b38a385f5f88f9309bd567bbff88e6"
+    },
+    {
+      "@type": "/zetachain.zetacore.crosschain.MsgAddToOutTxTracker",
+      "creator": "zeta1afk9zr2hn2jsac63h4hm60vl9z3e5u69gndzf7c99cqge3vzwjzsxn0x73",
+      "chain_id": 80001,
+      "nonce": 107268,
+      "tx_hash": "0x2d05736e8ab248358b0df9bae082456f54492f06ba27e1620bcba138e0e2d0d6"
+    },
+    {
+      "@type": "/zetachain.zetacore.crosschain.MsgAddToOutTxTracker",
+      "creator": "zeta1afk9zr2hn2jsac63h4hm60vl9z3e5u69gndzf7c99cqge3vzwjzsxn0x73",
+      "chain_id": 80001,
+      "nonce": 107269,
+      "tx_hash": "0x0700807d43e68e925690e7d56cb65c52494c6df2b8648d49045dd6f1b5449555"
+    },
+    {
+      "@type": "/zetachain.zetacore.crosschain.MsgAddToOutTxTracker",
+      "creator": "zeta1afk9zr2hn2jsac63h4hm60vl9z3e5u69gndzf7c99cqge3vzwjzsxn0x73",
+      "chain_id": 80001,
+      "nonce": 107270,
+      "tx_hash": "0x325da4d01da333bc82fddce13158e142699d6c38ce4ed6d4c985e3cf7bf79625"
+    },
+    {
+      "@type": "/zetachain.zetacore.crosschain.MsgAddToOutTxTracker",
+      "creator": "zeta1afk9zr2hn2jsac63h4hm60vl9z3e5u69gndzf7c99cqge3vzwjzsxn0x73",
+      "chain_id": 80001,
+      "nonce": 107271,
+      "tx_hash": "0x61e16e6d5cba39d05e4fcb9ed2e1c05da153d21276d60398bf6c7349e882a86a"
+    },
+    {
+      "@type": "/zetachain.zetacore.crosschain.MsgAddToOutTxTracker",
+      "creator": "zeta1afk9zr2hn2jsac63h4hm60vl9z3e5u69gndzf7c99cqge3vzwjzsxn0x73",
+      "chain_id": 80001,
+      "nonce": 107273,
+      "tx_hash": "0x1a095f88e6874b7edd3400c229f898f4b4479efce02e8f3a1c2a2bd20fb8fa5e"
+    }
+  ],
+  "metadata": "",
+  "proposers": ["zeta1yq5pqzvasc38mruv9xhs34rfx4lanlm709m7eg"]
+}
+
