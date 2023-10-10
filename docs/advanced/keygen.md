@@ -40,7 +40,7 @@ Replace with your own operator key
 rm ~/.tss/address_book.seed $ export TSSPATH=~/.tss
 zetaclientd init --val val --log-console \
     --enable-chains "goerli_testnet,bsc_testnet" \
-    --chain-id athens_7001-1 --dev \
+    --chain-id devnet_6001-1 --dev \
     --operator <your-operator-key-here> \
     --log-level 0 \
     --peer /ip4/$SEEDIP/tcp/6668/p2p/$SEED \

@@ -1,6 +1,7 @@
 #!/bin/bash
-CHAINID="athens_7000-1"
+CHAINID="devnet_6001-1"
 KEYRING="test"
+
 HOSTNAME=$(hostname)
 
 
@@ -30,10 +31,11 @@ fi
 MYIP=$(curl ifconfig.me)
 
 echo "SEEDIP: $SEEDIP"
-export SEED=$(curl --retry 10 --retry-delay 5 --retry-connrefused  -s 50.16.78.24:8123/p2p)
-peer=/ip4/50.16.78.24/tcp/6668/p2p/"$SEED"
+export SEED=$(curl --retry 10 --retry-delay 5 --retry-connrefused  -s "$SEEDIP":8123/p2p)
+peer=/ip4/"$SEEDIP"/tcp/6668/p2p/"$SEED"
 operatorAddress=$(zetacored keys show operator -a --keyring-backend=test)
 echo "operatorAddress: $operatorAddress"
 
-zetaclientd init --peer "$peer" --operator "$operatorAddress" --public-ip "$MYIP" --chain-id $CHAINID
+zetaclientd init --peer "$peer" --operator "$operatorAddress" --public-ip "$MYIP" --chain-id "$CHAINID"
 zetaclientd start >> ~/.zetacored/zetaclient.log 2>&1  &
+
