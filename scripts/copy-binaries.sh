@@ -1,3 +1,4 @@
+make isntall-testnet
 rm -rf /usr/local/bin/zetacored
 rm -rf /usr/local/bin/zetaclientd
 cp ~/go/bin/zetacored  /usr/local/bin/
