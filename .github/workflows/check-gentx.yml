@@ -20,7 +20,7 @@ on:
 env:
   ZETACORED_BINARY: "https://zetachain-external-files.s3.amazonaws.com/binaries/athens3-prerelease/latest/zetacored-ubuntu-22-amd64"
   ZETACLIENT_BINARY: "https://zetachain-external-files.s3.amazonaws.com/binaries/athens3-prerelease/latest/zetaclientd-ubuntu-22-amd64"
-  CHAINID: "devnet_6001-1"
+  CHAINID: "athens_7001-1"
   KEYRING: "test"
   HOSTNAME: checker
 

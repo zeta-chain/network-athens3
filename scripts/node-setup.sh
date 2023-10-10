@@ -1,4 +1,9 @@
 #!/bin/bash
+CHAINID="athens_7001-1"
+KEYRING="test"
+HOSTNAME=$(hostname)
+echo "HOSTNAME: $HOSTNAME"
+
 
 clibuilder()
 {
@@ -86,10 +91,6 @@ rm -rf ~/.zetacored/os_info
 
 
 # create keys
-CHAINID="devnet_6001-1"
-KEYRING="test"
-HOSTNAME=$(hostname)
-echo "HOSTNAME: $HOSTNAME"
 
 
 # Init a new node to generate genesis file .

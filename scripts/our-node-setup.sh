@@ -1,7 +1,7 @@
 !/bin/bash
 
 # create keys
-CHAINID="devnet_6001-1"
+CHAINID="athens_7001-1"
 KEYRING="test"
 MONIKER=$(grep moniker ~/.zetacored/config/config.toml | sed 's/moniker = \"\(.*\)\"/\1/')
 echo "MONIKER: $MONIKER"
