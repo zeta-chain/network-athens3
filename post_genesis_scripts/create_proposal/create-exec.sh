@@ -4,7 +4,7 @@ KEYRING="test"
 HOSTNAME=$(hostname)
 signer="operator"
 nodeip="localhost"
-node="tcp://46.4.15.110:26657"
+node=tcp://$nodeip:26657
 clibuilder()
 {
    echo ""
