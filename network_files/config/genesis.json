@@ -1,5 +1,5 @@
 {
-  "genesis_time": "2023-10-10T19:35:54.310371Z",
+  "genesis_time": "2023-10-11T02:06:58.41921Z",
   "chain_id": "athens_7001-1",
   "initial_height": "1",
   "consensus_params": {
@@ -34,7 +34,7 @@
         {
           "@type": "/ethermint.types.v1.EthAccount",
           "base_account": {
-            "address": "zeta1ts0p2gv8nzll2hnhsnrekuuuvk6msyuslhf4yg",
+            "address": "zeta1z9v79xzuxmxjy92yp0v34y24l85j0a7fyd2qap",
             "pub_key": null,
             "account_number": "0",
             "sequence": "0"
@@ -44,7 +44,7 @@
         {
           "@type": "/ethermint.types.v1.EthAccount",
           "base_account": {
-            "address": "zeta1kvy55z582saxuu8afsl4dnlv7q8fgm00yzh4xq",
+            "address": "zeta1z08lvcy6c8r9hfkzfz7eadk4regeqvff6mkhhh",
             "pub_key": null,
             "account_number": "0",
             "sequence": "0"
@@ -54,7 +54,7 @@
         {
           "@type": "/ethermint.types.v1.EthAccount",
           "base_account": {
-            "address": "zeta10p4uns44vfdgtyn99yt5xvaxtve6xeh0vk8plm",
+            "address": "zeta1uyz0l04cdujyecqegx3jyz3pmwujx6vjhqxqzg",
             "pub_key": null,
             "account_number": "0",
             "sequence": "0"
@@ -64,7 +64,7 @@
         {
           "@type": "/ethermint.types.v1.EthAccount",
           "base_account": {
-            "address": "zeta1cx73c4x2a3x2upqzqnrun54f7yqan8926dgr0f",
+            "address": "zeta1a8pp56l7r7tax2k5rfnt9t7yt9rm8weufeancd",
             "pub_key": null,
             "account_number": "0",
             "sequence": "0"
@@ -76,8 +76,8 @@
     "authz": {
       "authorization": [
         {
-          "granter": "zeta1ts0p2gv8nzll2hnhsnrekuuuvk6msyuslhf4yg",
-          "grantee": "zeta1kvy55z582saxuu8afsl4dnlv7q8fgm00yzh4xq",
+          "granter": "zeta1z9v79xzuxmxjy92yp0v34y24l85j0a7fyd2qap",
+          "grantee": "zeta1z08lvcy6c8r9hfkzfz7eadk4regeqvff6mkhhh",
           "authorization": {
             "@type": "/cosmos.authz.v1beta1.GenericAuthorization",
             "msg": "/zetachain.zetacore.crosschain.MsgNonceVoter"
@@ -85,8 +85,8 @@
           "expiration": null
         },
         {
-          "granter": "zeta1ts0p2gv8nzll2hnhsnrekuuuvk6msyuslhf4yg",
-          "grantee": "zeta1kvy55z582saxuu8afsl4dnlv7q8fgm00yzh4xq",
+          "granter": "zeta1z9v79xzuxmxjy92yp0v34y24l85j0a7fyd2qap",
+          "grantee": "zeta1z08lvcy6c8r9hfkzfz7eadk4regeqvff6mkhhh",
           "authorization": {
             "@type": "/cosmos.authz.v1beta1.GenericAuthorization",
             "msg": "/zetachain.zetacore.crosschain.MsgGasPriceVoter"
@@ -94,8 +94,8 @@
           "expiration": null
         },
         {
-          "granter": "zeta1ts0p2gv8nzll2hnhsnrekuuuvk6msyuslhf4yg",
-          "grantee": "zeta1kvy55z582saxuu8afsl4dnlv7q8fgm00yzh4xq",
+          "granter": "zeta1z9v79xzuxmxjy92yp0v34y24l85j0a7fyd2qap",
+          "grantee": "zeta1z08lvcy6c8r9hfkzfz7eadk4regeqvff6mkhhh",
           "authorization": {
             "@type": "/cosmos.authz.v1beta1.GenericAuthorization",
             "msg": "/zetachain.zetacore.crosschain.MsgVoteOnObservedInboundTx"
@@ -103,8 +103,8 @@
           "expiration": null
         },
         {
-          "granter": "zeta1ts0p2gv8nzll2hnhsnrekuuuvk6msyuslhf4yg",
-          "grantee": "zeta1kvy55z582saxuu8afsl4dnlv7q8fgm00yzh4xq",
+          "granter": "zeta1z9v79xzuxmxjy92yp0v34y24l85j0a7fyd2qap",
+          "grantee": "zeta1z08lvcy6c8r9hfkzfz7eadk4regeqvff6mkhhh",
           "authorization": {
             "@type": "/cosmos.authz.v1beta1.GenericAuthorization",
             "msg": "/zetachain.zetacore.crosschain.MsgVoteOnObservedOutboundTx"
@@ -112,8 +112,8 @@
           "expiration": null
         },
         {
-          "granter": "zeta1ts0p2gv8nzll2hnhsnrekuuuvk6msyuslhf4yg",
-          "grantee": "zeta1kvy55z582saxuu8afsl4dnlv7q8fgm00yzh4xq",
+          "granter": "zeta1z9v79xzuxmxjy92yp0v34y24l85j0a7fyd2qap",
+          "grantee": "zeta1z08lvcy6c8r9hfkzfz7eadk4regeqvff6mkhhh",
           "authorization": {
             "@type": "/cosmos.authz.v1beta1.GenericAuthorization",
             "msg": "/zetachain.zetacore.crosschain.MsgSetNodeKeys"
@@ -121,8 +121,8 @@
           "expiration": null
         },
         {
-          "granter": "zeta1ts0p2gv8nzll2hnhsnrekuuuvk6msyuslhf4yg",
-          "grantee": "zeta1kvy55z582saxuu8afsl4dnlv7q8fgm00yzh4xq",
+          "granter": "zeta1z9v79xzuxmxjy92yp0v34y24l85j0a7fyd2qap",
+          "grantee": "zeta1z08lvcy6c8r9hfkzfz7eadk4regeqvff6mkhhh",
           "authorization": {
             "@type": "/cosmos.authz.v1beta1.GenericAuthorization",
             "msg": "/zetachain.zetacore.crosschain.MsgCreateTSSVoter"
@@ -130,8 +130,8 @@
           "expiration": null
         },
         {
-          "granter": "zeta1ts0p2gv8nzll2hnhsnrekuuuvk6msyuslhf4yg",
-          "grantee": "zeta1kvy55z582saxuu8afsl4dnlv7q8fgm00yzh4xq",
+          "granter": "zeta1z9v79xzuxmxjy92yp0v34y24l85j0a7fyd2qap",
+          "grantee": "zeta1z08lvcy6c8r9hfkzfz7eadk4regeqvff6mkhhh",
           "authorization": {
             "@type": "/cosmos.authz.v1beta1.GenericAuthorization",
             "msg": "/zetachain.zetacore.crosschain.MsgAddToOutTxTracker"
@@ -139,8 +139,8 @@
           "expiration": null
         },
         {
-          "granter": "zeta1ts0p2gv8nzll2hnhsnrekuuuvk6msyuslhf4yg",
-          "grantee": "zeta1kvy55z582saxuu8afsl4dnlv7q8fgm00yzh4xq",
+          "granter": "zeta1z9v79xzuxmxjy92yp0v34y24l85j0a7fyd2qap",
+          "grantee": "zeta1z08lvcy6c8r9hfkzfz7eadk4regeqvff6mkhhh",
           "authorization": {
             "@type": "/cosmos.authz.v1beta1.GenericAuthorization",
             "msg": "/zetachain.zetacore.crosschain.MsgSetNodeKeys"
@@ -148,8 +148,8 @@
           "expiration": null
         },
         {
-          "granter": "zeta1ts0p2gv8nzll2hnhsnrekuuuvk6msyuslhf4yg",
-          "grantee": "zeta1kvy55z582saxuu8afsl4dnlv7q8fgm00yzh4xq",
+          "granter": "zeta1z9v79xzuxmxjy92yp0v34y24l85j0a7fyd2qap",
+          "grantee": "zeta1z08lvcy6c8r9hfkzfz7eadk4regeqvff6mkhhh",
           "authorization": {
             "@type": "/cosmos.authz.v1beta1.GenericAuthorization",
             "msg": "/zetachain.zetacore.observer.MsgAddBlameVote"
@@ -157,8 +157,8 @@
           "expiration": null
         },
         {
-          "granter": "zeta1ts0p2gv8nzll2hnhsnrekuuuvk6msyuslhf4yg",
-          "grantee": "zeta1kvy55z582saxuu8afsl4dnlv7q8fgm00yzh4xq",
+          "granter": "zeta1z9v79xzuxmxjy92yp0v34y24l85j0a7fyd2qap",
+          "grantee": "zeta1z08lvcy6c8r9hfkzfz7eadk4regeqvff6mkhhh",
           "authorization": {
             "@type": "/cosmos.authz.v1beta1.GenericAuthorization",
             "msg": "/zetachain.zetacore.observer.MsgAddBlockHeader"
@@ -166,8 +166,8 @@
           "expiration": null
         },
         {
-          "granter": "zeta10p4uns44vfdgtyn99yt5xvaxtve6xeh0vk8plm",
-          "grantee": "zeta1cx73c4x2a3x2upqzqnrun54f7yqan8926dgr0f",
+          "granter": "zeta1uyz0l04cdujyecqegx3jyz3pmwujx6vjhqxqzg",
+          "grantee": "zeta1a8pp56l7r7tax2k5rfnt9t7yt9rm8weufeancd",
           "authorization": {
             "@type": "/cosmos.authz.v1beta1.GenericAuthorization",
             "msg": "/zetachain.zetacore.crosschain.MsgNonceVoter"
@@ -175,8 +175,8 @@
           "expiration": null
         },
         {
-          "granter": "zeta10p4uns44vfdgtyn99yt5xvaxtve6xeh0vk8plm",
-          "grantee": "zeta1cx73c4x2a3x2upqzqnrun54f7yqan8926dgr0f",
+          "granter": "zeta1uyz0l04cdujyecqegx3jyz3pmwujx6vjhqxqzg",
+          "grantee": "zeta1a8pp56l7r7tax2k5rfnt9t7yt9rm8weufeancd",
           "authorization": {
             "@type": "/cosmos.authz.v1beta1.GenericAuthorization",
             "msg": "/zetachain.zetacore.crosschain.MsgGasPriceVoter"
@@ -184,8 +184,8 @@
           "expiration": null
         },
         {
-          "granter": "zeta10p4uns44vfdgtyn99yt5xvaxtve6xeh0vk8plm",
-          "grantee": "zeta1cx73c4x2a3x2upqzqnrun54f7yqan8926dgr0f",
+          "granter": "zeta1uyz0l04cdujyecqegx3jyz3pmwujx6vjhqxqzg",
+          "grantee": "zeta1a8pp56l7r7tax2k5rfnt9t7yt9rm8weufeancd",
           "authorization": {
             "@type": "/cosmos.authz.v1beta1.GenericAuthorization",
             "msg": "/zetachain.zetacore.crosschain.MsgVoteOnObservedInboundTx"
@@ -193,8 +193,8 @@
           "expiration": null
         },
         {
-          "granter": "zeta10p4uns44vfdgtyn99yt5xvaxtve6xeh0vk8plm",
-          "grantee": "zeta1cx73c4x2a3x2upqzqnrun54f7yqan8926dgr0f",
+          "granter": "zeta1uyz0l04cdujyecqegx3jyz3pmwujx6vjhqxqzg",
+          "grantee": "zeta1a8pp56l7r7tax2k5rfnt9t7yt9rm8weufeancd",
           "authorization": {
             "@type": "/cosmos.authz.v1beta1.GenericAuthorization",
             "msg": "/zetachain.zetacore.crosschain.MsgVoteOnObservedOutboundTx"
@@ -202,8 +202,8 @@
           "expiration": null
         },
         {
-          "granter": "zeta10p4uns44vfdgtyn99yt5xvaxtve6xeh0vk8plm",
-          "grantee": "zeta1cx73c4x2a3x2upqzqnrun54f7yqan8926dgr0f",
+          "granter": "zeta1uyz0l04cdujyecqegx3jyz3pmwujx6vjhqxqzg",
+          "grantee": "zeta1a8pp56l7r7tax2k5rfnt9t7yt9rm8weufeancd",
           "authorization": {
             "@type": "/cosmos.authz.v1beta1.GenericAuthorization",
             "msg": "/zetachain.zetacore.crosschain.MsgSetNodeKeys"
@@ -211,8 +211,8 @@
           "expiration": null
         },
         {
-          "granter": "zeta10p4uns44vfdgtyn99yt5xvaxtve6xeh0vk8plm",
-          "grantee": "zeta1cx73c4x2a3x2upqzqnrun54f7yqan8926dgr0f",
+          "granter": "zeta1uyz0l04cdujyecqegx3jyz3pmwujx6vjhqxqzg",
+          "grantee": "zeta1a8pp56l7r7tax2k5rfnt9t7yt9rm8weufeancd",
           "authorization": {
             "@type": "/cosmos.authz.v1beta1.GenericAuthorization",
             "msg": "/zetachain.zetacore.crosschain.MsgCreateTSSVoter"
@@ -220,8 +220,8 @@
           "expiration": null
         },
         {
-          "granter": "zeta10p4uns44vfdgtyn99yt5xvaxtve6xeh0vk8plm",
-          "grantee": "zeta1cx73c4x2a3x2upqzqnrun54f7yqan8926dgr0f",
+          "granter": "zeta1uyz0l04cdujyecqegx3jyz3pmwujx6vjhqxqzg",
+          "grantee": "zeta1a8pp56l7r7tax2k5rfnt9t7yt9rm8weufeancd",
           "authorization": {
             "@type": "/cosmos.authz.v1beta1.GenericAuthorization",
             "msg": "/zetachain.zetacore.crosschain.MsgAddToOutTxTracker"
@@ -229,8 +229,8 @@
           "expiration": null
         },
         {
-          "granter": "zeta10p4uns44vfdgtyn99yt5xvaxtve6xeh0vk8plm",
-          "grantee": "zeta1cx73c4x2a3x2upqzqnrun54f7yqan8926dgr0f",
+          "granter": "zeta1uyz0l04cdujyecqegx3jyz3pmwujx6vjhqxqzg",
+          "grantee": "zeta1a8pp56l7r7tax2k5rfnt9t7yt9rm8weufeancd",
           "authorization": {
             "@type": "/cosmos.authz.v1beta1.GenericAuthorization",
             "msg": "/zetachain.zetacore.crosschain.MsgSetNodeKeys"
@@ -238,8 +238,8 @@
           "expiration": null
         },
         {
-          "granter": "zeta10p4uns44vfdgtyn99yt5xvaxtve6xeh0vk8plm",
-          "grantee": "zeta1cx73c4x2a3x2upqzqnrun54f7yqan8926dgr0f",
+          "granter": "zeta1uyz0l04cdujyecqegx3jyz3pmwujx6vjhqxqzg",
+          "grantee": "zeta1a8pp56l7r7tax2k5rfnt9t7yt9rm8weufeancd",
           "authorization": {
             "@type": "/cosmos.authz.v1beta1.GenericAuthorization",
             "msg": "/zetachain.zetacore.observer.MsgAddBlameVote"
@@ -247,8 +247,8 @@
           "expiration": null
         },
         {
-          "granter": "zeta10p4uns44vfdgtyn99yt5xvaxtve6xeh0vk8plm",
-          "grantee": "zeta1cx73c4x2a3x2upqzqnrun54f7yqan8926dgr0f",
+          "granter": "zeta1uyz0l04cdujyecqegx3jyz3pmwujx6vjhqxqzg",
+          "grantee": "zeta1a8pp56l7r7tax2k5rfnt9t7yt9rm8weufeancd",
           "authorization": {
             "@type": "/cosmos.authz.v1beta1.GenericAuthorization",
             "msg": "/zetachain.zetacore.observer.MsgAddBlockHeader"
@@ -264,7 +264,7 @@
       },
       "balances": [
         {
-          "address": "zeta1ts0p2gv8nzll2hnhsnrekuuuvk6msyuslhf4yg",
+          "address": "zeta1z9v79xzuxmxjy92yp0v34y24l85j0a7fyd2qap",
           "coins": [
             {
               "denom": "azeta",
@@ -273,16 +273,7 @@
           ]
         },
         {
-          "address": "zeta10p4uns44vfdgtyn99yt5xvaxtve6xeh0vk8plm",
-          "coins": [
-            {
-              "denom": "azeta",
-              "amount": "4200000000000000000000000"
-            }
-          ]
-        },
-        {
-          "address": "zeta1kvy55z582saxuu8afsl4dnlv7q8fgm00yzh4xq",
+          "address": "zeta1z08lvcy6c8r9hfkzfz7eadk4regeqvff6mkhhh",
           "coins": [
             {
               "denom": "azeta",
@@ -291,7 +282,16 @@
           ]
         },
         {
-          "address": "zeta1cx73c4x2a3x2upqzqnrun54f7yqan8926dgr0f",
+          "address": "zeta1uyz0l04cdujyecqegx3jyz3pmwujx6vjhqxqzg",
+          "coins": [
+            {
+              "denom": "azeta",
+              "amount": "4200000000000000000000000"
+            }
+          ]
+        },
+        {
+          "address": "zeta1a8pp56l7r7tax2k5rfnt9t7yt9rm8weufeancd",
           "coins": [
             {
               "denom": "azeta",
@@ -412,7 +412,7 @@
               {
                 "@type": "/cosmos.staking.v1beta1.MsgCreateValidator",
                 "description": {
-                  "moniker": "devnetVal0",
+                  "moniker": "devVal0",
                   "identity": "",
                   "website": "",
                   "security_contact": "",
@@ -424,11 +424,11 @@
                   "max_change_rate": "0.010000000000000000"
                 },
                 "min_self_delegation": "1",
-                "delegator_address": "zeta1ts0p2gv8nzll2hnhsnrekuuuvk6msyuslhf4yg",
-                "validator_address": "zetavaloper1ts0p2gv8nzll2hnhsnrekuuuvk6msyusmh3ff7",
+                "delegator_address": "zeta1z9v79xzuxmxjy92yp0v34y24l85j0a7fyd2qap",
+                "validator_address": "zetavaloper1z9v79xzuxmxjy92yp0v34y24l85j0a7fqdjush",
                 "pubkey": {
                   "@type": "/cosmos.crypto.ed25519.PubKey",
-                  "key": "Dv3W+qXUfsWUXxhbCogxGNvkRseg12osFSg4VC7GbRM="
+                  "key": "n8ZACIxs3AwrrYE9HJ/TMsTCkiDEq1Kvo0HRM+Mqvdg="
                 },
                 "value": {
                   "denom": "azeta",
@@ -436,7 +436,7 @@
                 }
               }
             ],
-            "memo": "850497be5c0370010f3b8705852e8b7560f3ea23@172.31.0.190:26656",
+            "memo": "846777b1753b6200839f363ce46e0f8b44f06bcd@172.31.0.190:26656",
             "timeout_height": "0",
             "extension_options": [],
             "non_critical_extension_options": []
@@ -446,7 +446,7 @@
               {
                 "public_key": {
                   "@type": "/cosmos.crypto.secp256k1.PubKey",
-                  "key": "Atc0VSn/qEFh1ClKgAySwMphciwlE8DSq9VyLER3SM3t"
+                  "key": "ApEZZY8NdaX3kUXaXJVgEaXzeen2qVUo+at2LgVg4MCo"
                 },
                 "mode_info": {
                   "single": {
@@ -465,7 +465,7 @@
             "tip": null
           },
           "signatures": [
-            "NGN6oL9vUC8MMyS0wdLiNP6754qiGg/nuW+muS2HvZ0khyo6OpLJSrAxs6SJb1XgDTyEFn5OY+mLMz+w3lOuMA=="
+            "S4NupDMYCdQWBybf7L5bKeXk0P5EkQMr/c1ipM7ldygv0YvS8LW5T1IQ1l9oVOT7YB8uZIiuMnzuPXorCDWqbQ=="
           ]
         },
         {
@@ -474,7 +474,7 @@
               {
                 "@type": "/cosmos.staking.v1beta1.MsgCreateValidator",
                 "description": {
-                  "moniker": "deventVal1",
+                  "moniker": "devVal1",
                   "identity": "",
                   "website": "",
                   "security_contact": "",
@@ -486,11 +486,11 @@
                   "max_change_rate": "0.010000000000000000"
                 },
                 "min_self_delegation": "1",
-                "delegator_address": "zeta10p4uns44vfdgtyn99yt5xvaxtve6xeh0vk8plm",
-                "validator_address": "zetavaloper10p4uns44vfdgtyn99yt5xvaxtve6xeh0gklajd",
+                "delegator_address": "zeta1uyz0l04cdujyecqegx3jyz3pmwujx6vjhqxqzg",
+                "validator_address": "zetavaloper1uyz0l04cdujyecqegx3jyz3pmwujx6vjnq7u07",
                 "pubkey": {
                   "@type": "/cosmos.crypto.ed25519.PubKey",
-                  "key": "ONGSoh4PcIhv1z8t1wvGyk+oSJCkk8YCF44eA8uFrKE="
+                  "key": "TSDFtcS7rksNiwuZiArbSvOyQrPN2pWWc6qU3m8Cm0Y="
                 },
                 "value": {
                   "denom": "azeta",
@@ -498,7 +498,7 @@
                 }
               }
             ],
-            "memo": "e48105dac80b0e62583b70e9b905d5b722eceec0@172.31.1.174:26656",
+            "memo": "9381361bd673d1012eae37025ea377d72ab74799@172.31.1.174:26656",
             "timeout_height": "0",
             "extension_options": [],
             "non_critical_extension_options": []
@@ -508,7 +508,7 @@
               {
                 "public_key": {
                   "@type": "/cosmos.crypto.secp256k1.PubKey",
-                  "key": "Asj+NedelqOs15lr3WkVoBUYQ7Iw7Dgzmkt3sfRX6Fhu"
+                  "key": "AsFNc/Gyg6X625f5mGPGTYRyeJD9CYXR5WaOn9/Pw0Dd"
                 },
                 "mode_info": {
                   "single": {
@@ -527,7 +527,7 @@
             "tip": null
           },
           "signatures": [
-            "EsPeDZ4qEKyeBDw+rHDV2zUAd2ix1Jlp/KxA6SMjYI42sOHRsG4wNrMb22y3tb6fNGUy1mHNTB6XVjWLPMjQXQ=="
+            "kfGjxh6yEywJpVNe7mgCywwtFw/cEzIESx0al8CrMPtNTV0VVNcgTHGKxPZ2SnkVDWP1bmGpNqmwTm/nOEoRhQ=="
           ]
         }
       ]
@@ -574,49 +574,69 @@
       "observers": [
         {
           "observer_chain": {
-            "chain_name": 2,
-            "chain_id": 101
+            "chain_name": 7,
+            "chain_id": 80001
           },
           "observer_list": [
-            "zeta1ts0p2gv8nzll2hnhsnrekuuuvk6msyuslhf4yg",
-            "zeta10p4uns44vfdgtyn99yt5xvaxtve6xeh0vk8plm"
+            "zeta1z9v79xzuxmxjy92yp0v34y24l85j0a7fyd2qap",
+            "zeta1uyz0l04cdujyecqegx3jyz3pmwujx6vjhqxqzg"
           ]
         },
         {
           "observer_chain": {
-            "chain_name": 15,
-            "chain_id": 18444
+            "chain_name": 10,
+            "chain_id": 97
           },
           "observer_list": [
-            "zeta1ts0p2gv8nzll2hnhsnrekuuuvk6msyuslhf4yg",
-            "zeta10p4uns44vfdgtyn99yt5xvaxtve6xeh0vk8plm"
+            "zeta1z9v79xzuxmxjy92yp0v34y24l85j0a7fyd2qap",
+            "zeta1uyz0l04cdujyecqegx3jyz3pmwujx6vjhqxqzg"
           ]
         },
         {
           "observer_chain": {
-            "chain_name": 14,
-            "chain_id": 1337
+            "chain_name": 6,
+            "chain_id": 5
           },
           "observer_list": [
-            "zeta1ts0p2gv8nzll2hnhsnrekuuuvk6msyuslhf4yg",
-            "zeta10p4uns44vfdgtyn99yt5xvaxtve6xeh0vk8plm"
+            "zeta1z9v79xzuxmxjy92yp0v34y24l85j0a7fyd2qap",
+            "zeta1uyz0l04cdujyecqegx3jyz3pmwujx6vjhqxqzg"
+          ]
+        },
+        {
+          "observer_chain": {
+            "chain_name": 11,
+            "chain_id": 7001
+          },
+          "observer_list": [
+            "zeta1z9v79xzuxmxjy92yp0v34y24l85j0a7fyd2qap",
+            "zeta1uyz0l04cdujyecqegx3jyz3pmwujx6vjhqxqzg"
+          ]
+        },
+        {
+          "observer_chain": {
+            "chain_name": 12,
+            "chain_id": 18332
+          },
+          "observer_list": [
+            "zeta1z9v79xzuxmxjy92yp0v34y24l85j0a7fyd2qap",
+            "zeta1uyz0l04cdujyecqegx3jyz3pmwujx6vjhqxqzg"
           ]
         }
       ],
       "nodeAccountList": [
         {
-          "operator": "zeta1ts0p2gv8nzll2hnhsnrekuuuvk6msyuslhf4yg",
-          "granteeAddress": "zeta1kvy55z582saxuu8afsl4dnlv7q8fgm00yzh4xq",
+          "operator": "zeta1z9v79xzuxmxjy92yp0v34y24l85j0a7fyd2qap",
+          "granteeAddress": "zeta1z08lvcy6c8r9hfkzfz7eadk4regeqvff6mkhhh",
           "granteePubkey": {
-            "secp256k1": "zetapub1addwnpepqfy46xy99xks827djm9meqmcqcmhtuuv62glr6lqcur9lt545yu2c83mchv"
+            "secp256k1": "zetapub1addwnpepq0veggwvylf3x85qs20nwgv8tvculvcyxdd480cn0r4h3jzq2430u00ex9v"
           },
           "nodeStatus": 4
         },
         {
-          "operator": "zeta10p4uns44vfdgtyn99yt5xvaxtve6xeh0vk8plm",
-          "granteeAddress": "zeta1cx73c4x2a3x2upqzqnrun54f7yqan8926dgr0f",
+          "operator": "zeta1uyz0l04cdujyecqegx3jyz3pmwujx6vjhqxqzg",
+          "granteeAddress": "zeta1a8pp56l7r7tax2k5rfnt9t7yt9rm8weufeancd",
           "granteePubkey": {
-            "secp256k1": "zetapub1addwnpepq04gxgqz7szq7rjacl0rs0euqzt3e2vmsfyc4lct836gfzs0rjx6y2t9vlm"
+            "secp256k1": "zetapub1addwnpepqf8x5v3u8hlyrtlre6p00lqu2j2vxn8yzhulpqvqqcgrfuqd8tqd2nsv6pq"
           },
           "nodeStatus": 4
         }
@@ -629,8 +649,8 @@
         "observer_params": [
           {
             "chain": {
-              "chain_name": 15,
-              "chain_id": 18444
+              "chain_name": 12,
+              "chain_id": 18332
             },
             "ballot_threshold": "0.660000000000000000",
             "min_observer_delegation": "1000000000000000000000.000000000000000000",
@@ -638,8 +658,8 @@
           },
           {
             "chain": {
-              "chain_name": 14,
-              "chain_id": 1337
+              "chain_name": 7,
+              "chain_id": 80001
             },
             "ballot_threshold": "0.660000000000000000",
             "min_observer_delegation": "1000000000000000000000.000000000000000000",
@@ -647,8 +667,26 @@
           },
           {
             "chain": {
-              "chain_name": 2,
-              "chain_id": 101
+              "chain_name": 10,
+              "chain_id": 97
+            },
+            "ballot_threshold": "0.660000000000000000",
+            "min_observer_delegation": "1000000000000000000000.000000000000000000",
+            "is_supported": true
+          },
+          {
+            "chain": {
+              "chain_name": 6,
+              "chain_id": 5
+            },
+            "ballot_threshold": "0.660000000000000000",
+            "min_observer_delegation": "1000000000000000000000.000000000000000000",
+            "is_supported": true
+          },
+          {
+            "chain": {
+              "chain_name": 11,
+              "chain_id": 7001
             },
             "ballot_threshold": "0.660000000000000000",
             "min_observer_delegation": "1000000000000000000000.000000000000000000",
@@ -668,8 +706,8 @@
       },
       "keygen": {
         "granteePubkeys": [
-          "zetapub1addwnpepqfy46xy99xks827djm9meqmcqcmhtuuv62glr6lqcur9lt545yu2c83mchv",
-          "zetapub1addwnpepq04gxgqz7szq7rjacl0rs0euqzt3e2vmsfyc4lct836gfzs0rjx6y2t9vlm"
+          "zetapub1addwnpepq0veggwvylf3x85qs20nwgv8tvculvcyxdd480cn0r4h3jzq2430u00ex9v",
+          "zetapub1addwnpepqf8x5v3u8hlyrtlre6p00lqu2j2vxn8yzhulpqvqqcgrfuqd8tqd2nsv6pq"
         ],
         "blockNumber": 50
       },
