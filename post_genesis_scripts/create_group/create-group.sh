@@ -3,7 +3,7 @@ CHAINID="athens_7001-1"
 KEYRING="test"
 HOSTNAME=$(hostname)
 signer="operator"
-nodeip="3.218.170.198"
+nodeip="localhost"
 node=tcp://$nodeip:26657
 echo "node: $node"
 
