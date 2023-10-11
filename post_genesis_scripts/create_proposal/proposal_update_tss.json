@@ -4,7 +4,7 @@
     {
       "@type": "/zetachain.zetacore.crosschain.MsgUpdateTssAddress",
       "creator": "zeta1afk9zr2hn2jsac63h4hm60vl9z3e5u69gndzf7c99cqge3vzwjzsxn0x73",
-      "tss_pubkey": "zetapub1addwnpepqf2kegnfp0ly0e6c3g47q3typ8und6hyhjwlnlgjl4m9xf9q5t0s7nh9zm8"
+      "tss_pubkey": "zetapub1addwnpepq2ugeudgxj203qa4wctqqn2dc2ut6afnce5265j89ympguwkynalz0q3sjk"
     }
   ],
   "metadata": "",
