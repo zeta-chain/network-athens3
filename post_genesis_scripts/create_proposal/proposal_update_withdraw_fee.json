@@ -1,0 +1,14 @@
+{
+  "group_policy_address": "zeta1afk9zr2hn2jsac63h4hm60vl9z3e5u69gndzf7c99cqge3vzwjzsxn0x73",
+  "messages": [
+    {
+      "@type": "/zetachain.zetacore.fungible.MsgUpdateZRC20WithdrawFee",
+      "creator": "zeta1afk9zr2hn2jsac63h4hm60vl9z3e5u69gndzf7c99cqge3vzwjzsxn0x73",
+      "zrc20_address": "0x48f80608B672DC30DC7e3dbBd0343c5F02C738Eb",
+      "newWithdrawFee": "",
+      "newGasLimit": "3200",
+    }
+  ],
+  "metadata": "",
+  "proposers": ["zeta1z9v79xzuxmxjy92yp0v34y24l85j0a7fyd2qap"]
+}
