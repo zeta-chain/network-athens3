@@ -1,4 +1,4 @@
-killall zetacored
+pkill zetacored
 git pull
 make install-testnet
 rm -rf /usr/local/bin/zetacored
