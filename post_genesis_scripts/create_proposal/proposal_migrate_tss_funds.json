@@ -5,7 +5,7 @@
       "@type": "/zetachain.zetacore.crosschain.MsgMigrateTssFunds",
       "creator": "zeta1afk9zr2hn2jsac63h4hm60vl9z3e5u69gndzf7c99cqge3vzwjzsxn0x73",
       "chainId": 18332,
-      "amount": "1000"
+      "amount": "1"
     }
   ],
   "metadata": "",
