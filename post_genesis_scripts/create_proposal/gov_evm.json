@@ -1,0 +1,12 @@
+{
+  "title": "Allow Legacy Transactions",
+  "description": "Turn on the EVM parameter to allow legacy transactions",
+  "changes": [
+    {
+      "subspace": "evm",
+      "key": "AllowUnprotectedTxs",
+      "value": "true"
+    }
+  ],
+  "deposit": "10000000azeta"
+}
