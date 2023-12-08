@@ -2,7 +2,7 @@
 
 **These steps have been automated for the Athens3 testnet via the
 `node-setup.sh` and `start-zetaclient.sh` scripts. Operators should ignore this
-document unless you they to perform their key generation manually.**
+document unless they to perform their key generation manually.**
 
 During the genesis process of the Athens3 testnet, the TSS Signers (validators
 who are in the set of TSSSigner) need to coordinate the generation of a TSS
