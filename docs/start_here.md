@@ -42,7 +42,7 @@ zetacored-ubuntu-22-amd64
 zetacored-ubuntu-22-arm64
 ```
 
-For the rest of these instructions we'll assume you are usinng Ubuntu 22 with
+For the rest of these instructions we'll assume you are using Ubuntu 22 with
 `amd64` architecture. If you are using a different OS or CPU architecture you'll
 need to adjust the commands below.
 ```
@@ -64,7 +64,7 @@ git clone https://github.com/zeta-chain/network-athens3.git && cd network-athens
 To streamline this process we have provided scripts that will automatically
 generate the required keys, and create your gentx and os_info files. There are
 others ways to configure your node but this is the method we can provide
-techincal support for during this testnet genesis.  
+technical support for during this testnet genesis.  
 
 Give execute permissions to the scripts and run the node setup script.
 
@@ -173,7 +173,7 @@ pkill zetacored
 
 These instructions are for the initial setup and genesis of the network. Running
 a validator 24/7 requires a more robust setup that will change depending on the
-environment you are running the validator in. At a minimum we reccomend you:
+environment you are running the validator in. At a minimum we recommend you:
 
 - [ ] Run each process as a systemd service or containerized service
 - [ ] Do NOT run these services as root. Create a new restricted ZetaChain user
