@@ -92,7 +92,7 @@ enable-hostname-label = false
 enable-service-label = false
 
 # PrometheusRetentionTime, when positive, enables a Prometheus metrics sink.
-prometheus-retention-time = 0
+prometheus-retention-time = 10
 
 # GlobalLabels defines a global set of name/value label tuples applied to all
 # metrics emitted using the wrapper functions defined in telemetry package.
