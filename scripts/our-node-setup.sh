@@ -8,8 +8,8 @@ echo "MONIKER: $MONIKER"
 
 # Reset node
 rm ~/.zetacored/config/genesis.json
-zetacored keys delete operator -y
-zetacored keys delete hotkey -y
+zetacored keys delete operator --keyring-backend=$KEYRING -y 
+zetacored keys delete hotkey --keyring-backend=$KEYRING -y
 rm -rf ~/.zetacored/os_info
 rm -rf ~/.zetacored/config/gentx
 
@@ -22,7 +22,7 @@ zetacored keys add operator --algo=secp256k1 --keyring-backend=$KEYRING
 zetacored keys add hotkey --algo=secp256k1 --keyring-backend=$KEYRING
 operator_address=$(zetacored keys show operator -a --keyring-backend=$KEYRING)
 hotkey_address=$(zetacored keys show hotkey -a --keyring-backend=$KEYRING)
-pubkey=$(zetacored get-pubkey hotkey|sed -e 's/secp256k1:"\(.*\)"/\1/' | sed 's/ //g' )
+pubkey=$(zetacored get-pubkey hotkey --keyring-backend=$KEYRING | sed -e 's/secp256k1:"\(.*\)"/\1/' | sed 's/ //g' )
 echo "operator_address: $operator_address"
 echo "hotkey_address: $hotkey_address"
 echo "pubkey: $pubkey"
