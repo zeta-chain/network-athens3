@@ -4,7 +4,7 @@
 `node-setup.sh` and `start-zetaclient.sh` scripts. Operators should ignore this
 document unless you they to perform their key generation manually.**
 
-The genesis file is a JSON file which defines the initial state of a blockchain.
+The genesis file is a JSON file that defines the initial state of a blockchain.
 It can be seen as height **0** of the blockchain. The first block, at
 height **1**, will reference the genesis file as its parent. It is needed to
 join the blockchain as it contains all the necessary information.
@@ -73,7 +73,7 @@ zetacored gentx val <delegation_amount> \
   --commission-max-change-rate <commission_max_change_rate>
 ```
 
-- `delegation_amount` is the amount to be delegate in `azeta`
+- `delegation_amount` is the amount to be delegated in `azeta`
 - `public_ip` is your public IP. If you’re using sentry architecture, this would
   be one of your sentry public IP - `moniker` is the moniker for your node (ex.
   “my_node”)

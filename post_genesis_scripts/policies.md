@@ -5,7 +5,7 @@
 ```shell
     ./post_genesis_scripts/create_group/create-group.sh
 ```
-- This will create a new group and policy . query the policy address, this needs to updated to zetacore via a gov proposal
+- This will create a new group and policy . query the policy address, this needs to be updated to zetacore via a gov proposal
 ```shell
 zetacored q group group-policies-by-group 1
 ```
@@ -20,7 +20,7 @@ We can also query using the group admin address .
 ```shell
     ./post_genesis_scripts/voting/vote_gov.sh -i <Proposal ID>
 ```
-- Once successfull the policy will be set and can be queried using 
+- Once successful the policy will be set and can be queried using 
 ```shell
  zetacored q crosschain params
 ```

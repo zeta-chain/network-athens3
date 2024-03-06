@@ -2,7 +2,7 @@
 
 ### Node Specifications
 
-These are some recommended specs to a ZetaChain node.
+These are some recommended specs for a ZetaChain node.
 
 | Node Type       | CPU    | Memory       | Data Disk         |
 | :-------------- | :----- | :----------- | :---------------- |
@@ -22,7 +22,7 @@ need to make some adjustments.
 ### Set Limits on Open Files and Number of Processes
 
 To better manage the resources of your nodes, we recommend setting some limits
-on the maximum number of open file descriptors (nofile) and maximum number of
+on the maximum number of open file descriptors (nofile) and the maximum number of
 processes (nproc).
 
 Edit `/etc/security/limits.conf` to include or modify the following parameters:
@@ -45,7 +45,7 @@ fs.file-max=262144
 In a production environment we recommend monitoring the node resources (CPU
 load, Memory Usage, Disk usage and Disk IO) for any performance degradation.
 
-Prometheus can optionally be enabled to serve metrics which can be consumed by
+Prometheus can optionally be enabled to serve metrics that can be consumed by
 Prometheus collector(s). Telemetry include Prometheus metrics can be enabled in
 the app.toml file. See the [CosmosSDK Telemetry Documentation](https://docs.cosmos.network/v0.46/core/telemetry.html) for more information.
 
