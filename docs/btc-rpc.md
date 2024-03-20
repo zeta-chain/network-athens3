@@ -107,11 +107,17 @@ your watch-only wallet. For example:
     argument tells Bitcoin Core to rescan the blockchain for transactions
     involving the imported address.
 
-4. Wait for Bitcoin Core to finish rescanning the blockchain. This may take some
+4. Update bitcoin.conf to automatically import the wallet on restart by adding the following line: 
+
+    ```
+    wallet=watchonly
+    ```
+
+5. Wait for Bitcoin Core to finish rescanning the blockchain. This may take some
 time, depending on the size of the blockchain and the number of transactions
 involving the imported address.
 
-5. Once the rescan is complete, you should be able to see any incoming
+6. Once the rescan is complete, you should be able to see any incoming
 transactions involving the imported address in your watch-only wallet.
 
 Note that a watch-only wallet cannot be used to spend bitcoin, as it does not
